@@ -13,6 +13,8 @@ namespace Architecture_KC
 {
     public partial class LodinForm : Form
     {
+        private bool isDragging = false;
+        private Point lastCursorPos;
         public LodinForm()
         {
             InitializeComponent();
@@ -31,13 +33,8 @@ namespace Architecture_KC
             this.Close();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         Point lastPoint;
-        private int count;
+        /*private int count;*/
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -53,16 +50,6 @@ namespace Architecture_KC
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginField_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -70,21 +57,20 @@ namespace Architecture_KC
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            if (guna2log.Text == "admin" && guna2parol.Text == "1234")
             {
-                if (guna2log.Text == "admin" && guna2parol.Text == "1234")
-                {
-                    GlavForm form1 = new GlavForm();
-                    form1.Show();
-                    count++;
+                 GlavForm form1 = new GlavForm();
+                 form1.Show();
+                 /*count++;*/
 
-                    Hide();
+                 Hide();
 
-                }
-                else
-                {
-                    MessageBox.Show("Неверный логин или пароль!", "Не успешный вход!");
-                }
             }
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль!", "Не успешный вход!");
+            }
+            
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -95,6 +81,49 @@ namespace Architecture_KC
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;
+            lastCursorPos = e.Location;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastCursorPos.X) + e.X,
+                    (this.Location.Y - lastCursorPos.Y) + e.Y);
+
+                this.Update();
+            }
+
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+        }
+
+        private void guna2Button1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (guna2log.Text == "admin" && guna2parol.Text == "1234")
+                {
+                    GlavForm form1 = new GlavForm();
+                    form1.Show();
+                    /*count++;*/
+
+                    Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Неверный логин или пароль!", "Не успешный вход!");
+                }
+            }
         }
     }
 }

@@ -13,3 +13,18 @@ C:\Users\vbers\Desktop\AKC\Architecture KC\Architecture KC\bin\Debug\Guna.UI2.dl
 C:\Users\vbers\Desktop\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CopyComplete
 C:\Users\vbers\Desktop\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.TeorForm.resources
 C:\Users\vbers\Desktop\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.VideoForm.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.exe.config
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.exe
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.pdb
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Guna.UI2.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.AssemblyReference.cache
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.GlavForm.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.LodinForm.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.Properties.Resources.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.TeorForm.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.VideoForm.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.GenerateResource.cache
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CoreCompileInputs.cache
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CopyComplete
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.exe
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.pdb
