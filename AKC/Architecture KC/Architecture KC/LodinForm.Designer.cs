@@ -61,7 +61,7 @@
             this.label1.Font = new System.Drawing.Font("Sitka Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(121, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 39);
+            this.label1.Size = new System.Drawing.Size(195, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "Архитектура ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -100,7 +100,7 @@
             this.label2.Font = new System.Drawing.Font("Sitka Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(54, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(317, 39);
+            this.label2.Size = new System.Drawing.Size(318, 39);
             this.label2.TabIndex = 3;
             this.label2.Text = "компьютерных систем";
             // 
@@ -238,7 +238,7 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2parol;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

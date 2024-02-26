@@ -139,6 +139,7 @@
     <Content Include="image\тест.png" />
     <Content Include="image\тире.png" />
     <Content Include="image\человек.png" />
+    <Content Include="Resources\4801251.jpg" />
     <Content Include="Resources\пароль.png" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
