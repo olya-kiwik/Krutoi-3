@@ -130,6 +130,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="image\logo.png" />
+    <Content Include="image\АвторФон.png" />
     <Content Include="image\видео.png" />
     <Content Include="image\выключить.png" />
     <Content Include="image\квадратик.png" />
@@ -139,7 +141,13 @@
     <Content Include="image\тест.png" />
     <Content Include="image\тире.png" />
     <Content Include="image\человек.png" />
-    <Content Include="Resources\4801251.jpg" />
+    <Content Include="Resources\препод.png" />
+    <Content Include="Resources\студент.png" />
+    <None Include="Resources\студент1.png" />
+    <Content Include="Resources\фон.png" />
+    <None Include="Resources\фон1.png" />
+    <None Include="Resources\АвторФон.png" />
+    <None Include="Resources\logo.png" />
     <Content Include="Resources\пароль.png" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

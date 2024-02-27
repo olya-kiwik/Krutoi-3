@@ -63,6 +63,26 @@ namespace Architecture_KC.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap АвторФон {
+            get {
+                object obj = ResourceManager.GetObject("АвторФон", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap видео {
             get {
                 object obj = ResourceManager.GetObject("видео", resourceCulture);
@@ -133,6 +153,16 @@ namespace Architecture_KC.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap студент {
+            get {
+                object obj = ResourceManager.GetObject("студент", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap теория {
             get {
                 object obj = ResourceManager.GetObject("теория", resourceCulture);
@@ -156,6 +186,16 @@ namespace Architecture_KC.Properties {
         internal static System.Drawing.Bitmap тире {
             get {
                 object obj = ResourceManager.GetObject("тире", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap фон {
+            get {
+                object obj = ResourceManager.GetObject("фон", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

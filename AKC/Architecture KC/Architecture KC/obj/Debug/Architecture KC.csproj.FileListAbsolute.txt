@@ -28,3 +28,18 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CopyComplete
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.exe
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.pdb
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.exe.config
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.exe
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.pdb
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Guna.UI2.dll
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.AssemblyReference.cache
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.GlavForm.resources
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.LodinForm.resources
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.Properties.Resources.resources
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.TeorForm.resources
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.VideoForm.resources
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.GenerateResource.cache
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CoreCompileInputs.cache
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CopyComplete
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.exe
+C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.pdb
