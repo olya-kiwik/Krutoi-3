@@ -6,7 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
+using System.IO;
+using Architecture_KC.Properties;
 
 namespace Architecture_KC
 {
@@ -19,44 +22,9 @@ namespace Architecture_KC
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
@@ -64,24 +32,9 @@ namespace Architecture_KC
             Application.Exit();
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void panel3_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2ControlBox2_MouseDown(object sender, MouseEventArgs e)
-        {
-
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -113,20 +66,27 @@ namespace Architecture_KC
             isDragging = false;
         }
 
-        //Teoriya
-        private void pictureBox4_Click(object sender, EventArgs e)
+        
+        private void GlavForm_Load(object sender, EventArgs e)
         {
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string path = $@"{docPath}\Arch";
+            string[] files = Directory.GetFiles(path);
 
-        }
+            MessageBox.Show("Number of files in the folder: " + files.Length);
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
+            /*//FileInfo fileInfo = new FileInfo(files);
+            for (int i = 0; i < files.Length; i++)
+            {
+                TheorUC uc1 = new TheorUC();
+                flowLayoutPanel1.Controls.Add(uc1);
 
-        }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
+                uc1.PictureBox1.Image = Image.FromFile();
+                uc1.Label1.Text = Convert.ToString();
+                uc1.TextBox1.Text = Convert.ToString();
 
+            }*/
         }
     }
 }
