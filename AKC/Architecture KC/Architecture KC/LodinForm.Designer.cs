@@ -151,9 +151,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Architecture_KC.Properties.Resources.человек;
-            this.pictureBox3.Location = new System.Drawing.Point(30, 148);
+            this.pictureBox3.Location = new System.Drawing.Point(38, 157);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(61, 63);
+            this.pictureBox3.Size = new System.Drawing.Size(53, 54);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
             // 

@@ -43,3 +43,34 @@ C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj
 C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.exe
 C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.pdb
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.TheorUC.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\BouncyCastle.Cryptography.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Hash.xxHash.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\MySql.Data.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Buffers.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.IO.Pipelines.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Memory.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Numerics.Vectors.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\ZstdSharp.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\BouncyCastle.Cryptography.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.pdb
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Hash.xxHash.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\MySql.Data.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Buffers.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.IO.Pipelines.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Memory.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Numerics.Vectors.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Threading.Tasks.Extensions.xml

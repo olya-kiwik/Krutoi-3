@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,10 +31,26 @@ namespace Architecture_KC
             set { label1 = value;}
         }
 
-        public Guna2TextBox TextBox1
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            get { return guna2TextBox1;}
-            set { guna2TextBox1 = value;}
+            /*string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand command = new SqlCommand("SELECT File from Resurs where id_file=@id", conn);
+                    command.Parameters.AddWithValue("@id", );
+                    command.ExecuteNonQuery();
+                    conn.Close();
+
+                    MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при добавлении данных: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }*/
         }
     }
 }
