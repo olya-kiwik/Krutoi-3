@@ -96,7 +96,6 @@
             this.guna2log.SelectedText = "";
             this.guna2log.Size = new System.Drawing.Size(187, 54);
             this.guna2log.TabIndex = 8;
-            this.guna2log.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2parol
             // 
@@ -121,7 +120,6 @@
             this.guna2parol.SelectedText = "";
             this.guna2parol.Size = new System.Drawing.Size(187, 54);
             this.guna2parol.TabIndex = 9;
-            this.guna2parol.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             this.guna2parol.KeyUp += new System.Windows.Forms.KeyEventHandler(this.guna2Button1_KeyUp);
             // 
             // pictureBox2
@@ -134,6 +132,9 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // pictureBox4
             // 
@@ -197,6 +198,9 @@
             this.label3.Size = new System.Drawing.Size(161, 31);
             this.label3.TabIndex = 14;
             this.label3.Text = "Авторизация";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.label3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // LodinForm
             // 
@@ -213,6 +217,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LodinForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LodinForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
