@@ -50,17 +50,17 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.aKCDataSet1 = new Architecture_KC.AKCDataSet1();
-            this.resursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resursTableAdapter = new Architecture_KC.AKCDataSet1TableAdapters.ResursTableAdapter();
-            this.tableAdapterManager = new Architecture_KC.AKCDataSet1TableAdapters.TableAdapterManager();
             this.resursDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.resursBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aKCDataSet1 = new Architecture_KC.AKCDataSet1();
+            this.resursTableAdapter = new Architecture_KC.AKCDataSet1TableAdapters.ResursTableAdapter();
+            this.tableAdapterManager = new Architecture_KC.AKCDataSet1TableAdapters.TableAdapterManager();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -71,9 +71,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aKCDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resursBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resursDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resursBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aKCDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -264,6 +264,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(169, 52);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "  Теория";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label1
             // 
@@ -371,34 +372,52 @@
             this.panel3.Size = new System.Drawing.Size(1143, 633);
             this.panel3.TabIndex = 2;
             // 
+            // guna2Button7
+            // 
+            this.guna2Button7.BorderColor = System.Drawing.Color.White;
+            this.guna2Button7.BorderRadius = 5;
+            this.guna2Button7.BorderThickness = 1;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button7.Location = new System.Drawing.Point(1036, 112);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(94, 45);
+            this.guna2Button7.TabIndex = 2;
+            this.guna2Button7.Text = "Загрузить";
+            this.guna2Button7.Visible = false;
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BorderColor = System.Drawing.Color.White;
+            this.guna2Button4.BorderRadius = 5;
+            this.guna2Button4.BorderThickness = 1;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button4.Location = new System.Drawing.Point(1036, 60);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(94, 45);
+            this.guna2Button4.TabIndex = 1;
+            this.guna2Button4.Text = "Выбрать";
+            this.guna2Button4.Visible = false;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(205, 61);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(205, 60);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(825, 559);
             this.flowLayoutPanel2.TabIndex = 0;
-            // 
-            // aKCDataSet1
-            // 
-            this.aKCDataSet1.DataSetName = "AKCDataSet1";
-            this.aKCDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // resursBindingSource
-            // 
-            this.resursBindingSource.DataMember = "Resurs";
-            this.resursBindingSource.DataSource = this.aKCDataSet1;
-            // 
-            // resursTableAdapter
-            // 
-            this.resursTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.PrepodTableAdapter = null;
-            this.tableAdapterManager.ResursTableAdapter = this.resursTableAdapter;
-            this.tableAdapterManager.StudTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Architecture_KC.AKCDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // resursDataGridView
             // 
@@ -409,9 +428,9 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.resursDataGridView.DataSource = this.resursBindingSource;
-            this.resursDataGridView.Location = new System.Drawing.Point(59, 3);
+            this.resursDataGridView.Location = new System.Drawing.Point(345, 53);
             this.resursDataGridView.Name = "resursDataGridView";
-            this.resursDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.resursDataGridView.Size = new System.Drawing.Size(501, 220);
             this.resursDataGridView.TabIndex = 0;
             this.resursDataGridView.Visible = false;
             // 
@@ -433,35 +452,27 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "video";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // guna2Button4
+            // resursBindingSource
             // 
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(1036, 61);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(94, 45);
-            this.guna2Button4.TabIndex = 1;
-            this.guna2Button4.Text = "Выбрать";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.resursBindingSource.DataMember = "Resurs";
+            this.resursBindingSource.DataSource = this.aKCDataSet1;
             // 
-            // guna2Button7
+            // aKCDataSet1
             // 
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Location = new System.Drawing.Point(1036, 123);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(94, 45);
-            this.guna2Button7.TabIndex = 2;
-            this.guna2Button7.Text = "Загрузить";
-            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
+            this.aKCDataSet1.DataSetName = "AKCDataSet1";
+            this.aKCDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // resursTableAdapter
+            // 
+            this.resursTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PrepodTableAdapter = null;
+            this.tableAdapterManager.ResursTableAdapter = this.resursTableAdapter;
+            this.tableAdapterManager.StudTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Architecture_KC.AKCDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // GlavForm
             // 
@@ -489,9 +500,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.aKCDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resursBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resursDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resursBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aKCDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

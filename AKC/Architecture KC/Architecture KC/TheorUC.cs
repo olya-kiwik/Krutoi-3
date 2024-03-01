@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Architecture_KC
 {
@@ -31,26 +32,46 @@ namespace Architecture_KC
             set { label1 = value;}
         }
 
+        public Label Label2
+        {
+            get { return label2; }
+            set { label2 = value; }
+        }
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            /*string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+            string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
             using (SqlConnection conn = new SqlConnection(con))
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand command = new SqlCommand("SELECT File from Resurs where id_file=@id", conn);
-                    command.Parameters.AddWithValue("@id", );
-                    command.ExecuteNonQuery();
-                    conn.Close();
+                    SqlCommand command = new SqlCommand($"SELECT Teoria from Resurs where id={label2.Text}", conn);
+                   
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        byte[] filedata = (byte[])reader["Teoria"];
+                        SaveFileDialog saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.Filter = "Text files (*.docx)|.docx|Excel (*.xlsx)|.xlsx|PDF (*.pdf)|.pdf|All Files (*.*)|*.* ";
+                        saveFileDialog.FilterIndex = 0;
 
-                    MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            File.WriteAllBytes(saveFileDialog.FileName, filedata);
+                            MessageBox.Show($"Файл успешно загружен {saveFileDialog.RestoreDirectory}");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Произошла ошибка!");
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ошибка при добавлении данных: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }*/
+            }
         }
     }
 }

@@ -24,14 +24,32 @@ namespace Architecture_KC
             InitializeComponent();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+        public void SelectUC1()
         {
-            this.WindowState = FormWindowState.Minimized;
-        }
+            SqlConnection sqlConnection = new SqlConnection(conn);
+            string query = "SELECT * FROM Resurs";
 
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            sqlConnection.Open();
+
+            using (SqlCommand command = new SqlCommand(query, sqlConnection))
+            {
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    TheorUC uc1 = new TheorUC();
+                    
+                    //uc1.PictureBox1 = Properties.Resources.Image1;
+                    uc1.Label2.Text = reader.GetInt32(0).ToString();
+                    uc1.Label1.Text = reader.GetString(1);
+
+                    flowLayoutPanel2.Controls.Add(uc1);
+
+
+                }
+            }
+
+            sqlConnection.Close();
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -71,36 +89,10 @@ namespace Architecture_KC
         
         private void GlavForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "aKCDataSet1.Resurs". При необходимости она может быть перемещена или удалена.
-            this.resursTableAdapter.Fill(this.aKCDataSet1.Resurs);
-
-
-            for (int i = 0; i < resursDataGridView.Rows.Count - 1; i++)
-            {
-                TheorUC uc1 = new TheorUC();
-                flowLayoutPanel1.Controls.Add(uc1);
-
-                //uc1.PictureBox1.Image = Image.FromFile();
-                uc1.Label1.Text = Convert.ToString(resursDataGridView[1, i].Value);
-
-            }
+            
+            
         }
 
-        private void resursBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.resursBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.aKCDataSet1);
-
-        }
-
-        private void resursBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.resursBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.aKCDataSet1);
-
-        }
 
         private void guna2Button4_Click(object sender, EventArgs e) //Выбор файла для загрузки
         {
@@ -129,7 +121,7 @@ namespace Architecture_KC
                 try
                 {
                     conn.Open();
-                    SqlCommand command = new SqlCommand("Insert INTO Resurs (File) values (@Teoria) ", conn);
+                    SqlCommand command = new SqlCommand("Insert INTO Resurs (Teoria) values (@Teoria) ", conn);
                     command.Parameters.Add("@Teoria", SqlDbType.VarBinary).Value = File.ReadAllBytes(selectedFilePath);
                     command.ExecuteNonQuery();
                     conn.Close();
@@ -141,6 +133,11 @@ namespace Architecture_KC
                     MessageBox.Show($"Ошибка при добавлении данных: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            SelectUC1();
         }
     }
 }

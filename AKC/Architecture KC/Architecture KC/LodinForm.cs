@@ -25,7 +25,7 @@ namespace Architecture_KC
 
         public void Login()
         {
-            if (guna2log.Text == "admin" && guna2parol.Text == "1234")
+            if (guna2log.Text == "admin" && guna2parol.Text == "4321")
             {
                 GlavForm form1 = new GlavForm();
                 form1.Show();
@@ -42,9 +42,7 @@ namespace Architecture_KC
             {
                 MessageBox.Show("Неверный логин или пароль!", "Не успешный вход!");
             }
-
-            bufer mybufer = new bufer();
-            mybufer.log(guna2log.Text);
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

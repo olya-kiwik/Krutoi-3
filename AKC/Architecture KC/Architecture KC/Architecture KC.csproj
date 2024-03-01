@@ -110,7 +110,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AKCDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="bufer.cs" />
     <Compile Include="GlavForm.cs">
       <SubType>Form</SubType>
     </Compile>
