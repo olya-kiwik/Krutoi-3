@@ -170,6 +170,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TheorUC.resx">
@@ -193,9 +194,12 @@
     <Content Include="image\тире.png" />
     <Content Include="image\человек.png" />
     <Content Include="Resources\excel.png" />
+    <None Include="Resources\exit.png" />
     <Content Include="Resources\pdf.png" />
     <Content Include="Resources\powerpoint.png" />
-    <Content Include="Resources\word.png" />
+    <Resource Include="Resources\word.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Resources\препод.png" />
     <Content Include="Resources\студент.png" />
     <None Include="Resources\студент1.png" />

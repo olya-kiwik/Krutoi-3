@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.IO;
 using Architecture_KC.Properties;
 using System.Data.SqlClient;
+using System.Drawing.Text;
+using System.Diagnostics;
 
 namespace Architecture_KC
 {
@@ -19,9 +21,12 @@ namespace Architecture_KC
         private bool isDragging = false;
         private Point lastCursorPos;
         private string selectedFilePath;
-        public GlavForm()
+
+        private bool _isAdmin;
+        public GlavForm(bool isAdmin)
         {
             InitializeComponent();
+            _isAdmin = isAdmin;
         }
 
         string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
@@ -39,7 +44,7 @@ namespace Architecture_KC
                 {
                     TheorUC uc1 = new TheorUC();
                     
-                    //uc1.PictureBox1 = Properties.Resources.Image1;
+                    //uc1.PictureBox1.Image = new Bitmap();
                     uc1.Label2.Text = reader.GetInt32(0).ToString();
                     uc1.Label1.Text = reader.GetString(1);
 
@@ -54,7 +59,9 @@ namespace Architecture_KC
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            LodinForm lodinForm = new LodinForm();
+            lodinForm.Show();
+            Close();
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -89,8 +96,8 @@ namespace Architecture_KC
         
         private void GlavForm_Load(object sender, EventArgs e)
         {
-            
-            
+            guna2Button4.Visible = _isAdmin;
+            guna2Button7.Visible = _isAdmin;
         }
 
 
@@ -130,7 +137,7 @@ namespace Architecture_KC
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show($"Ошибка при добавлении данных: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -138,6 +145,19 @@ namespace Architecture_KC
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             SelectUC1();
+        }
+
+
+        private int _ClickLol = 0;
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+            _ClickLol++;
+            if(_ClickLol == 10)
+            {
+                Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+                _ClickLol = 0;
+            }
+
         }
     }
 }

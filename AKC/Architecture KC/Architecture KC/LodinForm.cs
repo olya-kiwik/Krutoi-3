@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,14 +28,14 @@ namespace Architecture_KC
         {
             if (guna2log.Text == "admin" && guna2parol.Text == "4321")
             {
-                GlavForm form1 = new GlavForm();
+                GlavForm form1 = new GlavForm(true);
                 form1.Show();
                 Hide();
 
             }
             else if (guna2log.Text == "stud" && guna2parol.Text == "1234")
             {
-                GlavForm form1 = new GlavForm();
+                GlavForm form1 = new GlavForm(false);
                 form1.Show();
                 Hide();
             }
@@ -43,7 +44,9 @@ namespace Architecture_KC
                 MessageBox.Show("Неверный логин или пароль!", "Не успешный вход!");
             }
             
+            
         }
+        
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -101,6 +104,11 @@ namespace Architecture_KC
             {
                 Login();
             }
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
