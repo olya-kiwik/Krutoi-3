@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LodinForm));
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2log = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2parol = new Guna.UI2.WinForms.Guna2TextBox();
@@ -218,9 +219,10 @@
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LodinForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LodinForm";
+            this.Text = "LoginForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

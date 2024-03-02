@@ -121,3 +121,5 @@ C:\Users\0_206_15\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\
 C:\Users\0_206_15\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.exe
 C:\Users\0_206_15\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.pdb
 C:\Users\0_206_15\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.g.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.g.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddFiles.resources

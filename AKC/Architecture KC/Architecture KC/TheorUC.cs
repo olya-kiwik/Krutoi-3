@@ -59,7 +59,7 @@ namespace Architecture_KC
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             File.WriteAllBytes(saveFileDialog.FileName, filedata);
-                            MessageBox.Show($"Файл успешно загружен {saveFileDialog.RestoreDirectory}");
+                            MessageBox.Show($"Файл успешно загружен!","Успех");
                         }
                     }
                     else

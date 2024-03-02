@@ -110,6 +110,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AKCDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlavForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GlavForm.resx">
       <DependentUpon>GlavForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +204,7 @@
     <Content Include="image\человек.png" />
     <Content Include="Resources\excel.png" />
     <None Include="Resources\exit.png" />
+    <Content Include="Resources\logo.ico" />
     <Content Include="Resources\pdf.png" />
     <Content Include="Resources\powerpoint.png" />
     <Resource Include="Resources\word.png">

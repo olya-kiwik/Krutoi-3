@@ -20,7 +20,6 @@ namespace Architecture_KC
     {
         private bool isDragging = false;
         private Point lastCursorPos;
-        private string selectedFilePath;
 
         private bool _isAdmin;
         public GlavForm(bool isAdmin)
@@ -97,53 +96,19 @@ namespace Architecture_KC
         private void GlavForm_Load(object sender, EventArgs e)
         {
             guna2Button4.Visible = _isAdmin;
-            guna2Button7.Visible = _isAdmin;
         }
 
 
         private void guna2Button4_Click(object sender, EventArgs e) //Выбор файла для загрузки
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Word Files (*.docx)|*.docx|All Files (*.*)|*.*";
+            AddFiles addFiles = new AddFiles();
+            addFiles.Show();
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                selectedFilePath = openFileDialog.FileName;
-                MessageBox.Show($"Файл {openFileDialog.FileName} выбран!", "Успешно",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void guna2Button7_Click(object sender, EventArgs e) // Добавление файла в бд
-        {
-            string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
-            
-            if (string.IsNullOrEmpty(selectedFilePath))
-            {
-                MessageBox.Show("Файл не выбран!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            using (SqlConnection conn = new SqlConnection(con))
-            {
-                try
-                {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand("Insert INTO Resurs (Teoria) values (@Teoria) ", conn);
-                    command.Parameters.Add("@Teoria", SqlDbType.VarBinary).Value = File.ReadAllBytes(selectedFilePath);
-                    command.ExecuteNonQuery();
-                    conn.Close();
-
-                    MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel2.Controls.Clear();
             SelectUC1();
         }
 
