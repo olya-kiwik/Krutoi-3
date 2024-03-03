@@ -18,6 +18,7 @@ namespace Architecture_KC
 {
     public partial class GlavForm : Form
     {
+
         private bool isDragging = false;
         private Point lastCursorPos;
 
@@ -26,46 +27,67 @@ namespace Architecture_KC
         {
             InitializeComponent();
             _isAdmin = isAdmin;
+            loadingCicle.Visible = false;
         }
 
         string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
         public void SelectUC1()
         {
-            SqlConnection sqlConnection = new SqlConnection(conn);
-            string query = "SELECT * FROM Resurs";
-
-            sqlConnection.Open();
-
-            using (SqlCommand command = new SqlCommand(query, sqlConnection))
+            loadingCicle.Start();
+            loadingCicle.Visible = true;
+            try
             {
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+                
+                SqlConnection sqlConnection = new SqlConnection(conn);
+                string query = "SELECT * FROM txtResurs";
+
+                sqlConnection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, sqlConnection))
                 {
-                    TheorUC uc1 = new TheorUC();
-                    
-                    //uc1.PictureBox1.Image = new Bitmap();
-                    uc1.Label2.Text = reader.GetInt32(0).ToString();
-                    uc1.Label1.Text = reader.GetString(1);
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        TheorUC uc1 = new TheorUC(_isAdmin);
 
-                    flowLayoutPanel2.Controls.Add(uc1);
+                        //uc1.PictureBox1.Image = new Bitmap();
+                        uc1.Label2.Text = reader.GetInt32(0).ToString();
+                        uc1.Label1.Text = reader.GetString(1);
+
+                        flowLayoutPanel2.Controls.Add(uc1);
 
 
+                    }
                 }
+                sqlConnection.Close();
+                loadingCicle.Stop();
+                loadingCicle.Visible = false;
             }
-
-            sqlConnection.Close();
+            catch(Exception ex)
+            {
+                loadingCicle.Stop();
+                loadingCicle.Visible = false;
+                MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            LodinForm lodinForm = new LodinForm();
-            lodinForm.Show();
-            Close();
+            
+            var quit = MessageBox.Show("Вы действительно хотите выйти из акаунта?", "Закрыть", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (quit == DialogResult.Yes)
+            {
+                LodinForm lodinForm = new LodinForm();
+                lodinForm.Show();
+                Close();
+            }
+            
         }
 
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        public  void FLPreset()
         {
-            Application.Exit();
+            flowLayoutPanel2.Controls.Clear();
+            SelectUC1();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -96,6 +118,15 @@ namespace Architecture_KC
         private void GlavForm_Load(object sender, EventArgs e)
         {
             guna2Button4.Visible = _isAdmin;
+            if(_isAdmin == true)
+            {
+                guna2TextBox1.Size = new System.Drawing.Size(720, 45);
+            }
+            else
+            {
+                guna2TextBox1.Size = new System.Drawing.Size(827, 45);
+            }
+            
         }
 
 
@@ -108,8 +139,35 @@ namespace Architecture_KC
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            FLPreset();
+            label3.Text = "txtResurs";
+        }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
             flowLayoutPanel2.Controls.Clear();
-            SelectUC1();
+            string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand($"Select * from {label3.Text} where Name like @Searth", con);
+                cmd.Parameters.AddWithValue("@Searth", (string.Format("{0}%", guna2TextBox1.Text)));
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    TheorUC theorUC = new TheorUC(_isAdmin);
+                    //theorUC.PictureBox1.Image
+                    theorUC.Label2.Text = reader.GetInt32(0).ToString();
+                    theorUC.Label1.Text = reader.GetString(1);
+
+                    flowLayoutPanel2.Controls.Add(theorUC);
+                }
+                reader.Close();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
         }
 
 
@@ -124,5 +182,16 @@ namespace Architecture_KC
             }
 
         }
+
+        private void CloseApp_Click(object sender, EventArgs e)
+        {
+            var quit = MessageBox.Show("Вы действительно хотите закрыть приложение?", "Закрыть", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (quit == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        
     }
 }

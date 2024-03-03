@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.delBt = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::Architecture_KC.Properties.Resources.теория;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(108, 114);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -62,6 +51,7 @@
             this.guna2Button1.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.BorderRadius = 5;
             this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -86,16 +76,52 @@
             this.label2.Text = "label2";
             this.label2.Visible = false;
             // 
+            // delBt
+            // 
+            this.delBt.BorderColor = System.Drawing.Color.DarkGray;
+            this.delBt.BorderRadius = 5;
+            this.delBt.BorderThickness = 1;
+            this.delBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delBt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.delBt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.delBt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.delBt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.delBt.FillColor = System.Drawing.Color.Transparent;
+            this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.delBt.ForeColor = System.Drawing.Color.Black;
+            this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
+            this.delBt.Location = new System.Drawing.Point(654, 42);
+            this.delBt.Name = "delBt";
+            this.delBt.Size = new System.Drawing.Size(98, 48);
+            this.delBt.TabIndex = 4;
+            this.delBt.Text = "Удалить";
+            this.delBt.Visible = false;
+            this.delBt.Click += new System.EventHandler(this.Del_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::Architecture_KC.Properties.Resources.теория;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(108, 114);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // TheorUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.delBt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "TheorUC";
             this.Size = new System.Drawing.Size(800, 120);
+            this.Load += new System.EventHandler(this.TheorUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,5 +134,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Button delBt;
     }
 }

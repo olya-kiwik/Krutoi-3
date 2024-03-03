@@ -26,7 +26,7 @@ namespace Architecture_KC {
         
         private PrepodDataTable tablePrepod;
         
-        private ResursDataTable tableResurs;
+        private txtResursDataTable tabletxtResurs;
         
         private StudDataTable tableStud;
         
@@ -63,8 +63,8 @@ namespace Architecture_KC {
                 if ((ds.Tables["Prepod"] != null)) {
                     base.Tables.Add(new PrepodDataTable(ds.Tables["Prepod"]));
                 }
-                if ((ds.Tables["Resurs"] != null)) {
-                    base.Tables.Add(new ResursDataTable(ds.Tables["Resurs"]));
+                if ((ds.Tables["txtResurs"] != null)) {
+                    base.Tables.Add(new txtResursDataTable(ds.Tables["txtResurs"]));
                 }
                 if ((ds.Tables["Stud"] != null)) {
                     base.Tables.Add(new StudDataTable(ds.Tables["Stud"]));
@@ -101,9 +101,9 @@ namespace Architecture_KC {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ResursDataTable Resurs {
+        public txtResursDataTable txtResurs {
             get {
-                return this.tableResurs;
+                return this.tabletxtResurs;
             }
         }
         
@@ -187,8 +187,8 @@ namespace Architecture_KC {
                 if ((ds.Tables["Prepod"] != null)) {
                     base.Tables.Add(new PrepodDataTable(ds.Tables["Prepod"]));
                 }
-                if ((ds.Tables["Resurs"] != null)) {
-                    base.Tables.Add(new ResursDataTable(ds.Tables["Resurs"]));
+                if ((ds.Tables["txtResurs"] != null)) {
+                    base.Tables.Add(new txtResursDataTable(ds.Tables["txtResurs"]));
                 }
                 if ((ds.Tables["Stud"] != null)) {
                     base.Tables.Add(new StudDataTable(ds.Tables["Stud"]));
@@ -232,10 +232,10 @@ namespace Architecture_KC {
                     this.tablePrepod.InitVars();
                 }
             }
-            this.tableResurs = ((ResursDataTable)(base.Tables["Resurs"]));
+            this.tabletxtResurs = ((txtResursDataTable)(base.Tables["txtResurs"]));
             if ((initTable == true)) {
-                if ((this.tableResurs != null)) {
-                    this.tableResurs.InitVars();
+                if ((this.tabletxtResurs != null)) {
+                    this.tabletxtResurs.InitVars();
                 }
             }
             this.tableStud = ((StudDataTable)(base.Tables["Stud"]));
@@ -257,8 +257,8 @@ namespace Architecture_KC {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablePrepod = new PrepodDataTable();
             base.Tables.Add(this.tablePrepod);
-            this.tableResurs = new ResursDataTable();
-            base.Tables.Add(this.tableResurs);
+            this.tabletxtResurs = new txtResursDataTable();
+            base.Tables.Add(this.tabletxtResurs);
             this.tableStud = new StudDataTable();
             base.Tables.Add(this.tableStud);
             this.relationFK_Prepod_Stud = new global::System.Data.DataRelation("FK_Prepod_Stud", new global::System.Data.DataColumn[] {
@@ -275,7 +275,7 @@ namespace Architecture_KC {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeResurs() {
+        private bool ShouldSerializetxtResurs() {
             return false;
         }
         
@@ -344,7 +344,7 @@ namespace Architecture_KC {
         public delegate void PrepodRowChangeEventHandler(object sender, PrepodRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void ResursRowChangeEventHandler(object sender, ResursRowChangeEvent e);
+        public delegate void txtResursRowChangeEventHandler(object sender, txtResursRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void StudRowChangeEventHandler(object sender, StudRowChangeEvent e);
@@ -678,7 +678,7 @@ namespace Architecture_KC {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ResursDataTable : global::System.Data.TypedTableBase<ResursRow> {
+        public partial class txtResursDataTable : global::System.Data.TypedTableBase<txtResursRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -688,8 +688,8 @@ namespace Architecture_KC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ResursDataTable() {
-                this.TableName = "Resurs";
+            public txtResursDataTable() {
+                this.TableName = "txtResurs";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -697,7 +697,7 @@ namespace Architecture_KC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ResursDataTable(global::System.Data.DataTable table) {
+            internal txtResursDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -714,7 +714,7 @@ namespace Architecture_KC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected ResursDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected txtResursDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -754,47 +754,47 @@ namespace Architecture_KC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ResursRow this[int index] {
+            public txtResursRow this[int index] {
                 get {
-                    return ((ResursRow)(this.Rows[index]));
+                    return ((txtResursRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ResursRowChangeEventHandler ResursRowChanging;
+            public event txtResursRowChangeEventHandler txtResursRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ResursRowChangeEventHandler ResursRowChanged;
+            public event txtResursRowChangeEventHandler txtResursRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ResursRowChangeEventHandler ResursRowDeleting;
+            public event txtResursRowChangeEventHandler txtResursRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ResursRowChangeEventHandler ResursRowDeleted;
+            public event txtResursRowChangeEventHandler txtResursRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddResursRow(ResursRow row) {
+            public void AddtxtResursRow(txtResursRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ResursRow AddResursRow(string id, string Teoria, string video) {
-                ResursRow rowResursRow = ((ResursRow)(this.NewRow()));
+            public txtResursRow AddtxtResursRow(string id, string Teoria, string video) {
+                txtResursRow rowtxtResursRow = ((txtResursRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         Teoria,
                         video};
-                rowResursRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowResursRow);
-                return rowResursRow;
+                rowtxtResursRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtxtResursRow);
+                return rowtxtResursRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ResursDataTable cln = ((ResursDataTable)(base.Clone()));
+                txtResursDataTable cln = ((txtResursDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -802,7 +802,7 @@ namespace Architecture_KC {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ResursDataTable();
+                return new txtResursDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -829,28 +829,28 @@ namespace Architecture_KC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ResursRow NewResursRow() {
-                return ((ResursRow)(this.NewRow()));
+            public txtResursRow NewtxtResursRow() {
+                return ((txtResursRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ResursRow(builder);
+                return new txtResursRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ResursRow);
+                return typeof(txtResursRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ResursRowChanged != null)) {
-                    this.ResursRowChanged(this, new ResursRowChangeEvent(((ResursRow)(e.Row)), e.Action));
+                if ((this.txtResursRowChanged != null)) {
+                    this.txtResursRowChanged(this, new txtResursRowChangeEvent(((txtResursRow)(e.Row)), e.Action));
                 }
             }
             
@@ -858,8 +858,8 @@ namespace Architecture_KC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ResursRowChanging != null)) {
-                    this.ResursRowChanging(this, new ResursRowChangeEvent(((ResursRow)(e.Row)), e.Action));
+                if ((this.txtResursRowChanging != null)) {
+                    this.txtResursRowChanging(this, new txtResursRowChangeEvent(((txtResursRow)(e.Row)), e.Action));
                 }
             }
             
@@ -867,8 +867,8 @@ namespace Architecture_KC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ResursRowDeleted != null)) {
-                    this.ResursRowDeleted(this, new ResursRowChangeEvent(((ResursRow)(e.Row)), e.Action));
+                if ((this.txtResursRowDeleted != null)) {
+                    this.txtResursRowDeleted(this, new txtResursRowChangeEvent(((txtResursRow)(e.Row)), e.Action));
                 }
             }
             
@@ -876,14 +876,14 @@ namespace Architecture_KC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ResursRowDeleting != null)) {
-                    this.ResursRowDeleting(this, new ResursRowChangeEvent(((ResursRow)(e.Row)), e.Action));
+                if ((this.txtResursRowDeleting != null)) {
+                    this.txtResursRowDeleting(this, new txtResursRowChangeEvent(((txtResursRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveResursRow(ResursRow row) {
+            public void RemovetxtResursRow(txtResursRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -910,7 +910,7 @@ namespace Architecture_KC {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ResursDataTable";
+                attribute2.FixedValue = "txtResursDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1409,15 +1409,15 @@ namespace Architecture_KC {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ResursRow : global::System.Data.DataRow {
+        public partial class txtResursRow : global::System.Data.DataRow {
             
-            private ResursDataTable tableResurs;
+            private txtResursDataTable tabletxtResurs;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ResursRow(global::System.Data.DataRowBuilder rb) : 
+            internal txtResursRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableResurs = ((ResursDataTable)(this.Table));
+                this.tabletxtResurs = ((txtResursDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1425,14 +1425,14 @@ namespace Architecture_KC {
             public string id {
                 get {
                     try {
-                        return ((string)(this[this.tableResurs.idColumn]));
+                        return ((string)(this[this.tabletxtResurs.idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'id\' в таблице \'Resurs\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'id\' в таблице \'txtResurs\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableResurs.idColumn] = value;
+                    this[this.tabletxtResurs.idColumn] = value;
                 }
             }
             
@@ -1441,14 +1441,14 @@ namespace Architecture_KC {
             public string Teoria {
                 get {
                     try {
-                        return ((string)(this[this.tableResurs.TeoriaColumn]));
+                        return ((string)(this[this.tabletxtResurs.TeoriaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Teoria\' в таблице \'Resurs\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Teoria\' в таблице \'txtResurs\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableResurs.TeoriaColumn] = value;
+                    this[this.tabletxtResurs.TeoriaColumn] = value;
                 }
             }
             
@@ -1457,51 +1457,51 @@ namespace Architecture_KC {
             public string video {
                 get {
                     try {
-                        return ((string)(this[this.tableResurs.videoColumn]));
+                        return ((string)(this[this.tabletxtResurs.videoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'video\' в таблице \'Resurs\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'video\' в таблице \'txtResurs\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableResurs.videoColumn] = value;
+                    this[this.tabletxtResurs.videoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
-                return this.IsNull(this.tableResurs.idColumn);
+                return this.IsNull(this.tabletxtResurs.idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetidNull() {
-                this[this.tableResurs.idColumn] = global::System.Convert.DBNull;
+                this[this.tabletxtResurs.idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTeoriaNull() {
-                return this.IsNull(this.tableResurs.TeoriaColumn);
+                return this.IsNull(this.tabletxtResurs.TeoriaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTeoriaNull() {
-                this[this.tableResurs.TeoriaColumn] = global::System.Convert.DBNull;
+                this[this.tabletxtResurs.TeoriaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsvideoNull() {
-                return this.IsNull(this.tableResurs.videoColumn);
+                return this.IsNull(this.tabletxtResurs.videoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetvideoNull() {
-                this[this.tableResurs.videoColumn] = global::System.Convert.DBNull;
+                this[this.tabletxtResurs.videoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1664,22 +1664,22 @@ namespace Architecture_KC {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class ResursRowChangeEvent : global::System.EventArgs {
+        public class txtResursRowChangeEvent : global::System.EventArgs {
             
-            private ResursRow eventRow;
+            private txtResursRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ResursRowChangeEvent(ResursRow row, global::System.Data.DataRowAction action) {
+            public txtResursRowChangeEvent(txtResursRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ResursRow Row {
+            public txtResursRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1875,9 +1875,9 @@ namespace Architecture_KC.AKCDataSet1TableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Prepod] ([№Test], [Group], [FIO_stud], [Result_test], [Estimat" +
-                "ion]) VALUES (@p1, @Group, @FIO_stud, @Result_test, @Estimation);\r\nSELECT [№Test" +
-                "], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE ([Group] = @Grou" +
-                "p)";
+                "ion]) VALUES (@p1, @Group, @FIO_stud, @Result_test, @Estimation);\nSELECT [№Test]" +
+                ", [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE ([Group] = @Group" +
+                ")";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "№Test", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Group", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Group", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2192,7 +2192,7 @@ SELECT [№Test], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE (
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ResursTableAdapter : global::System.ComponentModel.Component {
+    public partial class txtResursTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2206,7 +2206,7 @@ SELECT [№Test], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE (
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ResursTableAdapter() {
+        public txtResursTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2303,15 +2303,15 @@ SELECT [№Test], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE (
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Resurs";
+            tableMapping.DataSetTable = "txtResurs";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("Teoria", "Teoria");
             tableMapping.ColumnMappings.Add("video", "video");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Resurs] ([id], [Teoria], [video]) VALUES (@id, @Teoria, @video" +
-                ")";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[txtResurs] ([id], [Teoria], [video]) VALUES (@id, @Teoria, @vi" +
+                "deo)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Teoria", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Teoria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2331,7 +2331,7 @@ SELECT [№Test], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE (
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, Teoria, video FROM dbo.Resurs";
+            this._commandCollection[0].CommandText = "SELECT id, Teoria, video FROM dbo.txtResurs";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2339,7 +2339,7 @@ SELECT [№Test], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AKCDataSet1.ResursDataTable dataTable) {
+        public virtual int Fill(AKCDataSet1.txtResursDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2352,9 +2352,9 @@ SELECT [№Test], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AKCDataSet1.ResursDataTable GetData() {
+        public virtual AKCDataSet1.txtResursDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AKCDataSet1.ResursDataTable dataTable = new AKCDataSet1.ResursDataTable();
+            AKCDataSet1.txtResursDataTable dataTable = new AKCDataSet1.txtResursDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2362,7 +2362,7 @@ SELECT [№Test], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE (
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AKCDataSet1.ResursDataTable dataTable) {
+        public virtual int Update(AKCDataSet1.txtResursDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -2370,7 +2370,7 @@ SELECT [№Test], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(AKCDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Resurs");
+            return this.Adapter.Update(dataSet, "txtResurs");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2568,8 +2568,8 @@ SELECT [№Test], [Group], FIO_stud, Result_test, Estimation FROM Prepod WHERE (
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Stud] ([№Test], [Group], [FIO], [Estimation]) VALUES (@p1, @Gr" +
-                "oup, @FIO, @Estimation);\r\nSELECT [№Test], [Group], FIO, Estimation FROM Stud WHE" +
-                "RE ([Group] = @Group)";
+                "oup, @FIO, @Estimation);\nSELECT [№Test], [Group], FIO, Estimation FROM Stud WHER" +
+                "E ([Group] = @Group)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "№Test", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Group", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Group", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2857,7 +2857,7 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
         
         private PrepodTableAdapter _prepodTableAdapter;
         
-        private ResursTableAdapter _resursTableAdapter;
+        private txtResursTableAdapter _txtResursTableAdapter;
         
         private StudTableAdapter _studTableAdapter;
         
@@ -2895,12 +2895,12 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ResursTableAdapter ResursTableAdapter {
+        public txtResursTableAdapter txtResursTableAdapter {
             get {
-                return this._resursTableAdapter;
+                return this._txtResursTableAdapter;
             }
             set {
-                this._resursTableAdapter = value;
+                this._txtResursTableAdapter = value;
             }
         }
         
@@ -2941,9 +2941,9 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
                             && (this._prepodTableAdapter.Connection != null))) {
                     return this._prepodTableAdapter.Connection;
                 }
-                if (((this._resursTableAdapter != null) 
-                            && (this._resursTableAdapter.Connection != null))) {
-                    return this._resursTableAdapter.Connection;
+                if (((this._txtResursTableAdapter != null) 
+                            && (this._txtResursTableAdapter.Connection != null))) {
+                    return this._txtResursTableAdapter.Connection;
                 }
                 if (((this._studTableAdapter != null) 
                             && (this._studTableAdapter.Connection != null))) {
@@ -2965,7 +2965,7 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
                 if ((this._prepodTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._resursTableAdapter != null)) {
+                if ((this._txtResursTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._studTableAdapter != null)) {
@@ -2991,12 +2991,12 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._resursTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Resurs.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._txtResursTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.txtResurs.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._resursTableAdapter.Update(updatedRows));
+                    result = (result + this._txtResursTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -3027,11 +3027,11 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._resursTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Resurs.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._txtResursTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.txtResurs.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._resursTableAdapter.Update(addedRows));
+                    result = (result + this._txtResursTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -3061,11 +3061,11 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._resursTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Resurs.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._txtResursTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.txtResurs.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._resursTableAdapter.Update(deletedRows));
+                    result = (result + this._txtResursTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3121,8 +3121,8 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._resursTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._resursTableAdapter.Connection) == false))) {
+            if (((this._txtResursTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._txtResursTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -3172,13 +3172,13 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
                         adaptersWithAcceptChangesDuringUpdate.Add(this._prepodTableAdapter.Adapter);
                     }
                 }
-                if ((this._resursTableAdapter != null)) {
-                    revertConnections.Add(this._resursTableAdapter, this._resursTableAdapter.Connection);
-                    this._resursTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._resursTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._resursTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._resursTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._resursTableAdapter.Adapter);
+                if ((this._txtResursTableAdapter != null)) {
+                    revertConnections.Add(this._txtResursTableAdapter, this._txtResursTableAdapter.Connection);
+                    this._txtResursTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._txtResursTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._txtResursTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._txtResursTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._txtResursTableAdapter.Adapter);
                     }
                 }
                 if ((this._studTableAdapter != null)) {
@@ -3252,9 +3252,9 @@ SELECT [№Test], [Group], FIO, Estimation FROM Stud WHERE ([Group] = @Group)";
                     this._prepodTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._prepodTableAdapter]));
                     this._prepodTableAdapter.Transaction = null;
                 }
-                if ((this._resursTableAdapter != null)) {
-                    this._resursTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._resursTableAdapter]));
-                    this._resursTableAdapter.Transaction = null;
+                if ((this._txtResursTableAdapter != null)) {
+                    this._txtResursTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._txtResursTableAdapter]));
+                    this._txtResursTableAdapter.Transaction = null;
                 }
                 if ((this._studTableAdapter != null)) {
                     this._studTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._studTableAdapter]));

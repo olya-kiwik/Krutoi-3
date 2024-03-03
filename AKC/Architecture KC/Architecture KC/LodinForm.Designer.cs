@@ -66,7 +66,7 @@
             this.guna2Button1.FillColor = System.Drawing.SystemColors.Menu;
             this.guna2Button1.Font = new System.Drawing.Font("Sitka Text", 15.75F);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(177, 318);
+            this.guna2Button1.Location = new System.Drawing.Point(177, 322);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(123, 45);
             this.guna2Button1.TabIndex = 7;

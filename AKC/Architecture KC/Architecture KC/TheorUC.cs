@@ -15,9 +15,11 @@ namespace Architecture_KC
 {
     public partial class TheorUC : UserControl
     {
-        public TheorUC()
+        private bool _isAdmin;
+        public TheorUC(bool isAdmin)
         {
             InitializeComponent();
+            _isAdmin = isAdmin;
         }
 
         public Guna2PictureBox PictureBox1
@@ -37,16 +39,21 @@ namespace Architecture_KC
             get { return label2; }
             set { label2 = value; }
         }
-
+        /*public bool GBT
+        {
+            get { return delBt.Visible; }
+            set { delBt.Visible = value;}
+        }*/
+        string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+            
             using (SqlConnection conn = new SqlConnection(con))
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand command = new SqlCommand($"SELECT Teoria from Resurs where id={label2.Text}", conn);
+                    SqlCommand command = new SqlCommand($"SELECT Teoria from txtResurs where id={label2.Text}", conn);
                    
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
@@ -72,6 +79,43 @@ namespace Architecture_KC
                     MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void Del_Click(object sender, EventArgs e)
+        {
+            
+
+            var deel = MessageBox.Show("Вы действительно хотите удалить запись?" +
+                "\nПосле удаления востановить запись будет невозможно.", "Закрыть", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if (deel == DialogResult.Yes)
+            {
+                try
+                {
+                    SqlConnection sqlConnection = new SqlConnection(con);
+                    string del = $"DELETE FROM txtResurs WHERE id={label2.Text}";
+
+                    sqlConnection.Open();
+
+                    using (SqlCommand command = new SqlCommand(del, sqlConnection))
+                    {
+                        command.ExecuteReader();
+                    }
+                    sqlConnection.Close();
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            
+        }
+
+        private void TheorUC_Load(object sender, EventArgs e)
+        {
+            delBt.Visible = _isAdmin;
         }
     }
 }

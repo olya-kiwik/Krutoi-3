@@ -71,7 +71,7 @@ namespace Architecture_KC
                 try
                 {
                     conn.Open();
-                    SqlCommand command = new SqlCommand($"Insert INTO Resurs (Teoria, Name) values (@Teoria,@Name)", conn);
+                    SqlCommand command = new SqlCommand($"Insert INTO txtResurs (Teoria, Name) values (@Teoria,@Name)", conn);
                     command.Parameters.Add("@Teoria", SqlDbType.VarBinary).Value = File.ReadAllBytes(selectedFilePath);
                     command.Parameters.AddWithValue("@Name", guna2TextBox1.Text);
                     command.ExecuteNonQuery();
@@ -85,6 +85,8 @@ namespace Architecture_KC
                     MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+
+            
         }
     }
 }
