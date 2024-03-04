@@ -123,3 +123,52 @@ C:\Users\0_206_15\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\
 C:\Users\0_206_15\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.g.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.g.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddFiles.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.AssemblyReference.cache
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.g.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.exe
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.pdb
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.exe.config
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.exe
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.pdb
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\Guna.UI2.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\MySql.Data.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Buffers.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.IO.Pipelines.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Memory.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\ZstdSharp.dll
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.pdb
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\MySql.Data.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Buffers.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.IO.Pipelines.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Memory.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddFiles.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.GlavForm.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.LodinForm.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.Properties.Resources.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.TheorUC.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.VideoForm.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.GenerateResource.cache
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CoreCompileInputs.cache
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CopyComplete
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.UserControl1.resources

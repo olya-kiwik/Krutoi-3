@@ -60,6 +60,7 @@ namespace Architecture_KC
                     {
                         byte[] filedata = (byte[])reader["Teoria"];
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.FileName = label1.Text;
                         saveFileDialog.Filter = "Text files (*.docx)|.docx|Excel (*.xlsx)|.xlsx|PDF (*.pdf)|.pdf|All Files (*.*)|*.* ";
                         saveFileDialog.FilterIndex = 0;
 
@@ -83,9 +84,7 @@ namespace Architecture_KC
 
         private void Del_Click(object sender, EventArgs e)
         {
-            
-
-            var deel = MessageBox.Show("Вы действительно хотите удалить запись?" +
+            var deel = MessageBox.Show($"Вы действительно хотите удалить запись: {label1.Text}?" +
                 "\nПосле удаления востановить запись будет невозможно.", "Закрыть", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             
             if (deel == DialogResult.Yes)
@@ -102,17 +101,17 @@ namespace Architecture_KC
                         command.ExecuteReader();
                     }
                     sqlConnection.Close();
-                    
 
+                    Methods.ResetLayout1();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
-            
-        }
 
+                
+            }           
+        }
         private void TheorUC_Load(object sender, EventArgs e)
         {
             delBt.Visible = _isAdmin;

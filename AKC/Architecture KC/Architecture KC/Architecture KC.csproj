@@ -110,11 +110,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AKCDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="EditVideo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="EditVideo.Designer.cs">
+      <DependentUpon>EditVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFilesForm.Designer.cs">
+      <DependentUpon>AddFilesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlavForm.cs">
       <SubType>Form</SubType>
@@ -128,6 +134,7 @@
     <Compile Include="LodinForm.Designer.cs">
       <DependentUpon>LodinForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Methods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -145,6 +152,12 @@
     </Compile>
     <Compile Include="TheorUC.Designer.cs">
       <DependentUpon>TheorUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VideoUC.Designer.cs">
+      <DependentUpon>VideoUC.cs</DependentUpon>
     </Compile>
     <Compile Include="VideoForm.cs">
       <SubType>Form</SubType>
@@ -168,8 +181,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="EditVideo.resx">
+      <DependentUpon>EditVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFilesForm.resx">
+      <DependentUpon>AddFilesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlavForm.resx">
       <DependentUpon>GlavForm.cs</DependentUpon>
@@ -184,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TheorUC.resx">
       <DependentUpon>TheorUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoUC.resx">
+      <DependentUpon>VideoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VideoForm.resx">
       <DependentUpon>VideoForm.cs</DependentUpon>
@@ -202,11 +221,15 @@
     <Content Include="image\тест.png" />
     <Content Include="image\тире.png" />
     <Content Include="image\человек.png" />
+    <Content Include="Resources\edit.png" />
+    <None Include="Resources\edit1.png" />
     <Content Include="Resources\excel.png" />
     <None Include="Resources\exit.png" />
     <None Include="Resources\free-icon-bin-8556181.png" />
+    <None Include="Resources\free-icon-check-1055183.png" />
     <Content Include="Resources\logo.ico" />
     <Content Include="Resources\pdf.png" />
+    <None Include="Resources\play_button.png" />
     <Content Include="Resources\powerpoint.png" />
     <Resource Include="Resources\word.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

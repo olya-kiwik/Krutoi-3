@@ -28,10 +28,27 @@ namespace Architecture_KC
             InitializeComponent();
             _isAdmin = isAdmin;
             loadingCicle.Visible = false;
+            guna2TextBox1.Visible = false;
+            Methods.ResetLayout1 = FLP1reset;
+
+        }
+
+        private void GlavForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void CloseApp_Click(object sender, EventArgs e)
+        {
+            var quit = MessageBox.Show("Вы действительно хотите закрыть приложение?", "Закрыть", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (quit == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
-        public void SelectUC1()
+        public void SelectTheorUC1()
         {
             loadingCicle.Start();
             loadingCicle.Visible = true;
@@ -71,6 +88,49 @@ namespace Architecture_KC
             }
         }
 
+        public void SelectVideoUC2() 
+        {
+            loadingCicle.Start();
+            loadingCicle.Visible = true;
+            try
+            {
+
+                SqlConnection sqlConnection = new SqlConnection(conn);
+                string query = "SELECT * FROM videoResurs";
+
+                sqlConnection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, sqlConnection))
+                {
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        VideoUC uc2 = new VideoUC();
+
+                        byte[] img = (byte[])(reader[3]);
+                        MemoryStream ms = new MemoryStream(img);
+
+                        uc2.ImageVideo.Image = Image.FromStream(ms);
+                        uc2.LabelId.Text = reader.GetInt32(0).ToString();
+                        uc2.LabelName.Text = reader.GetString(1);
+                        uc2.Link.Text = reader.GetString(2);
+
+                        flowLayoutPanel2.Controls.Add(uc2);
+
+                    }
+                }
+                sqlConnection.Close();
+                loadingCicle.Stop();
+                loadingCicle.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                loadingCicle.Stop();
+                loadingCicle.Visible = false;
+                MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             
@@ -79,15 +139,20 @@ namespace Architecture_KC
             {
                 LodinForm lodinForm = new LodinForm();
                 lodinForm.Show();
-                Close();
+                Hide();
             }
             
         }
 
-        public  void FLPreset()
+        public void FLP1reset()
         {
             flowLayoutPanel2.Controls.Clear();
-            SelectUC1();
+            SelectTheorUC1();
+        }
+
+        public void FLP2reset()
+        {
+            flowLayoutPanel2.Controls.Clear();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -117,7 +182,7 @@ namespace Architecture_KC
         
         private void GlavForm_Load(object sender, EventArgs e)
         {
-            guna2Button4.Visible = _isAdmin;
+            
             if(_isAdmin == true)
             {
                 guna2TextBox1.Size = new System.Drawing.Size(720, 45);
@@ -137,13 +202,20 @@ namespace Architecture_KC
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)//Лекции
         {
-            FLPreset();
             label3.Text = "txtResurs";
+            guna2TextBox1.Visible = true;
+            guna2Button4.Visible = _isAdmin;
+            FLP1reset();
         }
 
-        private void search_TextChanged(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)//Видео
+        {
+            label3.Text = "videoResurs";
+        }
+
+        private void searchLec_TextChanged(object sender, EventArgs e)
         {
             flowLayoutPanel2.Controls.Clear();
             string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
@@ -177,19 +249,10 @@ namespace Architecture_KC
             _ClickLol++;
             if(_ClickLol == 10)
             {
-                Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+                Process.Start("https://www.youtube.com/watch?v=0tOXxuLcaog");
                 _ClickLol = 0;
             }
 
-        }
-
-        private void CloseApp_Click(object sender, EventArgs e)
-        {
-            var quit = MessageBox.Show("Вы действительно хотите закрыть приложение?", "Закрыть", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (quit == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
         }
 
         
