@@ -40,6 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.label1.Location = new System.Drawing.Point(117, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 24);
@@ -58,7 +59,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.guna2Button1.Location = new System.Drawing.Point(121, 42);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(168, 48);
@@ -69,6 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.label2.Location = new System.Drawing.Point(204, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
@@ -88,7 +90,7 @@
             this.delBt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.delBt.FillColor = System.Drawing.Color.Transparent;
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.delBt.ForeColor = System.Drawing.Color.Black;
+            this.delBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
             this.delBt.Location = new System.Drawing.Point(654, 42);
             this.delBt.Name = "delBt";
