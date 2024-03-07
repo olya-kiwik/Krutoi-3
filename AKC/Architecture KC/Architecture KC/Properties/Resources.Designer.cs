@@ -113,9 +113,9 @@ namespace Architecture_KC.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap play_button {
+        internal static System.Drawing.Bitmap play_button1 {
             get {
-                object obj = ResourceManager.GetObject("play_button", resourceCulture);
+                object obj = ResourceManager.GetObject("play-button1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

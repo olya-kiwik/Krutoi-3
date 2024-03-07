@@ -30,6 +30,7 @@ namespace Architecture_KC
             loadingCicle.Visible = false;
             guna2TextBox1.Visible = false;
             Methods.ResetLayout1 = FLP1reset;
+            Methods.ResetLayout2 = FLP2reset;
 
         }
 
@@ -105,12 +106,8 @@ namespace Architecture_KC
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        VideoUC uc2 = new VideoUC();
+                        VideoUC uc2 = new VideoUC(_isAdmin);
 
-                        byte[] img = (byte[])(reader[3]);
-                        MemoryStream ms = new MemoryStream(img);
-
-                        uc2.ImageVideo.Image = Image.FromStream(ms);
                         uc2.LabelId.Text = reader.GetInt32(0).ToString();
                         uc2.LabelName.Text = reader.GetString(1);
                         uc2.Link.Text = reader.GetString(2);
@@ -153,6 +150,7 @@ namespace Architecture_KC
         public void FLP2reset()
         {
             flowLayoutPanel2.Controls.Clear();
+            SelectVideoUC2();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -197,13 +195,22 @@ namespace Architecture_KC
 
         private void guna2Button4_Click(object sender, EventArgs e) //Выбор файла для загрузки
         {
-            AddFiles addFiles = new AddFiles();
-            addFiles.Show();
-
+            if (guna2Button4.Text == "Добавить видео")
+            {
+                AddVideo addVideo = new AddVideo();
+                addVideo.Show();
+            }
+            else if (guna2Button4.Text == "Добавить файл")
+            {
+                AddFiles addFiles = new AddFiles();
+                addFiles.Show();
+            }
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)//Лекции
         {
+            guna2Button4.Text = "Добавить файл";
             label3.Text = "txtResurs";
             guna2TextBox1.Visible = true;
             guna2Button4.Visible = _isAdmin;
@@ -212,7 +219,11 @@ namespace Architecture_KC
 
         private void guna2Button2_Click(object sender, EventArgs e)//Видео
         {
+            guna2Button4.Text = "Добавить видео";
             label3.Text = "videoResurs";
+            guna2TextBox1.Visible = true;
+            guna2Button4.Visible = _isAdmin;
+            FLP2reset();
         }
 
         private void searchLec_TextChanged(object sender, EventArgs e)
@@ -227,15 +238,37 @@ namespace Architecture_KC
                 cmd.Parameters.AddWithValue("@Searth", (string.Format("{0}%", guna2TextBox1.Text)));
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                while (reader.Read())
+                if (label3.Text == "txtResurs")
                 {
-                    TheorUC theorUC = new TheorUC(_isAdmin);
-                    //theorUC.PictureBox1.Image
-                    theorUC.Label2.Text = reader.GetInt32(0).ToString();
-                    theorUC.Label1.Text = reader.GetString(1);
 
-                    flowLayoutPanel2.Controls.Add(theorUC);
+                    while (reader.Read())
+                    {
+
+                        TheorUC theorUC = new TheorUC(_isAdmin);
+                        
+                        theorUC.Label2.Text = reader.GetInt32(0).ToString();
+                        theorUC.Label1.Text = reader.GetString(1);
+
+                        flowLayoutPanel2.Controls.Add(theorUC);
+                    }
+
                 }
+                else if (label3.Text == "videoResurs")
+                {                 
+                                        
+                    while (reader.Read())
+                    {
+
+                        VideoUC videoUC = new VideoUC(_isAdmin);
+
+                        videoUC.LabelName.Text = reader.GetString(1);
+                        videoUC.LabelId.Text = reader.GetInt32(0).ToString();
+
+                        flowLayoutPanel2.Controls.Add(videoUC);
+                    }
+
+                }
+                
                 reader.Close();
                 cmd.ExecuteNonQuery();
                 con.Close();

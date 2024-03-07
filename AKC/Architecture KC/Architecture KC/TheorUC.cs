@@ -39,11 +39,7 @@ namespace Architecture_KC
             get { return label2; }
             set { label2 = value; }
         }
-        /*public bool GBT
-        {
-            get { return delBt.Visible; }
-            set { delBt.Visible = value;}
-        }*/
+        
         string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
         private void guna2Button1_Click(object sender, EventArgs e)
         {

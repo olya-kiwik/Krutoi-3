@@ -36,17 +36,14 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.EditLabel = new System.Windows.Forms.Label();
-            this.ImageLabel = new System.Windows.Forms.Label();
             this.LinkLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.idLabel = new System.Windows.Forms.Label();
             this.TBLink = new Guna.UI2.WinForms.Guna2TextBox();
             this.TBName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.imagePB = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagePB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,23 +120,12 @@
             this.EditLabel.TabIndex = 3;
             this.EditLabel.Text = "Изменение ресурса";
             // 
-            // ImageLabel
-            // 
-            this.ImageLabel.AutoSize = true;
-            this.ImageLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ImageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.ImageLabel.Location = new System.Drawing.Point(12, 83);
-            this.ImageLabel.Name = "ImageLabel";
-            this.ImageLabel.Size = new System.Drawing.Size(78, 22);
-            this.ImageLabel.TabIndex = 4;
-            this.ImageLabel.Text = "Превью";
-            // 
             // LinkLabel
             // 
             this.LinkLabel.AutoSize = true;
             this.LinkLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.LinkLabel.Location = new System.Drawing.Point(12, 270);
+            this.LinkLabel.Location = new System.Drawing.Point(12, 135);
             this.LinkLabel.Name = "LinkLabel";
             this.LinkLabel.Size = new System.Drawing.Size(80, 22);
             this.LinkLabel.TabIndex = 5;
@@ -150,7 +136,7 @@
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.NameLabel.Location = new System.Drawing.Point(12, 224);
+            this.NameLabel.Location = new System.Drawing.Point(12, 89);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(93, 22);
             this.NameLabel.TabIndex = 6;
@@ -161,7 +147,7 @@
             this.idLabel.AutoSize = true;
             this.idLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.idLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.idLabel.Location = new System.Drawing.Point(12, 326);
+            this.idLabel.Location = new System.Drawing.Point(12, 191);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(25, 22);
             this.idLabel.TabIndex = 7;
@@ -181,9 +167,9 @@
             this.TBLink.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.TBLink.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TBLink.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.TBLink.ForeColor = System.Drawing.Color.Black;
+            this.TBLink.ForeColor = System.Drawing.Color.Gainsboro;
             this.TBLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TBLink.Location = new System.Drawing.Point(112, 270);
+            this.TBLink.Location = new System.Drawing.Point(112, 135);
             this.TBLink.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBLink.Name = "TBLink";
             this.TBLink.PasswordChar = '\0';
@@ -206,9 +192,9 @@
             this.TBName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.TBName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TBName.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.TBName.ForeColor = System.Drawing.Color.Black;
+            this.TBName.ForeColor = System.Drawing.Color.Gainsboro;
             this.TBName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TBName.Location = new System.Drawing.Point(112, 224);
+            this.TBName.Location = new System.Drawing.Point(112, 89);
             this.TBName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBName.Name = "TBName";
             this.TBName.PasswordChar = '\0';
@@ -220,6 +206,8 @@
             // 
             // guna2Button1
             // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.White;
             this.guna2Button1.BorderRadius = 10;
             this.guna2Button1.BorderThickness = 1;
             this.guna2Button1.Checked = true;
@@ -228,30 +216,16 @@
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.GhostWhite;
             this.guna2Button1.Image = global::Architecture_KC.Properties.Resources.free_icon_check_1055183;
-            this.guna2Button1.Location = new System.Drawing.Point(234, 353);
+            this.guna2Button1.Location = new System.Drawing.Point(237, 218);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(168, 33);
             this.guna2Button1.TabIndex = 11;
             this.guna2Button1.Text = "Подтвердить";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // imagePB
-            // 
-            this.imagePB.BackColor = System.Drawing.Color.Transparent;
-            this.imagePB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imagePB.Image = global::Architecture_KC.Properties.Resources.play_button;
-            this.imagePB.ImageRotate = 0F;
-            this.imagePB.Location = new System.Drawing.Point(112, 82);
-            this.imagePB.Name = "imagePB";
-            this.imagePB.Size = new System.Drawing.Size(186, 118);
-            this.imagePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imagePB.TabIndex = 8;
-            this.imagePB.TabStop = false;
-            this.imagePB.Click += new System.EventHandler(this.imagePB_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -270,15 +244,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(643, 410);
+            this.ClientSize = new System.Drawing.Size(643, 266);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.TBName);
             this.Controls.Add(this.TBLink);
-            this.Controls.Add(this.imagePB);
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.LinkLabel);
-            this.Controls.Add(this.ImageLabel);
             this.Controls.Add(this.EditLabel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -288,7 +260,6 @@
             this.Load += new System.EventHandler(this.EditVideo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagePB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -307,10 +278,8 @@
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label LinkLabel;
-        private System.Windows.Forms.Label ImageLabel;
         private Guna.UI2.WinForms.Guna2TextBox TBName;
         private Guna.UI2.WinForms.Guna2TextBox TBLink;
-        private Guna.UI2.WinForms.Guna2PictureBox imagePB;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

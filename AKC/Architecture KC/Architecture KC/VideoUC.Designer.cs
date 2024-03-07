@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.imageVideo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.labelid = new System.Windows.Forms.Label();
             this.PalyBt = new Guna.UI2.WinForms.Guna2Button();
+            this.link = new System.Windows.Forms.Label();
             this.EditBT = new Guna.UI2.WinForms.Guna2Button();
             this.delBt = new Guna.UI2.WinForms.Guna2Button();
-            this.link = new System.Windows.Forms.Label();
+            this.imageVideo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageVideo)).BeginInit();
             this.SuspendLayout();
@@ -49,26 +49,14 @@
             this.guna2Panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(265, 174);
+            this.guna2Panel1.Size = new System.Drawing.Size(92, 89);
             this.guna2Panel1.TabIndex = 1;
-            // 
-            // imageVideo
-            // 
-            this.imageVideo.BorderRadius = 5;
-            this.imageVideo.Image = global::Architecture_KC.Properties.Resources.play_button;
-            this.imageVideo.ImageRotate = 0F;
-            this.imageVideo.Location = new System.Drawing.Point(3, 1);
-            this.imageVideo.Name = "imageVideo";
-            this.imageVideo.Size = new System.Drawing.Size(259, 170);
-            this.imageVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imageVideo.TabIndex = 0;
-            this.imageVideo.TabStop = false;
             // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameLabel.Location = new System.Drawing.Point(274, 4);
+            this.NameLabel.Location = new System.Drawing.Point(114, 4);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(59, 23);
             this.NameLabel.TabIndex = 2;
@@ -77,49 +65,64 @@
             // labelid
             // 
             this.labelid.AutoSize = true;
-            this.labelid.Location = new System.Drawing.Point(750, 14);
+            this.labelid.Location = new System.Drawing.Point(290, 36);
             this.labelid.Name = "labelid";
-            this.labelid.Size = new System.Drawing.Size(35, 13);
+            this.labelid.Size = new System.Drawing.Size(15, 13);
             this.labelid.TabIndex = 3;
-            this.labelid.Text = "label1";
+            this.labelid.Text = "id";
             this.labelid.Visible = false;
             // 
             // PalyBt
             // 
+            this.PalyBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.PalyBt.BorderColor = System.Drawing.Color.DarkGray;
             this.PalyBt.BorderRadius = 5;
             this.PalyBt.BorderThickness = 1;
+            this.PalyBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PalyBt.DefaultAutoSize = true;
             this.PalyBt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.PalyBt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.PalyBt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.PalyBt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.PalyBt.FillColor = System.Drawing.Color.Transparent;
             this.PalyBt.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.PalyBt.ForeColor = System.Drawing.Color.Black;
-            this.PalyBt.Location = new System.Drawing.Point(278, 123);
+            this.PalyBt.ForeColor = System.Drawing.Color.White;
+            this.PalyBt.Location = new System.Drawing.Point(114, 59);
             this.PalyBt.Name = "PalyBt";
-            this.PalyBt.Size = new System.Drawing.Size(180, 45);
+            this.PalyBt.Size = new System.Drawing.Size(112, 33);
             this.PalyBt.TabIndex = 4;
             this.PalyBt.Text = "Смотреть";
             this.PalyBt.Click += new System.EventHandler(this.PlayBt_Click);
             // 
+            // link
+            // 
+            this.link.AutoSize = true;
+            this.link.Location = new System.Drawing.Point(226, 36);
+            this.link.Name = "link";
+            this.link.Size = new System.Drawing.Size(45, 13);
+            this.link.TabIndex = 7;
+            this.link.Text = "ссылка";
+            this.link.Visible = false;
+            // 
             // EditBT
             // 
+            this.EditBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.EditBT.BorderColor = System.Drawing.Color.DarkGray;
             this.EditBT.BorderRadius = 5;
             this.EditBT.BorderThickness = 1;
             this.EditBT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EditBT.DefaultAutoSize = true;
             this.EditBT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.EditBT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.EditBT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.EditBT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.EditBT.FillColor = System.Drawing.Color.Transparent;
             this.EditBT.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.EditBT.ForeColor = System.Drawing.Color.Black;
+            this.EditBT.ForeColor = System.Drawing.Color.White;
             this.EditBT.Image = global::Architecture_KC.Properties.Resources.edit;
-            this.EditBT.Location = new System.Drawing.Point(674, 72);
+            this.EditBT.Location = new System.Drawing.Point(667, 11);
             this.EditBT.Name = "EditBT";
-            this.EditBT.Size = new System.Drawing.Size(111, 45);
+            this.EditBT.Size = new System.Drawing.Size(119, 29);
             this.EditBT.TabIndex = 6;
             this.EditBT.Text = "Изменить";
             this.EditBT.Visible = false;
@@ -127,6 +130,7 @@
             // 
             // delBt
             // 
+            this.delBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.delBt.BorderColor = System.Drawing.Color.DarkGray;
             this.delBt.BorderRadius = 5;
             this.delBt.BorderThickness = 1;
@@ -137,25 +141,28 @@
             this.delBt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.delBt.FillColor = System.Drawing.Color.Transparent;
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.delBt.ForeColor = System.Drawing.Color.Black;
+            this.delBt.ForeColor = System.Drawing.Color.White;
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
-            this.delBt.Location = new System.Drawing.Point(674, 123);
+            this.delBt.Location = new System.Drawing.Point(667, 59);
             this.delBt.Name = "delBt";
-            this.delBt.Size = new System.Drawing.Size(111, 45);
+            this.delBt.Size = new System.Drawing.Size(119, 29);
             this.delBt.TabIndex = 5;
             this.delBt.Text = " Удалить";
             this.delBt.Visible = false;
             this.delBt.Click += new System.EventHandler(this.delBt_Click);
             // 
-            // link
+            // imageVideo
             // 
-            this.link.AutoSize = true;
-            this.link.Location = new System.Drawing.Point(333, 61);
-            this.link.Name = "link";
-            this.link.Size = new System.Drawing.Size(35, 13);
-            this.link.TabIndex = 7;
-            this.link.Text = "label1";
-            this.link.Visible = false;
+            this.imageVideo.BorderRadius = 5;
+            this.imageVideo.Image = global::Architecture_KC.Properties.Resources.play_button1;
+            this.imageVideo.ImageRotate = 0F;
+            this.imageVideo.Location = new System.Drawing.Point(3, 1);
+            this.imageVideo.Name = "imageVideo";
+            this.imageVideo.Size = new System.Drawing.Size(86, 85);
+            this.imageVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imageVideo.TabIndex = 0;
+            this.imageVideo.TabStop = false;
+            this.imageVideo.Click += new System.EventHandler(this.imageVideo_Click);
             // 
             // VideoUC
             // 
@@ -169,7 +176,8 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "VideoUC";
-            this.Size = new System.Drawing.Size(800, 180);
+            this.Size = new System.Drawing.Size(800, 98);
+            this.Load += new System.EventHandler(this.VideoUC_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageVideo)).EndInit();
             this.ResumeLayout(false);
