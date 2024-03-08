@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.imageVideo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.labelid = new System.Windows.Forms.Label();
             this.PalyBt = new Guna.UI2.WinForms.Guna2Button();
             this.link = new System.Windows.Forms.Label();
-            this.EditBT = new Guna.UI2.WinForms.Guna2Button();
             this.delBt = new Guna.UI2.WinForms.Guna2Button();
-            this.imageVideo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageVideo)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +50,19 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(92, 89);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // imageVideo
+            // 
+            this.imageVideo.BorderRadius = 5;
+            this.imageVideo.Image = global::Architecture_KC.Properties.Resources.play_button1;
+            this.imageVideo.ImageRotate = 0F;
+            this.imageVideo.Location = new System.Drawing.Point(3, 1);
+            this.imageVideo.Name = "imageVideo";
+            this.imageVideo.Size = new System.Drawing.Size(86, 85);
+            this.imageVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imageVideo.TabIndex = 0;
+            this.imageVideo.TabStop = false;
+            this.imageVideo.Click += new System.EventHandler(this.imageVideo_Click);
             // 
             // NameLabel
             // 
@@ -104,30 +116,6 @@
             this.link.Text = "ссылка";
             this.link.Visible = false;
             // 
-            // EditBT
-            // 
-            this.EditBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.EditBT.BorderColor = System.Drawing.Color.DarkGray;
-            this.EditBT.BorderRadius = 5;
-            this.EditBT.BorderThickness = 1;
-            this.EditBT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EditBT.DefaultAutoSize = true;
-            this.EditBT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.EditBT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.EditBT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.EditBT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.EditBT.FillColor = System.Drawing.Color.Transparent;
-            this.EditBT.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.EditBT.ForeColor = System.Drawing.Color.White;
-            this.EditBT.Image = global::Architecture_KC.Properties.Resources.edit;
-            this.EditBT.Location = new System.Drawing.Point(667, 11);
-            this.EditBT.Name = "EditBT";
-            this.EditBT.Size = new System.Drawing.Size(119, 29);
-            this.EditBT.TabIndex = 6;
-            this.EditBT.Text = "Изменить";
-            this.EditBT.Visible = false;
-            this.EditBT.Click += new System.EventHandler(this.EditBT_Click);
-            // 
             // delBt
             // 
             this.delBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
@@ -143,40 +131,26 @@
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.delBt.ForeColor = System.Drawing.Color.White;
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
-            this.delBt.Location = new System.Drawing.Point(667, 59);
+            this.delBt.Location = new System.Drawing.Point(733, 59);
             this.delBt.Name = "delBt";
-            this.delBt.Size = new System.Drawing.Size(119, 29);
+            this.delBt.Size = new System.Drawing.Size(119, 33);
             this.delBt.TabIndex = 5;
             this.delBt.Text = " Удалить";
             this.delBt.Visible = false;
             this.delBt.Click += new System.EventHandler(this.delBt_Click);
-            // 
-            // imageVideo
-            // 
-            this.imageVideo.BorderRadius = 5;
-            this.imageVideo.Image = global::Architecture_KC.Properties.Resources.play_button1;
-            this.imageVideo.ImageRotate = 0F;
-            this.imageVideo.Location = new System.Drawing.Point(3, 1);
-            this.imageVideo.Name = "imageVideo";
-            this.imageVideo.Size = new System.Drawing.Size(86, 85);
-            this.imageVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imageVideo.TabIndex = 0;
-            this.imageVideo.TabStop = false;
-            this.imageVideo.Click += new System.EventHandler(this.imageVideo_Click);
             // 
             // VideoUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.link);
-            this.Controls.Add(this.EditBT);
             this.Controls.Add(this.delBt);
             this.Controls.Add(this.PalyBt);
             this.Controls.Add(this.labelid);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "VideoUC";
-            this.Size = new System.Drawing.Size(800, 98);
+            this.Size = new System.Drawing.Size(855, 98);
             this.Load += new System.EventHandler(this.VideoUC_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageVideo)).EndInit();
@@ -193,7 +167,6 @@
         private System.Windows.Forms.Label labelid;
         private Guna.UI2.WinForms.Guna2Button PalyBt;
         private Guna.UI2.WinForms.Guna2Button delBt;
-        private Guna.UI2.WinForms.Guna2Button EditBT;
         private System.Windows.Forms.Label link;
     }
 }

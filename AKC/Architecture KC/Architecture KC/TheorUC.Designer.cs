@@ -53,6 +53,7 @@
             this.guna2Button1.BorderRadius = 5;
             this.guna2Button1.BorderThickness = 1;
             this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.DefaultAutoSize = true;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -62,7 +63,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.Gainsboro;
             this.guna2Button1.Location = new System.Drawing.Point(121, 42);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(168, 48);
+            this.guna2Button1.Size = new System.Drawing.Size(99, 33);
             this.guna2Button1.TabIndex = 2;
             this.guna2Button1.Text = "Скачать";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -92,9 +93,9 @@
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.delBt.ForeColor = System.Drawing.Color.Gainsboro;
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
-            this.delBt.Location = new System.Drawing.Point(654, 42);
+            this.delBt.Location = new System.Drawing.Point(742, 42);
             this.delBt.Name = "delBt";
-            this.delBt.Size = new System.Drawing.Size(98, 48);
+            this.delBt.Size = new System.Drawing.Size(110, 33);
             this.delBt.TabIndex = 4;
             this.delBt.Text = "Удалить";
             this.delBt.Visible = false;
@@ -122,7 +123,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "TheorUC";
-            this.Size = new System.Drawing.Size(800, 120);
+            this.Size = new System.Drawing.Size(855, 120);
             this.Load += new System.EventHandler(this.TheorUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);

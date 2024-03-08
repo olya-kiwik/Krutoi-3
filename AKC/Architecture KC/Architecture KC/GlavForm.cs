@@ -183,11 +183,11 @@ namespace Architecture_KC
             
             if(_isAdmin == true)
             {
-                guna2TextBox1.Size = new System.Drawing.Size(720, 45);
+                guna2TextBox1.Size = new System.Drawing.Size(758, 45);
             }
             else
             {
-                guna2TextBox1.Size = new System.Drawing.Size(827, 45);
+                guna2TextBox1.Size = new System.Drawing.Size(865, 45);
             }
             
         }
@@ -210,6 +210,11 @@ namespace Architecture_KC
 
         private void guna2Button1_Click(object sender, EventArgs e)//Лекции
         {
+            if (flowLayoutPanel2.Visible == false)
+            {
+                flowLayoutPanel2.Visible = true;
+            }
+
             guna2Button4.Text = "Добавить файл";
             label3.Text = "txtResurs";
             guna2TextBox1.Visible = true;
@@ -219,6 +224,10 @@ namespace Architecture_KC
 
         private void guna2Button2_Click(object sender, EventArgs e)//Видео
         {
+            if (flowLayoutPanel2.Visible == false)
+            {
+                flowLayoutPanel2.Visible = true;
+            }
             guna2Button4.Text = "Добавить видео";
             label3.Text = "videoResurs";
             guna2TextBox1.Visible = true;
@@ -291,6 +300,13 @@ namespace Architecture_KC
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel2.Visible = false;
+            guna2TextBox1.Visible = false;
+            guna2Button4.Visible = false;
         }
     }
 }

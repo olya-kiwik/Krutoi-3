@@ -175,6 +175,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(157, 52);
             this.guna2Button3.TabIndex = 1;
             this.guna2Button3.Text = "Тест";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // panel7
             // 
@@ -475,6 +476,7 @@
             // guna2Button4
             // 
             this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.BorderRadius = 5;
             this.guna2Button4.BorderThickness = 1;
             this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;

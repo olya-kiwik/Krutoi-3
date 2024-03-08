@@ -39,12 +39,6 @@ namespace Architecture_KC
             set { link = value; }
         }
 
-        public Guna2PictureBox ImageVideo
-        {
-            get { return imageVideo; }
-            set { imageVideo = value; }
-        }
-
         string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
 
         private void delBt_Click(object sender, EventArgs e)
@@ -78,12 +72,6 @@ namespace Architecture_KC
             }
         }
 
-        private void EditBT_Click(object sender, EventArgs e)
-        {
-            EditVideo editVideo = new EditVideo(_isAdmin);
-            editVideo.Show();
-        }
-
         private void PlayBt_Click(object sender, EventArgs e)
         {
             try
@@ -98,7 +86,6 @@ namespace Architecture_KC
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        //LabelName.Text = reader["Name"].ToString();
                         link.Text = reader["Link"].ToString();
                     }
 
@@ -117,7 +104,6 @@ namespace Architecture_KC
         private void VideoUC_Load(object sender, EventArgs e)
         {
             delBt.Visible = _isAdmin;
-            EditBT.Visible = _isAdmin;
         }
 
         private void imageVideo_Click(object sender, EventArgs e)
@@ -134,7 +120,6 @@ namespace Architecture_KC
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        //LabelName.Text = reader["Name"].ToString();
                         link.Text = reader["Link"].ToString();
                     }
 
