@@ -31,6 +31,8 @@ namespace Architecture_KC
             guna2TextBox1.Visible = false;
             Methods.ResetLayout1 = FLP1reset;
             Methods.ResetLayout2 = FLP2reset;
+            Methods.ResetLayout3 = FLP3reset;
+            //Methods.WebViewLoad = webView_Load;
 
         }
 
@@ -128,6 +130,45 @@ namespace Architecture_KC
             }
         }
 
+        public void SelectTestUC3()
+        {
+            loadingCicle.Start();
+            loadingCicle.Visible = true;
+            try
+            {
+
+                SqlConnection sqlConnection = new SqlConnection(conn);
+                string query = "SELECT * FROM Test";
+
+                sqlConnection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, sqlConnection))
+                {
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        TestUC uc3 = new TestUC(_isAdmin);
+
+                        uc3.Label2.Text = reader.GetInt32(0).ToString();
+                        uc3.Label1.Text = reader.GetString(1);
+                        uc3.Link.Text = reader.GetString(2);
+
+                        flowLayoutPanel2.Controls.Add(uc3);
+
+                    }
+                }
+                sqlConnection.Close();
+                loadingCicle.Stop();
+                loadingCicle.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                loadingCicle.Stop();
+                loadingCicle.Visible = false;
+                MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             
@@ -141,16 +182,22 @@ namespace Architecture_KC
             
         }
 
-        public void FLP1reset()
+        public void FLP1reset()//перезагрузка теории
         {
             flowLayoutPanel2.Controls.Clear();
             SelectTheorUC1();
         }
 
-        public void FLP2reset()
+        public void FLP2reset()//перезагрузка видео
         {
             flowLayoutPanel2.Controls.Clear();
             SelectVideoUC2();
+        }
+
+        public void FLP3reset()//перезагрузка теста
+        {
+            flowLayoutPanel2.Controls.Clear();
+            SelectTestUC3();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -190,6 +237,13 @@ namespace Architecture_KC
                 guna2TextBox1.Size = new System.Drawing.Size(865, 45);
             }
             
+        }
+        public void webView_Load(string link)
+        {
+            webView21.Visible = true;
+            webView21.Size = flowLayoutPanel2.Size;
+            webView21.Location = flowLayoutPanel2.Location;
+            webView21.CoreWebView2.Navigate(link);
         }
 
 
@@ -237,12 +291,19 @@ namespace Architecture_KC
 
         private void guna2Button3_Click(object sender, EventArgs e)//Test
         {
-            flowLayoutPanel2.Visible = false;
-            webView21.Visible = true;
-            guna2TextBox1.Visible = false;
-            guna2Button4.Visible = false;
-            webView21.Size = flowLayoutPanel2.Size;
-            webView21.Location = flowLayoutPanel2.Location;
+            if (flowLayoutPanel2.Visible == false)
+            {
+                flowLayoutPanel2.Visible = true;
+            }
+            guna2Button4.Visible = _isAdmin;
+            guna2Button4.Text = "Добавить Тест";
+            label3.Text = "Test";
+            guna2TextBox1.Visible = true;
+            FLP3reset();
+
+
+
+            
         }
 
         private void searchLec_TextChanged(object sender, EventArgs e)//Поиск
