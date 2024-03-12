@@ -170,7 +170,6 @@ C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\D
 C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.GenerateResource.cache
 C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CoreCompileInputs.cache
 C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CopyComplete
-C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.UserControl1.resources
 C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\BouncyCastle.Cryptography.dll
 C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.dll
 C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.dll
@@ -210,3 +209,6 @@ C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.EditVideo.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.VideoUC.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddVideo.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddVideo.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.EditVideo.resources
+C:\Users\0_206_3\Desktop\Krutoi-3-main\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.VideoUC.resources

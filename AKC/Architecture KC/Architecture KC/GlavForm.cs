@@ -235,7 +235,17 @@ namespace Architecture_KC
             FLP2reset();
         }
 
-        private void searchLec_TextChanged(object sender, EventArgs e)
+        private void guna2Button3_Click(object sender, EventArgs e)//Test
+        {
+            flowLayoutPanel2.Visible = false;
+            webView21.Visible = true;
+            guna2TextBox1.Visible = false;
+            guna2Button4.Visible = false;
+            webView21.Size = flowLayoutPanel2.Size;
+            webView21.Location = flowLayoutPanel2.Location;
+        }
+
+        private void searchLec_TextChanged(object sender, EventArgs e)//Поиск
         {
             flowLayoutPanel2.Controls.Clear();
             string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
@@ -302,11 +312,6 @@ namespace Architecture_KC
 
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel2.Visible = false;
-            guna2TextBox1.Visible = false;
-            guna2Button4.Visible = false;
-        }
+        
     }
 }

@@ -60,6 +60,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -72,6 +73,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -462,6 +464,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.webView21);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.guna2TextBox1);
             this.panel3.Controls.Add(this.loadingCicle);
@@ -497,6 +500,17 @@
             this.guna2Button4.Visible = false;
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
+            // webView21
+            // 
+            this.webView21.AllowExternalDrop = true;
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.Location = new System.Drawing.Point(146, 35);
+            this.webView21.Name = "webView21";
+            this.webView21.Size = new System.Drawing.Size(75, 23);
+            this.webView21.TabIndex = 5;
+            this.webView21.ZoomFactor = 1D;
+            // 
             // GlavForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,6 +542,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -563,5 +578,6 @@
         private Guna.UI2.WinForms.Guna2WinProgressIndicator loadingCicle;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }
