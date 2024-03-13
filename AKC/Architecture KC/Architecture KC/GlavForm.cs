@@ -70,7 +70,6 @@ namespace Architecture_KC
                     {
                         TheorUC uc1 = new TheorUC(_isAdmin);
 
-                        //uc1.PictureBox1.Image = new Bitmap();
                         uc1.Label2.Text = reader.GetInt32(0).ToString();
                         uc1.Label1.Text = reader.GetString(1);
 
@@ -303,7 +302,9 @@ namespace Architecture_KC
 
         private void guna2Button6_Click(object sender, EventArgs e)//Сборка
         {
-
+            PC pc = new PC();
+            pc.Show();
+            Hide();
         }
 
         private void searchLec_TextChanged(object sender, EventArgs e)//Поиск

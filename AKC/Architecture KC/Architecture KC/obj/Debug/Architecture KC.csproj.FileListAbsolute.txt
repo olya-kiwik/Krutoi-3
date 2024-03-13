@@ -284,3 +284,5 @@ D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architectu
 D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.exe
 D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.pdb
 D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddTest.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddTest.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.PC.resources
