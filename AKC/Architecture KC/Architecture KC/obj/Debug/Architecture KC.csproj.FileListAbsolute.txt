@@ -222,3 +222,65 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Web.W
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.TestUC.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.exe.config
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.exe
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.pdb
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\BouncyCastle.Cryptography.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Guna.UI2.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Hash.xxHash.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Web.WebView2.Core.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\MySql.Data.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Buffers.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.IO.Pipelines.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Memory.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Numerics.Vectors.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\ZstdSharp.dll
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\BouncyCastle.Cryptography.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.pdb
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Google.Protobuf.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\K4os.Hash.xxHash.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Web.WebView2.Core.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\MySql.Data.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Buffers.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.IO.Pipelines.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Memory.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Numerics.Vectors.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.AssemblyReference.cache
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.g.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddVideo.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.EditVideo.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddFiles.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.GlavForm.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.LodinForm.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.Properties.Resources.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.TestUC.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.TheorUC.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.VideoUC.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.VideoForm.resources
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.GenerateResource.cache
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CoreCompileInputs.cache
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CopyComplete
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.exe
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.pdb
+D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddTest.resources

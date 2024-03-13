@@ -13,6 +13,7 @@ using Architecture_KC.Properties;
 using System.Data.SqlClient;
 using System.Drawing.Text;
 using System.Diagnostics;
+using Microsoft.Web.WebView2.Core;
 
 namespace Architecture_KC
 {
@@ -32,8 +33,7 @@ namespace Architecture_KC
             Methods.ResetLayout1 = FLP1reset;
             Methods.ResetLayout2 = FLP2reset;
             Methods.ResetLayout3 = FLP3reset;
-            //Methods.WebViewLoad = webView_Load;
-
+            
         }
 
         private void GlavForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -76,7 +76,7 @@ namespace Architecture_KC
 
                         flowLayoutPanel2.Controls.Add(uc1);
 
-
+                        
                     }
                 }
                 sqlConnection.Close();
@@ -238,26 +238,23 @@ namespace Architecture_KC
             }
             
         }
-        public void webView_Load(string link)
-        {
-            webView21.Visible = true;
-            webView21.Size = flowLayoutPanel2.Size;
-            webView21.Location = flowLayoutPanel2.Location;
-            webView21.CoreWebView2.Navigate(link);
-        }
-
-
+        
         private void guna2Button4_Click(object sender, EventArgs e) //Выбор файла для загрузки
         {
             if (guna2Button4.Text == "Добавить видео")
             {
                 AddVideo addVideo = new AddVideo();
-                addVideo.Show();
+                addVideo.ShowDialog();
             }
             else if (guna2Button4.Text == "Добавить файл")
             {
                 AddFiles addFiles = new AddFiles();
-                addFiles.Show();
+                addFiles.ShowDialog();
+            }
+            else if (guna2Button4.Text == "Добавить Тест")
+            {
+                AddTest addTest = new AddTest();
+                addTest.ShowDialog();
             }
             
         }
@@ -301,9 +298,12 @@ namespace Architecture_KC
             guna2TextBox1.Visible = true;
             FLP3reset();
 
-
-
             
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)//Сборка
+        {
+
         }
 
         private void searchLec_TextChanged(object sender, EventArgs e)//Поиск

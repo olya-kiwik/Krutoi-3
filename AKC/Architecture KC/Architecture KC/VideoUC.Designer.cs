@@ -66,11 +66,12 @@
             // 
             // NameLabel
             // 
-            this.NameLabel.AutoSize = true;
+            this.NameLabel.BackColor = System.Drawing.SystemColors.Control;
             this.NameLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.NameLabel.Location = new System.Drawing.Point(114, 4);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(59, 23);
+            this.NameLabel.Size = new System.Drawing.Size(738, 45);
             this.NameLabel.TabIndex = 2;
             this.NameLabel.Text = "Name";
             // 
@@ -98,7 +99,7 @@
             this.PalyBt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.PalyBt.FillColor = System.Drawing.Color.Transparent;
             this.PalyBt.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.PalyBt.ForeColor = System.Drawing.Color.White;
+            this.PalyBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.PalyBt.Location = new System.Drawing.Point(114, 59);
             this.PalyBt.Name = "PalyBt";
             this.PalyBt.Size = new System.Drawing.Size(112, 33);
@@ -129,7 +130,7 @@
             this.delBt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.delBt.FillColor = System.Drawing.Color.Transparent;
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.delBt.ForeColor = System.Drawing.Color.White;
+            this.delBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
             this.delBt.Location = new System.Drawing.Point(733, 59);
             this.delBt.Name = "delBt";

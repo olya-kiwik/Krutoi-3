@@ -43,7 +43,7 @@ namespace Architecture_KC
         string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
+           
             using (SqlConnection conn = new SqlConnection(con))
             {
                 try
@@ -111,6 +111,15 @@ namespace Architecture_KC
         private void TheorUC_Load(object sender, EventArgs e)
         {
             delBt.Visible = _isAdmin;
+            string str = label1.Text;
+            if (str.Substring(str.Length - 5) == ".docx")
+                guna2PictureBox1.Image = Properties.Resources.word;
+            else if(str.Substring(str.Length - 4) == ".pdf")
+                guna2PictureBox1.Image = Properties.Resources.pdf;
+            else if(str.Substring(str.Length - 5) == ".xlsx")
+                guna2PictureBox1.Image = Properties.Resources.excel;
+            else if(str.Substring(str.Length - 5) == ".pptx")
+                guna2PictureBox1.Image = Properties.Resources.powerpoint;
         }
     }
 }

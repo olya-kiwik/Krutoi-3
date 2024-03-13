@@ -106,8 +106,9 @@ namespace Architecture_KC
 
                 }
                 sqlConnection.Close();
-                
-                
+
+                //Methods.WebViewLoad(labelLink.Text);
+                Process.Start(labelLink.Text);
             }
             catch (Exception ex)
             {

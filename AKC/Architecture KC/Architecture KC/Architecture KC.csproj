@@ -117,6 +117,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTest.Designer.cs">
+      <DependentUpon>AddTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddVideo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddTest.resx">
+      <DependentUpon>AddTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddVideo.resx">
       <DependentUpon>AddVideo.cs</DependentUpon>
     </EmbeddedResource>

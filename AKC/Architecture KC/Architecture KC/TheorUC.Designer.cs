@@ -38,12 +38,11 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.label1.Location = new System.Drawing.Point(117, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 24);
+            this.label1.Size = new System.Drawing.Size(726, 48);
             this.label1.TabIndex = 1;
             this.label1.Text = "Тема";
             // 
@@ -61,7 +60,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.guna2Button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button1.Location = new System.Drawing.Point(121, 42);
+            this.guna2Button1.Location = new System.Drawing.Point(121, 84);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(99, 33);
             this.guna2Button1.TabIndex = 2;
@@ -70,9 +69,8 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.label2.Location = new System.Drawing.Point(204, 17);
+            this.label2.Location = new System.Drawing.Point(237, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 3;
@@ -93,7 +91,7 @@
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.delBt.ForeColor = System.Drawing.Color.Gainsboro;
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
-            this.delBt.Location = new System.Drawing.Point(742, 42);
+            this.delBt.Location = new System.Drawing.Point(742, 84);
             this.delBt.Name = "delBt";
             this.delBt.Size = new System.Drawing.Size(110, 33);
             this.delBt.TabIndex = 4;
@@ -106,9 +104,9 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::Architecture_KC.Properties.Resources.теория;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(23, 21);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(108, 114);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(65, 65);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;

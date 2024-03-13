@@ -48,7 +48,7 @@ namespace Architecture_KC
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Word Files (*.docx)|*.docx|All Files (*.*)|*.*";
+            openFileDialog.Filter = "Word Files (*.docx)|*.docx|PowerPoint Files(*.pptx)|*.pptx|PDF Files (*.pdf)|*.pdf|Exel Files (*.xlxs)|*.xlxs|All Files (*.*)|*.*";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
