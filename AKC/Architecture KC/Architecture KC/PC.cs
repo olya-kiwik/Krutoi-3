@@ -12,6 +12,8 @@ namespace Architecture_KC
 {
     public partial class PC : Form
     {
+
+
         private bool _isAdmin;
         public PC(bool isAdmin)
         {
@@ -21,11 +23,14 @@ namespace Architecture_KC
 
         private void PC_Load(object sender, EventArgs e)
         {
+            
+
 
             TopMost = true;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            
+
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -33,6 +38,13 @@ namespace Architecture_KC
             GlavForm glavForm = new GlavForm(_isAdmin);
             glavForm.Show();
             Hide();
+        }
+
+        
+
+        private void PC_Resize(object sender, EventArgs e)
+        {
+            
         }
     }
 }

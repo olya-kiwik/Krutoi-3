@@ -24,7 +24,6 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.VideoForm.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.GenerateResource.cache
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CoreCompileInputs.cache
-D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.csproj.CopyComplete
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.exe
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture KC.pdb
 C:\Users\vbers\Documents\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\Architecture KC.exe.config
@@ -286,3 +285,4 @@ D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architectu
 D:\!GitHub\Rep\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddTest.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddTest.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.PC.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architec.FCFD6F30.Up2Date

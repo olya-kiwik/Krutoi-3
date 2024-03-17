@@ -302,7 +302,7 @@ namespace Architecture_KC
 
         private void guna2Button6_Click(object sender, EventArgs e)//Сборка
         {
-            PC pc = new PC();
+            PC pc = new PC(_isAdmin);
             pc.Show();
             Hide();
         }
