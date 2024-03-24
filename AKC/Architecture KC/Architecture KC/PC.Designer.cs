@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PC));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.TextWork = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CompComponent = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TextWork = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ConfirmBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,29 @@
             this.guna2Panel1.Size = new System.Drawing.Size(770, 74);
             this.guna2Panel1.TabIndex = 4;
             // 
+            // TextWork
+            // 
+            this.TextWork.AutoSize = true;
+            this.TextWork.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextWork.ForeColor = System.Drawing.Color.LightGray;
+            this.TextWork.Location = new System.Drawing.Point(0, 25);
+            this.TextWork.Name = "TextWork";
+            this.TextWork.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TextWork.Size = new System.Drawing.Size(74, 21);
+            this.TextWork.TabIndex = 1;
+            this.TextWork.Text = "Задание";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(356, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Задание";
+            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -65,27 +89,6 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(157, 678);
             this.flowLayoutPanel2.TabIndex = 3;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DefaultAutoSize = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2Button1.Image = global::Architecture_KC.Properties.Resources.exit;
-            this.guna2Button1.Location = new System.Drawing.Point(12, 12);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(100, 29);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "Выход";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2ComboBox1
             // 
@@ -122,47 +125,65 @@
             this.CompComponent.Size = new System.Drawing.Size(254, 678);
             this.CompComponent.TabIndex = 0;
             // 
-            // guna2Button2
+            // guna2Button1
             // 
-            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.guna2Button2.BorderRadius = 5;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(488, 686);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(176, 45);
-            this.guna2Button2.TabIndex = 5;
-            this.guna2Button2.Text = "На 1 шаг назад";
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.guna2Button1.BorderRadius = 5;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.DefaultAutoSize = true;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.LightGray;
+            this.guna2Button1.Image = global::Architecture_KC.Properties.Resources.exit;
+            this.guna2Button1.Location = new System.Drawing.Point(12, 12);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(100, 29);
+            this.guna2Button1.TabIndex = 2;
+            this.guna2Button1.Text = "Выход";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // label1
+            // AddBtn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(356, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Задание";
+            this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.AddBtn.BorderRadius = 5;
+            this.AddBtn.BorderThickness = 1;
+            this.AddBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddBtn.FillColor = System.Drawing.Color.Transparent;
+            this.AddBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.AddBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.AddBtn.Location = new System.Drawing.Point(765, 685);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(180, 45);
+            this.AddBtn.TabIndex = 5;
+            this.AddBtn.Text = "Добавить";
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // TextWork
+            // ConfirmBtn
             // 
-            this.TextWork.AutoSize = true;
-            this.TextWork.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextWork.ForeColor = System.Drawing.Color.LightGray;
-            this.TextWork.Location = new System.Drawing.Point(0, 25);
-            this.TextWork.Name = "TextWork";
-            this.TextWork.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TextWork.Size = new System.Drawing.Size(74, 21);
-            this.TextWork.TabIndex = 1;
-            this.TextWork.Text = "Задание";
+            this.ConfirmBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ConfirmBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.ConfirmBtn.BorderRadius = 5;
+            this.ConfirmBtn.BorderThickness = 1;
+            this.ConfirmBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ConfirmBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ConfirmBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ConfirmBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ConfirmBtn.FillColor = System.Drawing.Color.Transparent;
+            this.ConfirmBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.ConfirmBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.ConfirmBtn.Location = new System.Drawing.Point(470, 685);
+            this.ConfirmBtn.Name = "ConfirmBtn";
+            this.ConfirmBtn.Size = new System.Drawing.Size(180, 45);
+            this.ConfirmBtn.TabIndex = 6;
+            this.ConfirmBtn.Text = "Завершить";
             // 
             // PC
             // 
@@ -172,7 +193,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1215, 742);
             this.ControlBox = false;
-            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.ConfirmBtn);
+            this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.guna2Button1);
@@ -183,7 +205,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PC";
             this.Load += new System.EventHandler(this.PC_Load);
-            this.Resize += new System.EventHandler(this.PC_Resize);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -198,8 +219,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.FlowLayoutPanel CompComponent;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TextWork;
+        private Guna.UI2.WinForms.Guna2Button AddBtn;
+        private Guna.UI2.WinForms.Guna2Button ConfirmBtn;
     }
 }

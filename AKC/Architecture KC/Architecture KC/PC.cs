@@ -22,14 +22,11 @@ namespace Architecture_KC
         }
 
         private void PC_Load(object sender, EventArgs e)
-        {
-            
-
-
+        {     
+            AddBtn.Visible = _isAdmin;
             TopMost = true;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-
 
         }
 
@@ -42,9 +39,9 @@ namespace Architecture_KC
 
         
 
-        private void PC_Resize(object sender, EventArgs e)
+        private void AddBtn_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
