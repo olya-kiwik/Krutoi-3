@@ -55,11 +55,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.loadingCicle = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.loadingCicle = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -410,16 +410,6 @@
             this.flowLayoutPanel2.TabIndex = 0;
             this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
-            // loadingCicle
-            // 
-            this.loadingCicle.AutoStart = true;
-            this.loadingCicle.BackColor = System.Drawing.Color.Transparent;
-            this.loadingCicle.Location = new System.Drawing.Point(584, 241);
-            this.loadingCicle.Name = "loadingCicle";
-            this.loadingCicle.ProgressColor = System.Drawing.Color.White;
-            this.loadingCicle.Size = new System.Drawing.Size(90, 90);
-            this.loadingCicle.TabIndex = 2;
-            // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
@@ -498,6 +488,16 @@
             this.guna2Button4.Visible = false;
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
+            // loadingCicle
+            // 
+            this.loadingCicle.AutoStart = true;
+            this.loadingCicle.BackColor = System.Drawing.Color.Transparent;
+            this.loadingCicle.Location = new System.Drawing.Point(584, 241);
+            this.loadingCicle.Name = "loadingCicle";
+            this.loadingCicle.ProgressColor = System.Drawing.Color.White;
+            this.loadingCicle.Size = new System.Drawing.Size(90, 90);
+            this.loadingCicle.TabIndex = 2;
+            // 
             // GlavForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -561,8 +561,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2WinProgressIndicator loadingCicle;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private Guna.UI2.WinForms.Guna2WinProgressIndicator loadingCicle;
     }
 }

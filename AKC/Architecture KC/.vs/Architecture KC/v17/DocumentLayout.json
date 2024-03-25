@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|d:\\github\\krutoi-3\\akc\\architecture kc\\architecture kc\\pccompuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\pccompuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\pccompuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,36 +15,52 @@
       "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\pccompuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\pcquerysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\pcquerysql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\pc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|d:\\github\\krutoi-3\\akc\\architecture kc\\architecture kc\\addtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\testuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\testuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\testuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\testuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\addvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\addvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\addtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\addtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\glavform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\glavform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\lodinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\lodinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\addfilesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\addfilesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\addvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\addvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\glavform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\glavform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\glavform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\glavform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\methods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\addtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\addtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\lodinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\lodinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\theoruc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\theoruc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\testuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\testuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\videouc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\videouc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -63,20 +79,8 @@
       "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\videoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\glavform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\glavform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\addfilesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\addfilesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\testuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\testuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\addtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|solutionrelative:architecture kc\\addtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDF993B4-AD82-4B91-B69E-688425EEF28A}|Architecture KC\\Architecture KC.csproj|D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\architecture kc\\addvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 135,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -103,19 +107,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PCCompUC.cs",
-              "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PCCompUC.cs",
-              "RelativeDocumentMoniker": "Architecture KC\\PCCompUC.cs",
-              "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PCCompUC.cs",
-              "RelativeToolTip": "Architecture KC\\PCCompUC.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAIAwwDMAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T07:02:47.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "PCCompUC.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PCCompUC.cs",
               "RelativeDocumentMoniker": "Architecture KC\\PCCompUC.cs",
@@ -127,7 +118,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PC.cs",
+              "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PC.cs",
+              "RelativeDocumentMoniker": "Architecture KC\\PC.cs",
+              "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PC.cs",
+              "RelativeToolTip": "Architecture KC\\PC.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAhwCIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T11:25:37.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PCCompUC.cs",
+              "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PCCompUC.cs",
+              "RelativeDocumentMoniker": "Architecture KC\\PCCompUC.cs",
+              "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PCCompUC.cs",
+              "RelativeToolTip": "Architecture KC\\PCCompUC.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAwwEcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T07:02:47.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PC.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PC.cs",
               "RelativeDocumentMoniker": "Architecture KC\\PC.cs",
@@ -139,20 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PC.cs",
-              "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PC.cs",
-              "RelativeDocumentMoniker": "Architecture KC\\PC.cs",
-              "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PC.cs",
-              "RelativeToolTip": "Architecture KC\\PC.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAhwBwAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:52:21.403Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "VideoForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\VideoForm.cs",
               "RelativeDocumentMoniker": "Architecture KC\\VideoForm.cs",
@@ -163,19 +167,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "TheorUC.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\TheorUC.cs",
               "RelativeDocumentMoniker": "Architecture KC\\TheorUC.cs",
               "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\TheorUC.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Architecture KC\\TheorUC.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:18:14.818Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-03-13T14:18:14.818Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "TestUC.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\TestUC.cs",
               "RelativeDocumentMoniker": "Architecture KC\\TestUC.cs",
@@ -187,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "AddVideo.cs",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\AddVideo.cs",
               "RelativeDocumentMoniker": "Architecture KC\\AddVideo.cs",
@@ -200,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "TheorUC.cs",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\TheorUC.cs",
               "RelativeDocumentMoniker": "Architecture KC\\TheorUC.cs",
@@ -208,12 +211,24 @@
               "RelativeToolTip": "Architecture KC\\TheorUC.cs",
               "ViewState": "AQIAAFEAAAAAAAAAAAAmwHkAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:18:14.822Z",
+              "WhenOpened": "2024-03-13T14:18:14.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PCQuerySql.cs",
+              "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PCQuerySql.cs",
+              "RelativeDocumentMoniker": "Architecture KC\\PCQuerySql.cs",
+              "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\PCQuerySql.cs",
+              "RelativeToolTip": "Architecture KC\\PCQuerySql.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACEAAACbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T11:28:28.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AddFilesForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\AddFilesForm.cs",
               "RelativeDocumentMoniker": "Architecture KC\\AddFilesForm.cs",
@@ -225,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "AddFilesForm.cs",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\AddFilesForm.cs",
               "RelativeDocumentMoniker": "Architecture KC\\AddFilesForm.cs",
@@ -238,44 +253,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "VideoUC.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\VideoUC.cs",
               "RelativeDocumentMoniker": "Architecture KC\\VideoUC.cs",
               "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\VideoUC.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Architecture KC\\VideoUC.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:18:14.881Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-03-13T14:18:14.881Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "GlavForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\GlavForm.cs",
               "RelativeDocumentMoniker": "Architecture KC\\GlavForm.cs",
               "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\GlavForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Architecture KC\\GlavForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:18:14.897Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-03-13T14:18:14.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 10,
               "Title": "GlavForm.cs",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\GlavForm.cs",
               "RelativeDocumentMoniker": "Architecture KC\\GlavForm.cs",
               "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\GlavForm.cs",
               "RelativeToolTip": "Architecture KC\\GlavForm.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAuwEgBAAAYAAAA",
+              "ViewState": "AQIAANUAAAAAAAAAAAArwO0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:18:14.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-13T14:18:14.898Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "AddVideo.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\AddVideo.cs",
               "RelativeDocumentMoniker": "Architecture KC\\AddVideo.cs",
@@ -287,33 +299,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 13,
               "Title": "AddTest.cs",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\AddTest.cs",
               "RelativeDocumentMoniker": "Architecture KC\\AddTest.cs",
               "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\AddTest.cs",
               "RelativeToolTip": "Architecture KC\\AddTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwEcAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-13T14:18:14.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Methods.cs",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\Methods.cs",
               "RelativeDocumentMoniker": "Architecture KC\\Methods.cs",
               "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\Methods.cs",
               "RelativeToolTip": "Architecture KC\\Methods.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:18:14.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-13T14:18:14.901Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "AddTest.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\AddTest.cs",
               "RelativeDocumentMoniker": "Architecture KC\\AddTest.cs",
@@ -325,32 +336,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 5,
               "Title": "TestUC.cs",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\TestUC.cs",
               "RelativeDocumentMoniker": "Architecture KC\\TestUC.cs",
               "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\TestUC.cs",
               "RelativeToolTip": "Architecture KC\\TestUC.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAADwv24AAAAsAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAcwG4AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-13T14:18:14.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "LodinForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\LodinForm.cs",
               "RelativeDocumentMoniker": "Architecture KC\\LodinForm.cs",
               "ToolTip": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\LodinForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Architecture KC\\LodinForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:18:14.903Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-03-13T14:18:14.903Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "VideoUC.cs",
               "DocumentMoniker": "D:\\GitHub\\Krutoi-3\\AKC\\Architecture KC\\Architecture KC\\VideoUC.cs",
               "RelativeDocumentMoniker": "Architecture KC\\VideoUC.cs",
@@ -358,8 +368,7 @@
               "RelativeToolTip": "Architecture KC\\VideoUC.cs",
               "ViewState": "AQIAAEEAAAAAAAAAAAAcwGMAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T14:18:14.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-13T14:18:14.903Z"
             }
           ]
         }

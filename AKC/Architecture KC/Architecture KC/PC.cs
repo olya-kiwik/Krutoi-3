@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,13 +22,18 @@ namespace Architecture_KC
             InitializeComponent();
             _isAdmin = isAdmin;
         }
-
+        
+        PCQuerySql sql = new PCQuerySql();
+        
         private void PC_Load(object sender, EventArgs e)
         {     
             AddBtn.Visible = _isAdmin;
             TopMost = true;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
+
+            sql.SelectBox(CompComponent);
+            
 
         }
 

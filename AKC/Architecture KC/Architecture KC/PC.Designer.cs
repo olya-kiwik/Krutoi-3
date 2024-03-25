@@ -32,13 +32,30 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.TextWork = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CompComponent = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ConfirmBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.PanelFilter = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -51,9 +68,9 @@
             this.guna2Panel1.Controls.Add(this.TextWork);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(175, 12);
+            this.guna2Panel1.Location = new System.Drawing.Point(155, 12);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(770, 74);
+            this.guna2Panel1.Size = new System.Drawing.Size(790, 74);
             this.guna2Panel1.TabIndex = 4;
             // 
             // TextWork
@@ -79,72 +96,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Задание";
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(12, 53);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(157, 678);
-            this.flowLayoutPanel2.TabIndex = 3;
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.guna2ComboBox1.BorderRadius = 5;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(951, 12);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(252, 36);
-            this.guna2ComboBox1.TabIndex = 1;
-            // 
             // CompComponent
             // 
-            this.CompComponent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CompComponent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CompComponent.AutoScroll = true;
-            this.CompComponent.AutoSize = true;
             this.CompComponent.BackColor = System.Drawing.Color.Transparent;
             this.CompComponent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CompComponent.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CompComponent.Location = new System.Drawing.Point(950, 53);
+            this.CompComponent.Location = new System.Drawing.Point(159, 98);
             this.CompComponent.Margin = new System.Windows.Forms.Padding(2);
             this.CompComponent.Name = "CompComponent";
-            this.CompComponent.Size = new System.Drawing.Size(254, 678);
+            this.CompComponent.Size = new System.Drawing.Size(786, 571);
             this.CompComponent.TabIndex = 0;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DefaultAutoSize = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2Button1.Image = global::Architecture_KC.Properties.Resources.exit;
-            this.guna2Button1.Location = new System.Drawing.Point(12, 12);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(100, 29);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "Выход";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // AddBtn
             // 
@@ -159,11 +124,12 @@
             this.AddBtn.FillColor = System.Drawing.Color.Transparent;
             this.AddBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.AddBtn.ForeColor = System.Drawing.Color.LightGray;
-            this.AddBtn.Location = new System.Drawing.Point(765, 685);
+            this.AddBtn.Location = new System.Drawing.Point(951, 686);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(180, 45);
+            this.AddBtn.Size = new System.Drawing.Size(252, 45);
             this.AddBtn.TabIndex = 5;
             this.AddBtn.Text = "Добавить";
+            this.AddBtn.Visible = false;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // ConfirmBtn
@@ -179,11 +145,149 @@
             this.ConfirmBtn.FillColor = System.Drawing.Color.Transparent;
             this.ConfirmBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.ConfirmBtn.ForeColor = System.Drawing.Color.LightGray;
-            this.ConfirmBtn.Location = new System.Drawing.Point(470, 685);
+            this.ConfirmBtn.Location = new System.Drawing.Point(442, 686);
             this.ConfirmBtn.Name = "ConfirmBtn";
             this.ConfirmBtn.Size = new System.Drawing.Size(180, 45);
             this.ConfirmBtn.TabIndex = 6;
             this.ConfirmBtn.Text = "Завершить";
+            // 
+            // PanelFilter
+            // 
+            this.PanelFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelFilter.BackColor = System.Drawing.Color.Transparent;
+            this.PanelFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelFilter.Location = new System.Drawing.Point(951, 12);
+            this.PanelFilter.Name = "PanelFilter";
+            this.PanelFilter.Size = new System.Drawing.Size(252, 657);
+            this.PanelFilter.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.guna2PictureBox5);
+            this.panel1.Controls.Add(this.guna2PictureBox6);
+            this.panel1.Controls.Add(this.guna2PictureBox7);
+            this.panel1.Controls.Add(this.guna2PictureBox8);
+            this.panel1.Controls.Add(this.guna2PictureBox3);
+            this.panel1.Controls.Add(this.guna2PictureBox4);
+            this.panel1.Controls.Add(this.guna2PictureBox2);
+            this.panel1.Controls.Add(this.guna2PictureBox1);
+            this.panel1.Location = new System.Drawing.Point(12, 47);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(137, 683);
+            this.panel1.TabIndex = 8;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.BorderRadius = 5;
+            this.guna2PictureBox5.Image = global::Architecture_KC.Properties.Resources.power;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(19, 631);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox5.TabIndex = 7;
+            this.guna2PictureBox5.TabStop = false;
+            // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.BorderRadius = 5;
+            this.guna2PictureBox6.Image = global::Architecture_KC.Properties.Resources.hdd;
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(19, 542);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox6.TabIndex = 6;
+            this.guna2PictureBox6.TabStop = false;
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.BorderRadius = 5;
+            this.guna2PictureBox7.Image = global::Architecture_KC.Properties.Resources.gpu;
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(19, 453);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox7.TabIndex = 5;
+            this.guna2PictureBox7.TabStop = false;
+            // 
+            // guna2PictureBox8
+            // 
+            this.guna2PictureBox8.BorderRadius = 5;
+            this.guna2PictureBox8.Image = global::Architecture_KC.Properties.Resources.ram;
+            this.guna2PictureBox8.ImageRotate = 0F;
+            this.guna2PictureBox8.Location = new System.Drawing.Point(19, 364);
+            this.guna2PictureBox8.Name = "guna2PictureBox8";
+            this.guna2PictureBox8.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox8.TabIndex = 4;
+            this.guna2PictureBox8.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BorderRadius = 5;
+            this.guna2PictureBox3.Image = global::Architecture_KC.Properties.Resources.cpu_fan;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(19, 276);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox3.TabIndex = 3;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BorderRadius = 5;
+            this.guna2PictureBox4.Image = global::Architecture_KC.Properties.Resources.cpu;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(19, 187);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox4.TabIndex = 2;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BorderRadius = 5;
+            this.guna2PictureBox2.Image = global::Architecture_KC.Properties.Resources.mother_board;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(19, 98);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox2.TabIndex = 1;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BorderRadius = 5;
+            this.guna2PictureBox1.Image = global::Architecture_KC.Properties.Resources.pc_tower;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(19, 9);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.guna2Button1.BorderRadius = 5;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.LightGray;
+            this.guna2Button1.Image = global::Architecture_KC.Properties.Resources.exit;
+            this.guna2Button1.Location = new System.Drawing.Point(12, 12);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(137, 29);
+            this.guna2Button1.TabIndex = 2;
+            this.guna2Button1.Text = "Выход";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // PC
             // 
@@ -193,12 +297,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1215, 742);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelFilter);
             this.Controls.Add(this.ConfirmBtn);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.CompComponent);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PC";
@@ -207,6 +311,15 @@
             this.Load += new System.EventHandler(this.PC_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,13 +328,21 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.FlowLayoutPanel CompComponent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TextWork;
         private Guna.UI2.WinForms.Guna2Button AddBtn;
         private Guna.UI2.WinForms.Guna2Button ConfirmBtn;
+        private System.Windows.Forms.Panel PanelFilter;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
     }
 }

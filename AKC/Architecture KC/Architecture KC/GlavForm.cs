@@ -51,6 +51,7 @@ namespace Architecture_KC
         }
 
         string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+
         public void SelectTheorUC1()
         {
             loadingCicle.Start();
