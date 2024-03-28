@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PC));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.TextWork = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
@@ -184,90 +186,130 @@
             // guna2PictureBox5
             // 
             this.guna2PictureBox5.BorderRadius = 5;
-            this.guna2PictureBox5.Image = global::Architecture_KC.Properties.Resources.power;
+            this.guna2PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox5.Image = global::Architecture_KC.Properties.Resources.power_def;
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(19, 631);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(80, 80);
             this.guna2PictureBox5.TabIndex = 7;
             this.guna2PictureBox5.TabStop = false;
+            this.toolTip1.SetToolTip(this.guna2PictureBox5, "Блок питания");
+            this.guna2PictureBox5.Click += new System.EventHandler(this.guna2PictureBox5_Click);
+            this.guna2PictureBox5.MouseEnter += new System.EventHandler(this.guna2PictureBox5_MouseEnter);
+            this.guna2PictureBox5.MouseLeave += new System.EventHandler(this.guna2PictureBox5_MouseLeave);
             // 
             // guna2PictureBox6
             // 
             this.guna2PictureBox6.BorderRadius = 5;
-            this.guna2PictureBox6.Image = global::Architecture_KC.Properties.Resources.hdd;
+            this.guna2PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox6.Image = global::Architecture_KC.Properties.Resources.hdd_def;
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(19, 542);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.Size = new System.Drawing.Size(80, 80);
             this.guna2PictureBox6.TabIndex = 6;
             this.guna2PictureBox6.TabStop = false;
+            this.toolTip1.SetToolTip(this.guna2PictureBox6, "Жёский диск");
+            this.guna2PictureBox6.Click += new System.EventHandler(this.guna2PictureBox6_Click);
+            this.guna2PictureBox6.MouseEnter += new System.EventHandler(this.guna2PictureBox6_MouseEnter);
+            this.guna2PictureBox6.MouseLeave += new System.EventHandler(this.guna2PictureBox6_MouseLeave);
             // 
             // guna2PictureBox7
             // 
             this.guna2PictureBox7.BorderRadius = 5;
-            this.guna2PictureBox7.Image = global::Architecture_KC.Properties.Resources.gpu;
+            this.guna2PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox7.Image = global::Architecture_KC.Properties.Resources.gpu_def;
             this.guna2PictureBox7.ImageRotate = 0F;
             this.guna2PictureBox7.Location = new System.Drawing.Point(19, 453);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.Size = new System.Drawing.Size(80, 80);
             this.guna2PictureBox7.TabIndex = 5;
             this.guna2PictureBox7.TabStop = false;
+            this.toolTip1.SetToolTip(this.guna2PictureBox7, "Видеокарта");
+            this.guna2PictureBox7.Click += new System.EventHandler(this.guna2PictureBox7_Click);
+            this.guna2PictureBox7.MouseEnter += new System.EventHandler(this.guna2PictureBox7_MouseEnter);
+            this.guna2PictureBox7.MouseLeave += new System.EventHandler(this.guna2PictureBox7_MouseLeave);
             // 
             // guna2PictureBox8
             // 
             this.guna2PictureBox8.BorderRadius = 5;
-            this.guna2PictureBox8.Image = global::Architecture_KC.Properties.Resources.ram;
+            this.guna2PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox8.Image = global::Architecture_KC.Properties.Resources.ram_def;
             this.guna2PictureBox8.ImageRotate = 0F;
             this.guna2PictureBox8.Location = new System.Drawing.Point(19, 364);
             this.guna2PictureBox8.Name = "guna2PictureBox8";
             this.guna2PictureBox8.Size = new System.Drawing.Size(80, 80);
             this.guna2PictureBox8.TabIndex = 4;
             this.guna2PictureBox8.TabStop = false;
+            this.toolTip1.SetToolTip(this.guna2PictureBox8, "Оперативная память");
+            this.guna2PictureBox8.Click += new System.EventHandler(this.guna2PictureBox8_Click);
+            this.guna2PictureBox8.MouseEnter += new System.EventHandler(this.guna2PictureBox8_MouseEnter);
+            this.guna2PictureBox8.MouseLeave += new System.EventHandler(this.guna2PictureBox8_MouseLeave);
             // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BorderRadius = 5;
-            this.guna2PictureBox3.Image = global::Architecture_KC.Properties.Resources.cpu_fan;
+            this.guna2PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox3.Image = global::Architecture_KC.Properties.Resources.cpu_fan_def;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(19, 276);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(80, 80);
             this.guna2PictureBox3.TabIndex = 3;
             this.guna2PictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.guna2PictureBox3, "Охлаждение процессора");
+            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
+            this.guna2PictureBox3.MouseEnter += new System.EventHandler(this.guna2PictureBox3_MouseEnter);
+            this.guna2PictureBox3.MouseLeave += new System.EventHandler(this.guna2PictureBox3_MouseLeave);
             // 
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.BorderRadius = 5;
-            this.guna2PictureBox4.Image = global::Architecture_KC.Properties.Resources.cpu;
+            this.guna2PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox4.Image = global::Architecture_KC.Properties.Resources.cpu_def;
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(19, 187);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(80, 80);
             this.guna2PictureBox4.TabIndex = 2;
             this.guna2PictureBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.guna2PictureBox4, "Процессор");
+            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
+            this.guna2PictureBox4.MouseEnter += new System.EventHandler(this.guna2PictureBox4_MouseEnter);
+            this.guna2PictureBox4.MouseLeave += new System.EventHandler(this.guna2PictureBox4_MouseLeave);
             // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.BorderRadius = 5;
-            this.guna2PictureBox2.Image = global::Architecture_KC.Properties.Resources.mother_board;
+            this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox2.Image = global::Architecture_KC.Properties.Resources.mother_board_def;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(19, 98);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(80, 80);
             this.guna2PictureBox2.TabIndex = 1;
             this.guna2PictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.guna2PictureBox2, "Системная плата");
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            this.guna2PictureBox2.MouseEnter += new System.EventHandler(this.guna2PictureBox2_MouseEnter);
+            this.guna2PictureBox2.MouseLeave += new System.EventHandler(this.guna2PictureBox2_MouseLeave);
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BorderRadius = 5;
-            this.guna2PictureBox1.Image = global::Architecture_KC.Properties.Resources.pc_tower;
+            this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox1.Image = global::Architecture_KC.Properties.Resources.pc_tower_def;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(19, 9);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(80, 80);
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.guna2PictureBox1, "Корпус");
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            this.guna2PictureBox1.MouseEnter += new System.EventHandler(this.guna2PictureBox1_MouseEnter);
+            this.guna2PictureBox1.MouseLeave += new System.EventHandler(this.guna2PictureBox1_MouseLeave);
             // 
             // guna2Button1
             // 
@@ -344,5 +386,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -281,6 +281,8 @@
     <Content Include="image\человек.png" />
     <None Include="Resources\cpu.png" />
     <None Include="Resources\cpu_fan.png" />
+    <None Include="Resources\cpu_def.png" />
+    <None Include="Resources\cpu_fan_def.png" />
     <Content Include="Resources\edit.png" />
     <None Include="Resources\edit1.png" />
     <Content Include="Resources\excel.png" />
@@ -289,9 +291,13 @@
     <None Include="Resources\free-icon-check-1055183.png" />
     <None Include="Resources\hdd.png" />
     <None Include="Resources\gpu.png" />
+    <None Include="Resources\gpu_def.png" />
+    <None Include="Resources\hdd_def.png" />
     <Content Include="Resources\logo.ico" />
     <None Include="Resources\pc_tower.png" />
     <None Include="Resources\mother_board.png" />
+    <None Include="Resources\pc_tower_def.png" />
+    <None Include="Resources\mother_board_def.png" />
     <Content Include="Resources\pdf.png" />
     <None Include="Resources\play_button.png" />
     <Content Include="Resources\play-button1.png" />
@@ -301,6 +307,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <None Include="Resources\ram.png" />
+    <None Include="Resources\power_def.png" />
+    <None Include="Resources\ram_def.png" />
     <Content Include="Resources\препод.png" />
     <Content Include="Resources\студент.png" />
     <None Include="Resources\студент1.png" />

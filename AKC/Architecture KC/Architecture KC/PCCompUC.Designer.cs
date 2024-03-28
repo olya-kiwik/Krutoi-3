@@ -31,8 +31,8 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.NameComp = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this._Type = new System.Windows.Forms.Label();
             this.haracter = new System.Windows.Forms.TextBox();
+            this._Type = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Характеристики";
             // 
+            // haracter
+            // 
+            this.haracter.BackColor = System.Drawing.Color.Gainsboro;
+            this.haracter.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.haracter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.haracter.ForeColor = System.Drawing.Color.Black;
+            this.haracter.Location = new System.Drawing.Point(6, 21);
+            this.haracter.Multiline = true;
+            this.haracter.Name = "haracter";
+            this.haracter.ReadOnly = true;
+            this.haracter.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.haracter.Size = new System.Drawing.Size(539, 93);
+            this.haracter.TabIndex = 0;
+            this.haracter.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
+            this.haracter.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
+            // 
             // _Type
             // 
             this._Type.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -91,21 +107,6 @@
             this._Type.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this._Type.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
             this._Type.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
-            // 
-            // haracter
-            // 
-            this.haracter.BackColor = System.Drawing.Color.Gainsboro;
-            this.haracter.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.haracter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.haracter.ForeColor = System.Drawing.Color.Black;
-            this.haracter.Location = new System.Drawing.Point(6, 21);
-            this.haracter.Multiline = true;
-            this.haracter.Name = "haracter";
-            this.haracter.ReadOnly = true;
-            this.haracter.Size = new System.Drawing.Size(539, 93);
-            this.haracter.TabIndex = 0;
-            this.haracter.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
-            this.haracter.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
             // 
             // PCCompUC
             // 

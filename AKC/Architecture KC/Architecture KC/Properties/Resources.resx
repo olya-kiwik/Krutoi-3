@@ -220,4 +220,28 @@
   <data name="ram" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cpu_def" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cpu_def.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cpu_fan_def" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cpu_fan_def.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gpu_def" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gpu_def.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hdd_def" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hdd_def.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mother_board_def" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mother_board_def.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pc_tower_def" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pc_tower_def.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="power_def" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\power_def.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ram_def" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ram_def.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
