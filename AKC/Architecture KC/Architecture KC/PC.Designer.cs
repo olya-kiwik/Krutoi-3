@@ -37,6 +37,7 @@
             this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ConfirmBtn = new Guna.UI2.WinForms.Guna2Button();
             this.PanelFilter = new System.Windows.Forms.Panel();
+            this.ComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -48,7 +49,9 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ComponentSelect = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
+            this.PanelFilter.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -159,10 +162,31 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelFilter.BackColor = System.Drawing.Color.Transparent;
             this.PanelFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelFilter.Controls.Add(this.ComboBox);
             this.PanelFilter.Location = new System.Drawing.Point(951, 12);
             this.PanelFilter.Name = "PanelFilter";
             this.PanelFilter.Size = new System.Drawing.Size(252, 657);
             this.PanelFilter.TabIndex = 7;
+            // 
+            // ComboBox
+            // 
+            this.ComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.ComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.ComboBox.BorderRadius = 5;
+            this.ComboBox.BorderThickness = 2;
+            this.ComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.ComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.ComboBox.ForeColor = System.Drawing.Color.LightGray;
+            this.ComboBox.ItemHeight = 30;
+            this.ComboBox.Location = new System.Drawing.Point(3, 3);
+            this.ComboBox.Name = "ComboBox";
+            this.ComboBox.Size = new System.Drawing.Size(244, 36);
+            this.ComboBox.TabIndex = 0;
+            this.ComboBox.SelectedValueChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // panel1
             // 
@@ -331,6 +355,18 @@
             this.guna2Button1.Text = "Выход";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // ComponentSelect
+            // 
+            this.ComponentSelect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ComponentSelect.AutoSize = true;
+            this.ComponentSelect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ComponentSelect.Location = new System.Drawing.Point(763, 716);
+            this.ComponentSelect.Name = "ComponentSelect";
+            this.ComponentSelect.Size = new System.Drawing.Size(35, 13);
+            this.ComponentSelect.TabIndex = 9;
+            this.ComponentSelect.Text = "label2";
+            this.ComponentSelect.Visible = false;
+            // 
             // PC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +375,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1215, 742);
             this.ControlBox = false;
+            this.Controls.Add(this.ComponentSelect);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelFilter);
             this.Controls.Add(this.ConfirmBtn);
@@ -353,6 +390,7 @@
             this.Load += new System.EventHandler(this.PC_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.PanelFilter.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
@@ -387,5 +425,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
         private System.Windows.Forms.ToolTip toolTip1;
+        private Guna.UI2.WinForms.Guna2ComboBox ComboBox;
+        private System.Windows.Forms.Label ComponentSelect;
     }
 }

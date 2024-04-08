@@ -287,3 +287,7 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.PC.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architec.FCFD6F30.Up2Date
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.PCCompUC.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\AWSSDK.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\AWSSDK.pdb
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.SelectAddComonent.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddBox.resources
