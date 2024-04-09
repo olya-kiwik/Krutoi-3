@@ -14,8 +14,11 @@ namespace Architecture_KC
 {
     public partial class LodinForm : Form
     {
+        DBLinkForm dBLinkForm = new DBLinkForm();
+        PCQuerySql sql = new PCQuerySql();
         private bool isDragging = false;
         private Point lastCursorPos;
+        int x = 0;
         public LodinForm()
         {
             InitializeComponent();
@@ -109,6 +112,17 @@ namespace Architecture_KC
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void LodinForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            dBLinkForm.ShowDialog();
+            linkBD.Text = $"Имя сервера SQL: {sql.GetSqlConn()}";
         }
     }
 }

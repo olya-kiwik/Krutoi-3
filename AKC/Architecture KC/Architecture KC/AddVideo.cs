@@ -18,6 +18,7 @@ namespace Architecture_KC
         private bool isDragging = false;
         private Point lastCursorPos;
         private string selectedFilePath;
+        PCQuerySql sql = new PCQuerySql();
         public AddVideo()
         {
             InitializeComponent();
@@ -50,29 +51,17 @@ namespace Architecture_KC
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(con))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand($"Insert INTO videoResurs (Name, Link) values (@Name, @Link)", conn);
-                    command.Parameters.AddWithValue("@Name", TBName.Text);
-                    command.Parameters.AddWithValue("@Link", TBLink.Text);
-                    command.ExecuteNonQuery();
-                    conn.Close();
+                sql.AddVideo(TBName, TBLink);
 
-                    MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
-
-                    Methods.ResetLayout1();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
-                Methods.ResetLayout2();
+                Close();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

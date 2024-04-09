@@ -40,6 +40,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2parol = new Guna.UI2.WinForms.Guna2TextBox();
+            this.linkBD = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -210,6 +212,28 @@
             this.guna2parol.TabIndex = 9;
             this.guna2parol.KeyUp += new System.Windows.Forms.KeyEventHandler(this.guna2Button1_KeyUp);
             // 
+            // linkBD
+            // 
+            this.linkBD.AutoSize = true;
+            this.linkBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.linkBD.Location = new System.Drawing.Point(25, 76);
+            this.linkBD.Name = "linkBD";
+            this.linkBD.Size = new System.Drawing.Size(166, 13);
+            this.linkBD.TabIndex = 12;
+            this.linkBD.Text = "Имя сервера SQL: Отсутствует";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(25, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Изменить";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // LodinForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,6 +241,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(341, 419);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.linkBD);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.guna2parol);
@@ -228,12 +254,14 @@
             this.Name = "LodinForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
+            this.Load += new System.EventHandler(this.LodinForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -247,5 +275,7 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2parol;
+        private System.Windows.Forms.Label linkBD;
+        private System.Windows.Forms.Label label1;
     }
 }

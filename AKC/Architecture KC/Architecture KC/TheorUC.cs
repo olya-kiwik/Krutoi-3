@@ -16,6 +16,9 @@ namespace Architecture_KC
     public partial class TheorUC : UserControl
     {
         private bool _isAdmin;
+        static PCQuerySql sql = new PCQuerySql();
+
+        static string conect = sql.GetSqlConn();
         public TheorUC(bool isAdmin)
         {
             InitializeComponent();
@@ -40,7 +43,7 @@ namespace Architecture_KC
             set { label2 = value; }
         }
         
-        string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+        string con = $@"Data Source = {conect}; Initial Catalog = AKC; Integrated Security = SSPI";
         private void guna2Button1_Click(object sender, EventArgs e)
         {
            

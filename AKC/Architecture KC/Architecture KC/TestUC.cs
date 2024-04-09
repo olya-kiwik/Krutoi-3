@@ -18,6 +18,9 @@ namespace Architecture_KC
     public partial class TestUC : UserControl
     {
         private bool _isAdmin;
+        static PCQuerySql sql = new PCQuerySql();
+
+        static string conect = sql.GetSqlConn();
         public TestUC(bool isAdmin)
         {
             InitializeComponent();
@@ -48,7 +51,7 @@ namespace Architecture_KC
             set { labelLink = value; }
         }
 
-        string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+        string con = $@"Data Source = {conect}; Initial Catalog = AKC; Integrated Security = SSPI";
         
 
 

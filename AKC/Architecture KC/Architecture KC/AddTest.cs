@@ -15,6 +15,9 @@ namespace Architecture_KC
     {
         private bool isDragging = false;
         private Point lastCursorPos;
+
+        PCQuerySql sql = new PCQuerySql();
+
         public AddTest()
         {
             InitializeComponent();
@@ -44,32 +47,19 @@ namespace Architecture_KC
             isDragging = false;
         }
 
-        string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+        
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(con))
+            try
             {
-                try
+                sql.AddTest(TBName, TBLink);
+
+                Close();
+            }
+            catch (Exception ex)
                 {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand($"Insert INTO Test (Name, Link) values (@Name, @Link)", conn);
-                    command.Parameters.AddWithValue("@Name", TBName.Text);
-                    command.Parameters.AddWithValue("@Link", TBLink.Text);
-                    command.ExecuteNonQuery();
-                    conn.Close();
-
-                    MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
-
-                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
-                Methods.ResetLayout3();
+                MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

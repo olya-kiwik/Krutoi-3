@@ -1,18 +1,35 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Architecture_KC
 {
     public class PCQuerySql
     {
-        string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+        private bool _isAdmin;
+        private static string sqlConn;
+
+        public string GetSqlConn()
+        {
+            return sqlConn;
+        }
+
+        public void SetSqlConn(string value)
+        {
+            sqlConn = value;
+        }
+
+        string conn = $@"Data Source = {sqlConn}; Initial Catalog = AKC; Integrated Security = SSPI";
 
         public void SelectBox(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
         {
@@ -531,6 +548,110 @@ namespace Architecture_KC
                 
             }
         }
+
+        public void AddBox(Guna2ComboBox cb1, Guna2ComboBox cb2, Guna2ComboBox cb3, Guna2TextBox tb1)
+        {
+
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand($"Insert INTO Box (Name, FormFactorMatherBoar, BoxSize, FormFactorPower) values (@Name, @FormFactorMatherBoard, @BpxSize, @FormFactorPower)", con);
+                    command.Parameters.AddWithValue("@Name", tb1.Text);
+                    command.Parameters.AddWithValue("@FormFactorMatherBoard", cb3.Text);
+                    command.Parameters.AddWithValue("@BpxSize", cb1.Text);
+                    command.Parameters.AddWithValue("@FormFactorPower", cb2.Text);
+                    command.ExecuteNonQuery();
+                    con.Close();
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+        }
+
+        public void AddFile(string selectedFilePath, Guna2TextBox tb1)
+        {
+
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+              
+                con.Open();
+                SqlCommand command = new SqlCommand($"Insert INTO txtResurs (Teoria, Name) values (@Teoria,@Name)", con);
+                command.Parameters.Add("@Teoria", SqlDbType.VarBinary).Value = File.ReadAllBytes(selectedFilePath);
+                command.Parameters.AddWithValue("@Name", tb1.Text);
+                command.ExecuteNonQuery();
+                con.Close();
+
+                Methods.ResetLayout1();
+                
+            }
+        }
+
+        public void AddTest(Guna2TextBox TBName, Guna2TextBox TBLink)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+             
+                con.Open();
+                SqlCommand command = new SqlCommand($"Insert INTO Test (Name, Link) values (@Name, @Link)", con);
+                command.Parameters.AddWithValue("@Name", TBName.Text);
+                command.Parameters.AddWithValue("@Link", TBLink.Text);
+                command.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);          
+
+                Methods.ResetLayout3();
+            }
+        }
+
+        public void AddVideo(Guna2TextBox TBName, Guna2TextBox TBLink)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                
+                con.Open();
+                SqlCommand command = new SqlCommand($"Insert INTO videoResurs (Name, Link) values (@Name, @Link)", con);
+                command.Parameters.AddWithValue("@Name", TBName.Text);
+                command.Parameters.AddWithValue("@Link", TBLink.Text);
+                command.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+
+                Methods.ResetLayout1();              
+                Methods.ResetLayout2();
+            }
+        }
+
+        /*public void EditVideo( Guna2TextBox TBName, Guna2TextBox TBLink)
+        {
+            VideoUC uc1 = new VideoUC(_isAdmin);
+            SqlConnection sqlConnection = new SqlConnection(conn);
+            string update = $"Update videoResurs set Name = @Name, Link = @Link WHERE id={uc1.LabelId.Text}";
+
+            sqlConnection.Open();
+
+            using (SqlCommand command = new SqlCommand(update, sqlConnection))
+            {
+
+                command.Parameters.AddWithValue("@Name", TBName.Text);
+                command.Parameters.AddWithValue("@Link", TBLink.Text);
+
+                command.ExecuteReader();
+            }
+
+            sqlConnection.Close();
+        }*/
+
+
 
     }
 }

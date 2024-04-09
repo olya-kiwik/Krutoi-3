@@ -291,3 +291,4 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\AWSSDK.dll
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\AWSSDK.pdb
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.SelectAddComonent.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddBox.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.DBLinkForm.resources
