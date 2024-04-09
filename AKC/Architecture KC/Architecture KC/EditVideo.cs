@@ -17,6 +17,8 @@ namespace Architecture_KC
         private bool isDragging = false;
         private Point lastCursorPos;
         private bool _isAdmin;
+
+        PCQuerySql sql = new PCQuerySql();
         public EditVideo(bool Admin)
         {
             InitializeComponent();
@@ -24,31 +26,17 @@ namespace Architecture_KC
         }
  
 
-        string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            var up = MessageBox.Show($"Вы действительно хотите применить изменения?","Подверждение", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            /*var up = MessageBox.Show($"Вы действительно хотите применить изменения?","Подверждение", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             //-------------------------------
             if (up == DialogResult.Yes)
             {
-                VideoUC uc1 = new VideoUC(_isAdmin);
+                
                 try
                 {
-                    SqlConnection sqlConnection = new SqlConnection(con);
-                    string update = $"Update videoResurs set Name = @Name, Link = @Link WHERE id={uc1.LabelId.Text}";
+                    sql.EditVideo(TBName, TBLink);
 
-                    sqlConnection.Open();
-
-                    using (SqlCommand command = new SqlCommand(update, sqlConnection))
-                    {
-
-                        command.Parameters.AddWithValue("@Name", TBName.Text);
-                        command.Parameters.AddWithValue("@Link", TBLink.Text);
-
-                        command.ExecuteReader();
-                    }
-
-                    sqlConnection.Close();
                     Close();
                     Methods.ResetLayout2();
                 }
@@ -60,7 +48,7 @@ namespace Architecture_KC
             else if (up == DialogResult.No)
             {
                 Close();
-            }
+            }*/
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)

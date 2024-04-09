@@ -16,6 +16,10 @@ namespace Architecture_KC
     public partial class VideoUC : UserControl
     {
         private bool _isAdmin;
+
+        static PCQuerySql sql = new PCQuerySql();
+
+        static string conect = sql.GetSqlConn();
         public VideoUC(bool isAdmin)
         {
             InitializeComponent();
@@ -39,7 +43,7 @@ namespace Architecture_KC
             set { link = value; }
         }
 
-        string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+        string con = $@"Data Source = {conect}; Initial Catalog = AKC; Integrated Security = SSPI";
 
         private void delBt_Click(object sender, EventArgs e)
         {

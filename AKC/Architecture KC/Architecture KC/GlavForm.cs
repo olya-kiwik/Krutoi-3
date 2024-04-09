@@ -23,7 +23,9 @@ namespace Architecture_KC
         private bool isDragging = false;
         private Point lastCursorPos;
 
+        static PCQuerySql sql = new PCQuerySql();
         private bool _isAdmin;
+        static string conect = sql.GetSqlConn();
         public GlavForm(bool isAdmin)
         {
             InitializeComponent();
@@ -50,7 +52,7 @@ namespace Architecture_KC
             }
         }
 
-        string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
+        string conn = $@"Data Source = {conect}; Initial Catalog = AKC; Integrated Security = SSPI";
 
         public void SelectTheorUC1()
         {
@@ -311,7 +313,6 @@ namespace Architecture_KC
         private void searchLec_TextChanged(object sender, EventArgs e)//Поиск
         {
             flowLayoutPanel2.Controls.Clear();
-            string conn = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
             using (SqlConnection con = new SqlConnection(conn))
             {
                 con.Open();

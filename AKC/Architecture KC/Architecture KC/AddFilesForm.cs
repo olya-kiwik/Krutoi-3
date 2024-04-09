@@ -17,6 +17,7 @@ namespace Architecture_KC
         private bool isDragging = false;
         private Point lastCursorPos;
         private string selectedFilePath;
+        PCQuerySql sql = new PCQuerySql();
 
         public AddFiles()
         {
@@ -62,34 +63,22 @@ namespace Architecture_KC
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
-            string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
-
             if (string.IsNullOrEmpty(selectedFilePath))
             {
                 MessageBox.Show("Файл не выбран!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection(con))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand($"Insert INTO txtResurs (Teoria, Name) values (@Teoria,@Name)", conn);
-                    command.Parameters.Add("@Teoria", SqlDbType.VarBinary).Value = File.ReadAllBytes(selectedFilePath);
-                    command.Parameters.AddWithValue("@Name", guna2TextBox1.Text);
-                    command.ExecuteNonQuery();
-                    conn.Close();
-
-                    MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
-
-                    Methods.ResetLayout1();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                sql.AddFile(selectedFilePath, guna2TextBox1);
+                
+                MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

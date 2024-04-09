@@ -12,5 +12,7 @@ namespace Architecture_KC
         public static Action ResetLayout2 { get; set; }
         public static Action ResetLayout3 { get; set; }
         
+        
+        
     }
 }

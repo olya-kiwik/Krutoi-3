@@ -143,6 +143,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AKCDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBLinkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBLinkForm.Designer.cs">
+      <DependentUpon>DBLinkForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditVideo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddVideo.resx">
       <DependentUpon>AddVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBLinkForm.resx">
+      <DependentUpon>DBLinkForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditVideo.resx">
       <DependentUpon>EditVideo.cs</DependentUpon>

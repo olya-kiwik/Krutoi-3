@@ -15,6 +15,8 @@ namespace Architecture_KC
     {
         private bool isDragging = false;
         private Point lastCursorPos;
+
+        PCQuerySql sql = new PCQuerySql();
         public AddBox()
         {
             TopMost = true;
@@ -44,32 +46,7 @@ namespace Architecture_KC
             isDragging = false;
         }
 
-        private void Add()
-        {
-            string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
-
-            using (SqlConnection conn = new SqlConnection(con))
-            {
-                try
-                {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand($"Insert INTO Box (Name, FormFactorMatherBoar, BoxSize, FormFactorPower) values (@Name, @FormFactorMatherBoard, @BpxSize, @FormFactorPower)", conn);
-                    command.Parameters.AddWithValue("@Name", guna2TextBox1.Text);
-                    command.Parameters.AddWithValue("@FormFactorMatherBoard", guna2ComboBox3.Text);
-                    command.Parameters.AddWithValue("@BpxSize", guna2ComboBox1.Text);
-                    command.Parameters.AddWithValue("@FormFactorPower", guna2ComboBox2.Text);
-                    command.ExecuteNonQuery();
-                    conn.Close();
-
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            
-        }
+        
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             if (guna2TextBox1.Text != null && guna2ComboBox3.SelectedIndex != -1 && guna2ComboBox1.SelectedIndex != -1 && guna2ComboBox2.SelectedIndex != -1)
@@ -77,7 +54,7 @@ namespace Architecture_KC
                 var qute = MessageBox.Show("Сохранить?", "Сохранение", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (qute == DialogResult.Yes)
                 {
-                    Add();
+                    sql.AddBox(guna2ComboBox1, guna2ComboBox2, guna2ComboBox3, guna2TextBox1);
 
                     var quet2 = MessageBox.Show("Добавить ещё компанент?", "?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (quet2 == DialogResult.Yes)
