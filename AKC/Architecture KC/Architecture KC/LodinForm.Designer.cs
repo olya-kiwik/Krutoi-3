@@ -275,7 +275,7 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2parol;
-        private System.Windows.Forms.Label linkBD;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label linkBD;
     }
 }

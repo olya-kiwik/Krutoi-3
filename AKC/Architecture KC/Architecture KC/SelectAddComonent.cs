@@ -14,6 +14,13 @@ namespace Architecture_KC
     {
         private bool isDragging = false;
         private Point lastCursorPos;
+
+        AddBox addBox = new AddBox();
+        AddCPU addCPU = new AddCPU();
+
+
+
+
         public SelectAddComonent()
         {
             TopMost = true;
@@ -50,31 +57,47 @@ namespace Architecture_KC
                 switch (guna2ComboBox1.SelectedIndex)
                 {
                     case -1:
+
                         MessageBox.Show("Необходимо выбрать параметр!", "Ошибка!");
                         return;
+
                     case 0://Корпус
-                        AddBox addBox = new AddBox();
+
                         addBox.ShowDialog();
                         break;
+
                     case 1://Процессор
 
+                        addCPU.ShowDialog();
                         break;
+
                     case 2://Охлаждение процессора
 
+
                         break;
+
                     case 3://Системная плата
 
+
                         break;
+
                     case 4://Видеокарта
 
+
                         break;
+
                     case 5://Оперативная память
 
-                        break;
-                    case 6://Блок питания
 
                         break;
+
+                    case 6://Блок питания
+
+
+                        break;
+
                     case 7://Хранилище
+
 
                         break;
 

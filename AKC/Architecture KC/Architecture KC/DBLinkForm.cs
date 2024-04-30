@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +14,8 @@ namespace Architecture_KC
 {
     public partial class DBLinkForm : Form
     {
-        PCQuerySql sql = new PCQuerySql();
+        PCQuerySql sql;
+        LodinForm lf;
 
         public DBLinkForm()
         {
@@ -29,7 +31,12 @@ namespace Architecture_KC
         {
             if (guna2link.Text != null)
             {
-                sql.SetSqlConn(guna2link.Text);
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                config.AppSettings.Settings.Clear();
+                config.AppSettings.Settings.Add("dbCon", guna2link.Text);
+                config.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection("AKC");
+
                 Close();
             }
             else

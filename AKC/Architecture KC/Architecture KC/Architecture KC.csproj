@@ -126,6 +126,12 @@
     <Compile Include="AddBox.Designer.cs">
       <DependentUpon>AddBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddCPU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCPU.Designer.cs">
+      <DependentUpon>AddCPU.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AKC.config" />
     <None Include="AKCDataSet1.xsc">
       <DependentUpon>AKCDataSet1.xsd</DependentUpon>
     </None>
@@ -247,6 +254,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AddBox.resx">
       <DependentUpon>AddBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCPU.resx">
+      <DependentUpon>AddCPU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTest.resx">
       <DependentUpon>AddTest.cs</DependentUpon>

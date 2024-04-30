@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -17,7 +18,8 @@ namespace Architecture_KC
     public class PCQuerySql
     {
         private bool _isAdmin;
-        private static string sqlConn;
+        
+        static string sqlConn = ConfigurationManager.AppSettings["dbCon"];
 
         public string GetSqlConn()
         {
@@ -131,6 +133,7 @@ namespace Architecture_KC
                         flowLayoutPanel.Controls.Add(pcUC);
 
                         comboBox.Items.Add(reader.GetString(1));
+                        RemoveDuplicates(comboBox);
                     }
                 }
                 sqlConnection.Close();
@@ -202,6 +205,7 @@ namespace Architecture_KC
                         flowLayoutPanel.Controls.Add(pcUC);
 
                         comboBox.Items.Add(reader.GetString(1));
+                        RemoveDuplicates(comboBox);
                     }
                 }
                 sqlConnection.Close();
@@ -344,6 +348,8 @@ namespace Architecture_KC
                         flowLayoutPanel.Controls.Add(pcUC);
 
                         comboBox.Items.Add(reader.GetString(2));
+
+                        RemoveDuplicates(comboBox);
                     }
                 }
                 sqlConnection.Close();
@@ -415,6 +421,7 @@ namespace Architecture_KC
                         flowLayoutPanel.Controls.Add(pcUC);
 
                         comboBox.Items.Add(reader.GetString(1));
+                        RemoveDuplicates(comboBox);
                     }
                 }
                 sqlConnection.Close();
@@ -481,6 +488,7 @@ namespace Architecture_KC
                         pcUC.TextBoxHar.Text = $"Мощность: {reader.GetString(1)} W" + Environment.NewLine + $"Форм фактор: {reader.GetString(2)}";
 
                         flowLayoutPanel.Controls.Add(pcUC);
+
                     }
                 }
                 sqlConnection.Close();
@@ -562,6 +570,39 @@ namespace Architecture_KC
                     command.Parameters.AddWithValue("@FormFactorMatherBoard", cb3.Text);
                     command.Parameters.AddWithValue("@BpxSize", cb1.Text);
                     command.Parameters.AddWithValue("@FormFactorPower", cb2.Text);
+                    command.ExecuteNonQuery();
+                    con.Close();
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+        }
+
+        public void AddCPU(Guna2ComboBox cb1, Guna2ComboBox cb2, Guna2TextBox tb1, Guna2TextBox tb2, Guna2TextBox tb3, Guna2TextBox tb4, Guna2TextBox tb5, Guna2TextBox tb6)
+        {
+
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand($"Insert INTO CPU (Name, Creator, Socket, DDR, TDP, Max_DDR, P_Core, E_Core) values " +
+                        "(@Name, @Creator, @Socket, @DDR, @TDP, @Max_DDR, @P_Core, @E_Core)", con);
+
+                    command.Parameters.AddWithValue("@Name", tb1.Text);
+                    command.Parameters.AddWithValue("@Creator", cb2.Text);
+                    command.Parameters.AddWithValue("@Socket", tb2.Text);
+                    command.Parameters.AddWithValue("@DDR", cb1.Text);
+                    command.Parameters.AddWithValue("@TDP", tb3.Text);
+                    command.Parameters.AddWithValue("@Max_DDR", tb4.Text);
+                    command.Parameters.AddWithValue("@P_Core", tb5.Text);
+                    command.Parameters.AddWithValue("@E_Core", tb6.Text);
+
                     command.ExecuteNonQuery();
                     con.Close();
 

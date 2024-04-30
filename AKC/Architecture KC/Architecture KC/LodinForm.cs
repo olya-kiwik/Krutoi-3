@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using System.Configuration;
 
 namespace Architecture_KC
 {
@@ -116,13 +117,12 @@ namespace Architecture_KC
 
         private void LodinForm_Load(object sender, EventArgs e)
         {
-            
+            linkBD.Text = $"Имя сервера SQL: {sql.GetSqlConn()}";
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            dBLinkForm.ShowDialog();
-            linkBD.Text = $"Имя сервера SQL: {sql.GetSqlConn()}";
+            dBLinkForm.ShowDialog(); 
         }
     }
 }
