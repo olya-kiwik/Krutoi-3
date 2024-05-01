@@ -150,6 +150,24 @@
     <Compile Include="AddMotherBoard.Designer.cs">
       <DependentUpon>AddMotherBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddPower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPower.Designer.cs">
+      <DependentUpon>AddPower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRAM.Designer.cs">
+      <DependentUpon>AddRAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStorage.Designer.cs">
+      <DependentUpon>AddStorage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +302,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddMotherBoard.resx">
       <DependentUpon>AddMotherBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPower.resx">
+      <DependentUpon>AddPower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRAM.resx">
+      <DependentUpon>AddRAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStorage.resx">
+      <DependentUpon>AddStorage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTest.resx">
       <DependentUpon>AddTest.cs</DependentUpon>

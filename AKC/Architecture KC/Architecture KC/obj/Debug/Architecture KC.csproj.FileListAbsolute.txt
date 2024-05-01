@@ -295,3 +295,7 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddCPU.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddCPU_Colling.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddGPU.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddMotherBoard.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddPower.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddRAM.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.AddStorage.resources

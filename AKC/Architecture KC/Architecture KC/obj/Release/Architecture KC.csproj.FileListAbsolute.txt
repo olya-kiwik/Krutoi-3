@@ -62,3 +62,15 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture 
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architec.FCFD6F30.Up2Date
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture KC.exe
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture KC.pdb
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\AWSSDK.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\AWSSDK.pdb
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddBox.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddCPU.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddCPU_Colling.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddGPU.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddMotherBoard.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddPower.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddRAM.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddStorage.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.DBLinkForm.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.SelectAddComonent.resources

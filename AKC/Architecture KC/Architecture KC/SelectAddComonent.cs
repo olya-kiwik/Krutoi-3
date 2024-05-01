@@ -20,8 +20,9 @@ namespace Architecture_KC
         AddCPU_Colling addCPU_Colling = new AddCPU_Colling();
         AddGPU addGPU = new AddGPU();
         AddMotherBoard addMotherBoard = new AddMotherBoard();
-
-
+        AddStorage addStorage = new AddStorage();
+        AddRAM addRAM = new AddRAM();
+        AddPower addPower = new AddPower();
 
         public SelectAddComonent()
         {
@@ -90,19 +91,18 @@ namespace Architecture_KC
 
                     case 5://Оперативная память
 
-
+                        addRAM.ShowDialog();
                         break;
 
                     case 6://Блок питания
 
-
+                        addPower.ShowDialog();
                         break;
 
                     case 7://Хранилище
 
-
+                        addStorage.ShowDialog();
                         break;
-
                 }
                 Close();
             }

@@ -519,7 +519,7 @@ namespace Architecture_KC
                         pcUC.labelName.Text = reader.GetString(0);
                         pcUC.ImageComp.Image = Properties.Resources.hdd;
                         pcUC.labelType.Text = "Накопитель";
-                        pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость вращения: {reader.GetString(1)} об/мин";
+                        pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость записи: {reader.GetString(1)} мб/сек";
 
                         flowLayoutPanel.Controls.Add(pcUC);
                     }
@@ -680,6 +680,79 @@ namespace Architecture_KC
                     command.Parameters.AddWithValue("@DDR", ddr.Text);
                     command.Parameters.AddWithValue("@ChipSet", chipset.Text);
                     command.Parameters.AddWithValue("@FormFactor", formFactor.Text);
+
+                    command.ExecuteNonQuery();
+                    con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+        public void AddStorage(Guna2TextBox name, Guna2TextBox speed, Guna2ComboBox type)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand($"Insert INTO Storage (Name, Speed, Type) values (@Name, @Speed, @Type)", con);
+
+                    command.Parameters.AddWithValue("@Name", name.Text);
+                    command.Parameters.AddWithValue("@Speed", speed.Text);
+                    command.Parameters.AddWithValue("@Type", type.Text);
+                    
+                    command.ExecuteNonQuery();
+                    con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        public void AddRAM(Guna2TextBox name, Guna2TextBox ddr, Guna2TextBox GB, Guna2TextBox mghz, Guna2TextBox times)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand($"Insert INTO RAM (Name, DDR, GB, MGHz, Times) values (@Name, @DDR, @GB, @MGHz, @Times)", con);
+
+                    command.Parameters.AddWithValue("@Name", name.Text);
+                    command.Parameters.AddWithValue("@DDR", ddr.Text);
+                    command.Parameters.AddWithValue("@GB", GB.Text);
+                    command.Parameters.AddWithValue("@MGHz", mghz.Text);
+                    command.Parameters.AddWithValue("@Times", times.Text);
+
+                    command.ExecuteNonQuery();
+                    con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        public void AddPower(Guna2TextBox name, Guna2TextBox power, Guna2ComboBox formfactor)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand($"Insert INTO Power (Name, [Power(W)], FormFactor) values (@Name, @Power, @FormFactor)", con);
+
+                    command.Parameters.AddWithValue("@Name", name.Text);
+                    command.Parameters.AddWithValue("@Power", power.Text);
+                    command.Parameters.AddWithValue("@FormFactor", formfactor.Text);
 
                     command.ExecuteNonQuery();
                     con.Close();
