@@ -17,7 +17,9 @@ namespace Architecture_KC
 
         AddBox addBox = new AddBox();
         AddCPU addCPU = new AddCPU();
-
+        AddCPU_Colling addCPU_Colling = new AddCPU_Colling();
+        AddGPU addGPU = new AddGPU();
+        AddMotherBoard addMotherBoard = new AddMotherBoard();
 
 
 
@@ -73,17 +75,17 @@ namespace Architecture_KC
 
                     case 2://Охлаждение процессора
 
-
+                        addCPU_Colling.ShowDialog();
                         break;
 
                     case 3://Системная плата
 
-
+                        addMotherBoard.ShowDialog();
                         break;
 
                     case 4://Видеокарта
 
-
+                        addGPU.ShowDialog();
                         break;
 
                     case 5://Оперативная память

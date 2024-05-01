@@ -132,6 +132,24 @@
     <Compile Include="AddCPU.Designer.cs">
       <DependentUpon>AddCPU.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddCPU_Colling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCPU_Colling.Designer.cs">
+      <DependentUpon>AddCPU_Colling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGPU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGPU.Designer.cs">
+      <DependentUpon>AddGPU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMotherBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMotherBoard.Designer.cs">
+      <DependentUpon>AddMotherBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +275,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddCPU.resx">
       <DependentUpon>AddCPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCPU_Colling.resx">
+      <DependentUpon>AddCPU_Colling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddGPU.resx">
+      <DependentUpon>AddGPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMotherBoard.resx">
+      <DependentUpon>AddMotherBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTest.resx">
       <DependentUpon>AddTest.cs</DependentUpon>

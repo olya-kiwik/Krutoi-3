@@ -271,7 +271,7 @@ namespace Architecture_KC
                         pcUC.labelName.Text = reader.GetString(0);
                         pcUC.ImageComp.Image = Properties.Resources.gpu;
                         pcUC.labelType.Text = "Видеокарта";
-                        pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Кол-во памяти: {reader.GetString(1)} Гб" + Environment.NewLine + $"Тип памяти: ПDDR{reader.GetString(3)}";
+                        pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Кол-во памяти: {reader.GetString(1)} Гб" + Environment.NewLine + $"Тип памяти: GDDR{reader.GetString(3)}";
 
                         flowLayoutPanel.Controls.Add(pcUC);
 
@@ -583,7 +583,7 @@ namespace Architecture_KC
 
         }
 
-        public void AddCPU(Guna2ComboBox cb1, Guna2ComboBox cb2, Guna2TextBox tb1, Guna2TextBox tb2, Guna2TextBox tb3, Guna2TextBox tb4, Guna2TextBox tb5, Guna2TextBox tb6)
+        public void AddCPU(Guna2ComboBox ddr, Guna2ComboBox creator, Guna2TextBox name, Guna2TextBox socket, Guna2TextBox tdp, Guna2TextBox max_ddr, Guna2TextBox powerCore, Guna2TextBox energyCore)
         {
 
             using (SqlConnection con = new SqlConnection(conn))
@@ -594,18 +594,17 @@ namespace Architecture_KC
                     SqlCommand command = new SqlCommand($"Insert INTO CPU (Name, Creator, Socket, DDR, TDP, Max_DDR, P_Core, E_Core) values " +
                         "(@Name, @Creator, @Socket, @DDR, @TDP, @Max_DDR, @P_Core, @E_Core)", con);
 
-                    command.Parameters.AddWithValue("@Name", tb1.Text);
-                    command.Parameters.AddWithValue("@Creator", cb2.Text);
-                    command.Parameters.AddWithValue("@Socket", tb2.Text);
-                    command.Parameters.AddWithValue("@DDR", cb1.Text);
-                    command.Parameters.AddWithValue("@TDP", tb3.Text);
-                    command.Parameters.AddWithValue("@Max_DDR", tb4.Text);
-                    command.Parameters.AddWithValue("@P_Core", tb5.Text);
-                    command.Parameters.AddWithValue("@E_Core", tb6.Text);
+                    command.Parameters.AddWithValue("@Name", name.Text);
+                    command.Parameters.AddWithValue("@Creator", creator.Text);
+                    command.Parameters.AddWithValue("@Socket", socket.Text);
+                    command.Parameters.AddWithValue("@DDR", ddr.Text);
+                    command.Parameters.AddWithValue("@TDP", tdp.Text);
+                    command.Parameters.AddWithValue("@Max_DDR", max_ddr.Text);
+                    command.Parameters.AddWithValue("@P_Core", powerCore.Text);
+                    command.Parameters.AddWithValue("@E_Core", energyCore.Text);
 
                     command.ExecuteNonQuery();
                     con.Close();
-
 
                 }
                 catch (Exception ex)
@@ -614,6 +613,83 @@ namespace Architecture_KC
                 }
             }
 
+        }
+
+        public void AddCPU_Cool(Guna2TextBox name, Guna2TextBox type, Guna2TextBox tdp)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand($"Insert INTO CPU_Cool (Name, Type, TDP) values (@Name, @Type, @TDP)", con);
+
+                    command.Parameters.AddWithValue("@Name", name.Text);
+                    command.Parameters.AddWithValue("@Type", type.Text);
+                    command.Parameters.AddWithValue("@TDP", tdp.Text);
+
+                    command.ExecuteNonQuery();
+                    con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        public void AddGPU(Guna2TextBox name, Guna2TextBox gb, Guna2ComboBox creator, Guna2TextBox typeMemory, Guna2TextBox size)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand($"Insert INTO GPU (Name, GB, Creator, TypeMemory, Size) values (@Name, @GB, @Creator, @TypeMemory, @Size)", con);
+
+                    command.Parameters.AddWithValue("@Name", name.Text);
+                    command.Parameters.AddWithValue("@GB", gb.Text);
+                    command.Parameters.AddWithValue("@Creator", creator.Text);
+                    command.Parameters.AddWithValue("@TypeMemory", typeMemory.Text);
+                    command.Parameters.AddWithValue("@Size", size.Text);
+
+                    command.ExecuteNonQuery();
+                    con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        public void AddMB(Guna2TextBox name, Guna2TextBox socket, Guna2TextBox creator, Guna2TextBox ddr, Guna2TextBox chipset, Guna2ComboBox formFactor)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand($"Insert INTO MotherBoard (Name, Socket, Creator, DDR, ChipSet, FormFactor) values (@Name, @Socket, @Creator, @DDR, @ChipSet, @FormFactor)", con);
+
+                    command.Parameters.AddWithValue("@Name", name.Text);
+                    command.Parameters.AddWithValue("@Socket", socket.Text);
+                    command.Parameters.AddWithValue("@Creator", creator.Text);
+                    command.Parameters.AddWithValue("@DDR", ddr.Text);
+                    command.Parameters.AddWithValue("@ChipSet", chipset.Text);
+                    command.Parameters.AddWithValue("@FormFactor", formFactor.Text);
+
+                    command.ExecuteNonQuery();
+                    con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при добавлении данных:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         public void AddFile(string selectedFilePath, Guna2TextBox tb1)

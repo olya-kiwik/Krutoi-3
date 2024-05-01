@@ -17,6 +17,7 @@ namespace Architecture_KC
         private Point lastCursorPos;
 
         PCQuerySql sql = new PCQuerySql();
+
         public AddBox()
         {
             TopMost = true;
