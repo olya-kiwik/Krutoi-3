@@ -1,5 +1,6 @@
 ﻿using Amazon.DeviceFarm.Model;
 using Guna.UI2.WinForms;
+using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,8 +71,8 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             CompComponent.Controls.Clear();
-            sql.SelectBox(CompComponent, ComboBox);
-            
+            FLPanelFilter.Controls.Clear();
+            sql.SelectBox(CompComponent, FLPanelFilter);
         }
 
         private void guna2PictureBox1_MouseEnter(object sender, EventArgs e)//Корпус
@@ -100,7 +101,8 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             CompComponent.Controls.Clear();
-            sql.SelectMB(CompComponent, ComboBox);
+            FLPanelFilter.Controls.Clear();
+            sql.SelectMB(CompComponent, FLPanelFilter);
         }
 
         private void guna2PictureBox2_MouseEnter(object sender, EventArgs e)//Системная плата
@@ -129,7 +131,8 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             CompComponent.Controls.Clear();
-            sql.SelectCPU(CompComponent, ComboBox);
+            FLPanelFilter.Controls.Clear();
+            sql.SelectCPU(CompComponent, FLPanelFilter);
         }
 
         private void guna2PictureBox4_MouseEnter(object sender, EventArgs e)//проццессор
@@ -158,7 +161,8 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             CompComponent.Controls.Clear();
-            sql.SelectCPU_Cooling(CompComponent, ComboBox);
+            FLPanelFilter.Controls.Clear();
+            sql.SelectCPU_Cooling(CompComponent, FLPanelFilter);
         }
 
         private void guna2PictureBox3_MouseEnter(object sender, EventArgs e)//охлад процессора
@@ -187,7 +191,8 @@ namespace Architecture_KC
             guna2PictureBox1.BorderStyle = BorderStyle.None;
 
             CompComponent.Controls.Clear();
-            sql.SelectRAM(CompComponent, ComboBox);
+            FLPanelFilter.Controls.Clear();
+            sql.SelectRAM(CompComponent, FLPanelFilter);
         }
 
         private void guna2PictureBox8_MouseEnter(object sender, EventArgs e)//ОЗУ
@@ -216,7 +221,8 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             CompComponent.Controls.Clear();
-            sql.SelectGPU(CompComponent, ComboBox);
+            FLPanelFilter.Controls.Clear();
+            sql.SelectGPU(CompComponent, FLPanelFilter);
         }
 
         private void guna2PictureBox7_MouseEnter(object sender, EventArgs e)//видеокарта
@@ -288,29 +294,29 @@ namespace Architecture_KC
                 guna2PictureBox5.Image = Properties.Resources.power_def;
         }
 
-        private void ComboBox_SelectedValueChanged(object sender, EventArgs e)
+        private void Button_SelectedValueChanged(object sender, EventArgs e)
         {
             CompComponent.Controls.Clear();
             switch (ComponentSelect.Text)
             {
                 case "CPU":
-                    sql.SelectCPUSeek(CompComponent, ComboBox);
+                    sql.SelectCPUSeek(CompComponent);
                     break;
 
                 case "Corpus":
-                    sql.SelectBoxSeek(CompComponent, ComboBox);
+                    sql.SelectBoxSeek(CompComponent);
                     break;
 
                 case "MB":
-                    sql.SelectMBSeek(CompComponent, ComboBox);
+                    sql.SelectMBSeek(CompComponent);
                     break;
 
                 case "RAM":
-                    sql.SelectRAMSeek(CompComponent, ComboBox);
+                    sql.SelectRAMSeek(CompComponent);
                     break;
 
                 case "GPU":
-                    sql.SelectGPUSeek(CompComponent, ComboBox);
+                    sql.SelectGPUSeek(CompComponent);
                     break;
 
                 case "HDD":
@@ -318,7 +324,7 @@ namespace Architecture_KC
                     break;
 
                 case "CPU_FAN":
-                    sql.SelectCPU_CoolingSeek(CompComponent, ComboBox);
+                    sql.SelectCPU_CoolingSeek(CompComponent);
                     break;
 
                 case "power":

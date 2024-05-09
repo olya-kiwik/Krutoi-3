@@ -74,3 +74,9 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddStorage.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.DBLinkForm.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.SelectAddComonent.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.BoxFolter.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.CPUFilter.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.CPU_FAN_Filter.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.FilterGPU.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.FilterMB.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.FilterRAM.resources

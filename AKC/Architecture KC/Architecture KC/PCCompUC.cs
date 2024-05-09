@@ -36,12 +36,6 @@ namespace Architecture_KC
             set { _Type = value; }
         }
 
-        public Guna2PictureBox ImageComp
-        {
-            get { return guna2PictureBox1; }
-            set { guna2PictureBox1 = value; }
-        }
-
         private void PCCompUC_MouseEnter(object sender, EventArgs e)
         {
             BorderStyle = BorderStyle.FixedSingle; // устанавливаем новый стиль границ

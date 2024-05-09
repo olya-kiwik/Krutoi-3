@@ -185,6 +185,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AKCDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BoxFolter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoxFolter.Designer.cs">
+      <DependentUpon>BoxFolter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPUFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPUFilter.Designer.cs">
+      <DependentUpon>CPUFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPU_FAN_Filter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPU_FAN_Filter.Designer.cs">
+      <DependentUpon>CPU_FAN_Filter.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBLinkForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +220,24 @@
     </Compile>
     <Compile Include="AddFilesForm.Designer.cs">
       <DependentUpon>AddFilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterGPU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FilterGPU.Designer.cs">
+      <DependentUpon>FilterGPU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterMB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FilterMB.Designer.cs">
+      <DependentUpon>FilterMB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterRAM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FilterRAM.Designer.cs">
+      <DependentUpon>FilterRAM.cs</DependentUpon>
     </Compile>
     <Compile Include="GlavForm.cs">
       <SubType>Form</SubType>
@@ -318,6 +354,15 @@
     <EmbeddedResource Include="AddVideo.resx">
       <DependentUpon>AddVideo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BoxFolter.resx">
+      <DependentUpon>BoxFolter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPUFilter.resx">
+      <DependentUpon>CPUFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPU_FAN_Filter.resx">
+      <DependentUpon>CPU_FAN_Filter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DBLinkForm.resx">
       <DependentUpon>DBLinkForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +371,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddFilesForm.resx">
       <DependentUpon>AddFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterGPU.resx">
+      <DependentUpon>FilterGPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterMB.resx">
+      <DependentUpon>FilterMB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterRAM.resx">
+      <DependentUpon>FilterRAM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlavForm.resx">
       <DependentUpon>GlavForm.cs</DependentUpon>

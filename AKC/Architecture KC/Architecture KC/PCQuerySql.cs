@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using Amazon.Runtime.Internal.Util;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -33,11 +34,16 @@ namespace Architecture_KC
 
         string conn = $@"Data Source = {sqlConn}; Initial Catalog = AKC; Integrated Security = SSPI";
 
-        public void SelectBox(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectBox(FlowLayoutPanel flowLayoutPanel, FlowLayoutPanel _filter)
         {
             try
             {
-                comboBox.Items.Clear();
+                BoxFolter boxFolter = new BoxFolter();
+                boxFolter.FFMB.Items.Clear();
+                boxFolter.BoxSize.Items.Clear();
+                boxFolter.FFP.Items.Clear();
+
+                _filter.Controls.Add(boxFolter);
 
                 SqlConnection sqlConnection = new SqlConnection(conn);
                 string query = "SELECT * FROM Box";
@@ -52,14 +58,18 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(1);
-                        pcUC.ImageComp.Image = Properties.Resources.pc_tower;
                         pcUC.labelType.Text = "Корпус";
                         pcUC.TextBoxHar.Text = $"Размер системной платы: {reader.GetString(2)}"+Environment.NewLine+$"Размер корпуса: {reader.GetString(3)}"+Environment.NewLine+$"Размер блока питания: {reader.GetString(4)}";
 
                         flowLayoutPanel.Controls.Add(pcUC);
-                        comboBox.Items.Add(reader.GetString(3));
 
-                        RemoveDuplicates(comboBox);
+                        boxFolter.FFMB.Items.Add(reader.GetString(2));
+                        boxFolter.BoxSize.Items.Add(reader.GetString(3));
+                        boxFolter.FFP.Items.Add(reader.GetString(4));
+
+                        RemoveDuplicates(boxFolter.FFMB);
+                        RemoveDuplicates(boxFolter.BoxSize);
+                        RemoveDuplicates(boxFolter.FFP);
                     }
                 }
                 sqlConnection.Close();
@@ -70,31 +80,31 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectBoxSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
-        {
-            
+        public void SelectBoxSeek(FlowLayoutPanel flowLayoutPanel)
+        {            
             try
             {
+                BoxFolter boxFolter = new BoxFolter();
                 
-
                 SqlConnection sqlConnection = new SqlConnection(conn);
-                string query = $"SELECT * FROM Box where BoxSize like @Searth";
+                string query = $"SELECT * FROM Box where FormFactorMatherBoar like @SearthFFMB and BoxSize like @SearthBoxSize and FormFactorPower like @SearthFFP";
 
                 sqlConnection.Open();
 
                 using (SqlCommand command = new SqlCommand(query, sqlConnection))
                 {
-                    command.Parameters.AddWithValue("@Searth", (string.Format("{0}%", comboBox.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthFFMB", (string.Format("{0}%", boxFolter.FFMB.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthBoxSize", (string.Format("{0}%", boxFolter.BoxSize.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthFFP", (string.Format("{0}%", boxFolter.FFP.SelectedItem)));
 
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
                         PCCompUC pcUC = new PCCompUC();
 
-                        pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.pc_tower;
+                        pcUC.labelName.Text = reader.GetString(1);
                         pcUC.labelType.Text = "Корпус";
-                        pcUC.TextBoxHar.Text = $"Размер системной платы: {reader.GetString(1)}" + Environment.NewLine + $"Размер корпуса: {reader.GetString(2)}" + Environment.NewLine + $"Размер блока питания: {reader.GetString(3)}";
+                        pcUC.TextBoxHar.Text = $"Размер системной платы: {reader.GetString(2)}" + Environment.NewLine + $"Размер корпуса: {reader.GetString(3)}" + Environment.NewLine + $"Размер блока питания: {reader.GetString(4)}";
 
                         flowLayoutPanel.Controls.Add(pcUC);
                     }
@@ -107,11 +117,18 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectCPU(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectCPU(FlowLayoutPanel companent, FlowLayoutPanel _filter)
         {
             try
             {
-                comboBox.Items.Clear();
+                CPUFilter filter = new CPUFilter();
+                filter.Creator.Items.Clear();
+                filter.Soket.Items.Clear();
+                filter.DDR.Items.Clear();
+                filter.TDP.Items.Clear();
+                filter.P_Core.Items.Clear();
+
+                _filter.Controls.Add(filter);
 
                 SqlConnection sqlConnection = new SqlConnection(conn);
                 string query = "SELECT * FROM CPU";
@@ -126,15 +143,24 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.cpu;
                         pcUC.labelType.Text = "Процессор";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(1)}" + Environment.NewLine + $"Сокет: {reader.GetString(2)}" + Environment.NewLine + $"Тип памяти: DDR{reader.GetString(3)}" + Environment.NewLine + $"Тепловыделение(TDP): {reader.GetString(4)} Вт" + Environment.NewLine + $"Максидальное кол-во памяти: {reader.GetString(5)} Гб" + Environment.NewLine + $"Кол-во производительных ядер: {reader.GetString(6)}" + Environment.NewLine + $"Кол-во энергоэффективных ядер: {reader.GetString(7)}";
 
-                        flowLayoutPanel.Controls.Add(pcUC);
+                        companent.Controls.Add(pcUC);
 
-                        comboBox.Items.Add(reader.GetString(1));
-                        RemoveDuplicates(comboBox);
+                        filter.Creator.Items.Add(reader.GetString(1));
+                        filter.Soket.Items.Add(reader.GetString(2));
+                        filter.DDR.Items.Add(reader.GetString(3));
+                        filter.TDP.Items.Add(reader.GetString(4));
+                        filter.P_Core.Items.Add(reader.GetString(6));
+
+                        RemoveDuplicates(filter.Creator);
+                        RemoveDuplicates(filter.Soket);
+                        RemoveDuplicates(filter.DDR);
+                        RemoveDuplicates(filter.TDP);
+                        RemoveDuplicates(filter.P_Core);
                     }
+                    
                 }
                 sqlConnection.Close();
             }
@@ -144,19 +170,24 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectCPUSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectCPUSeek(FlowLayoutPanel companent)
         {
             try
             {
+                CPUFilter filter = new CPUFilter();
+
                 SqlConnection sqlConnection = new SqlConnection(conn);
-                string query = "SELECT * FROM CPU where Creator like @Searth";
+                string query = "SELECT * FROM CPU where Creator like @SearthCreator and @SearthSoket and @SearthDDR and @SearthTDP and @SearthP_Core";
 
                 sqlConnection.Open();
 
                 using (SqlCommand command = new SqlCommand(query, sqlConnection))
                 {
-
-                    command.Parameters.AddWithValue("@Searth", (string.Format("{0}%", comboBox.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthCreator", (string.Format("{0}%", filter.Creator.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthSoket", (string.Format("{0}%", filter.Soket.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthDDR", (string.Format("{0}%", filter.DDR.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthTDP", (string.Format("{0}%", filter.TDP.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthP_Core", (string.Format("{0}%", filter.P_Core.SelectedItem)));
 
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
@@ -164,11 +195,10 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.cpu;
                         pcUC.labelType.Text = "Процессор";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(1)}" + Environment.NewLine + $"Сокет: {reader.GetString(2)}" + Environment.NewLine + $"Тип памяти: DDR{reader.GetString(3)}" + Environment.NewLine + $"Тепловыделение(TDP): {reader.GetString(4)} Вт" + Environment.NewLine + $"Максидальное кол-во памяти: {reader.GetString(5)} Гб" + Environment.NewLine + $"Кол-во производительных ядер: {reader.GetString(6)}" + Environment.NewLine + $"Кол-во энергоэффективных ядер: {reader.GetString(7)}";
 
-                        flowLayoutPanel.Controls.Add(pcUC);
+                        companent.Controls.Add(pcUC);
                     }
                 }
                 sqlConnection.Close();
@@ -179,9 +209,14 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectMB(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectMB(FlowLayoutPanel companent, FlowLayoutPanel _filter)
         {
-            comboBox.Items.Clear();
+            FilterMB filterMB = new FilterMB();
+            filterMB.Creator.Items.Clear();
+            filterMB.Soket.Items.Clear();
+            filterMB.DDR.Items.Clear();
+            filterMB.FF.Items.Clear();
+            filterMB.Chipset.Items.Clear();
 
             try
             {
@@ -198,15 +233,24 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.mother_board;
                         pcUC.labelType.Text = "Системная плата";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Сокет: {reader.GetString(1)}" + Environment.NewLine + $"Тип памяти: DDR{reader.GetString(3)}" + Environment.NewLine + $"Чипсет: {reader.GetString(4)}" + Environment.NewLine + $"Форум-фактор: {reader.GetString(5)}";
 
-                        flowLayoutPanel.Controls.Add(pcUC);
+                        companent.Controls.Add(pcUC);
 
-                        comboBox.Items.Add(reader.GetString(1));
-                        RemoveDuplicates(comboBox);
+                        filterMB.Creator.Items.Add(reader.GetString(2));
+                        filterMB.Soket.Items.Add(reader.GetString(1));
+                        filterMB.DDR.Items.Add(reader.GetString(3));
+                        filterMB.FF.Items.Add(reader.GetString(5));
+                        filterMB.Chipset.Items.Add(reader.GetString(4));
+
+                        RemoveDuplicates(filterMB.Creator);
+                        RemoveDuplicates(filterMB.Soket);
+                        RemoveDuplicates(filterMB.DDR);
+                        RemoveDuplicates(filterMB.FF);
+                        RemoveDuplicates(filterMB.Chipset);
                     }
+                    _filter.Controls.Add(filterMB);
                 }
                 sqlConnection.Close();
             }
@@ -216,18 +260,24 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectMBSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectMBSeek(FlowLayoutPanel flowLayoutPanel)
         {
             try
             {
+                FilterMB filterMB = new FilterMB();
+
                 SqlConnection sqlConnection = new SqlConnection(conn);
-                string query = "SELECT * FROM MotherBoard where Socket like @Searth";
+                string query = "SELECT * FROM MotherBoard where Socket like @SearthCreator and @SearthSoket and @SearthDDR and @SearthFF and @SearthChipset";
 
                 sqlConnection.Open();
 
                 using (SqlCommand command = new SqlCommand(query, sqlConnection))
                 {
-                    command.Parameters.AddWithValue("@Searth", (string.Format("{0}%", comboBox.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthCreator", (string.Format("{0}%", filterMB.Creator.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthSoket", (string.Format("{0}%", filterMB.Soket.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthDDR", (string.Format("{0}%", filterMB.DDR.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthFF", (string.Format("{0}%", filterMB.FF.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthChipset", (string.Format("{0}%", filterMB.Chipset.SelectedItem)));
 
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
@@ -235,7 +285,6 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.mother_board;
                         pcUC.labelType.Text = "Системная плата";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Сокет: {reader.GetString(1)}" + Environment.NewLine + $"Тип памяти: DDR{reader.GetString(3)}" + Environment.NewLine + $"Чипсет: {reader.GetString(4)}" + Environment.NewLine + $"Форум-фактор: {reader.GetString(5)}";
 
@@ -250,9 +299,13 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectGPU(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectGPU(FlowLayoutPanel companent, FlowLayoutPanel _filter)
         {
-            comboBox.Items.Clear();
+            FilterGPU filterGPU = new FilterGPU();
+            filterGPU.Creator.Items.Clear();
+            filterGPU.GB.Items.Clear();
+            filterGPU.GDDR.Items.Clear();
+            filterGPU.GPUSize.Items.Clear();
 
             try
             {
@@ -269,16 +322,22 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.gpu;
                         pcUC.labelType.Text = "Видеокарта";
-                        pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Кол-во памяти: {reader.GetString(1)} Гб" + Environment.NewLine + $"Тип памяти: GDDR{reader.GetString(3)}";
+                        pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Кол-во памяти: {reader.GetString(1)} Гб" + Environment.NewLine + $"Тип памяти: GDDR{reader.GetString(3)}" + Environment.NewLine + $"Длинна видеокарты:{reader.GetString(4)}";
 
-                        flowLayoutPanel.Controls.Add(pcUC);
+                        companent.Controls.Add(pcUC);
 
-                        comboBox.Items.Add(reader.GetString(2));
+                        filterGPU.Creator.Items.Add(reader.GetString(2));
+                        filterGPU.GB.Items.Add(reader.GetString(1));
+                        filterGPU.GDDR.Items.Add(reader.GetString(3));
+                        filterGPU.GPUSize.Items.Add(reader.GetString(4));
 
-                        RemoveDuplicates(comboBox);
+                        RemoveDuplicates(filterGPU.Creator);
+                        RemoveDuplicates(filterGPU.GB);
+                        RemoveDuplicates(filterGPU.GDDR);
+                        RemoveDuplicates(filterGPU.GPUSize);
                     }
+                    _filter.Controls.Add(filterGPU);
                 }
                 sqlConnection.Close();
             }
@@ -288,18 +347,23 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectGPUSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectGPUSeek(FlowLayoutPanel flowLayoutPanel)
         {
             try
             {
+                FilterGPU filterGPU = new FilterGPU();
+
                 SqlConnection sqlConnection = new SqlConnection(conn);
-                string query = "SELECT * FROM GPU where Creator like @Searth";
+                string query = "SELECT * FROM GPU where Creator like @SearthCreator and @SearthGB and @SearthGDDR and @SearthSize";
 
                 sqlConnection.Open();
 
                 using (SqlCommand command = new SqlCommand(query, sqlConnection))
                 {
-                    command.Parameters.AddWithValue("@Searth", (string.Format("{0}%", comboBox.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthCreator", (string.Format("{0}%", filterGPU.Creator.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthGB", (string.Format("{0}%", filterGPU.GB.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthGDDR", (string.Format("{0}%", filterGPU.GDDR.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthSize", (string.Format("{0}%", filterGPU.GPUSize.SelectedItem)));
 
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
@@ -307,7 +371,6 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.gpu;
                         pcUC.labelType.Text = "Видеокарта";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Кол-во памяти: {reader.GetString(1)} Гб" + Environment.NewLine + $"Тип памяти: ПDDR{reader.GetString(3)}";
 
@@ -322,9 +385,12 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectCPU_Cooling(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectCPU_Cooling(FlowLayoutPanel flowLayoutPanel, FlowLayoutPanel _filter)
         {
-            comboBox.Items.Clear();
+            CPU_FAN_Filter cff = new CPU_FAN_Filter();
+
+            cff.Type.Items.Clear();
+            cff.TDP.Items.Clear();
 
             try
             {
@@ -341,16 +407,18 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.cpu_fan;
                         pcUC.labelType.Text = "Охлаждение процессора";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(1)}" + Environment.NewLine + $"Рассеиваемая мощность(TDP): {reader.GetString(2)}";
 
                         flowLayoutPanel.Controls.Add(pcUC);
 
-                        comboBox.Items.Add(reader.GetString(2));
+                        cff.Type.Items.Add(reader.GetString(1));
+                        cff.TDP.Items.Add(reader.GetString(2));
 
-                        RemoveDuplicates(comboBox);
+                        RemoveDuplicates(cff.Type);
+                        RemoveDuplicates(cff.TDP);
                     }
+                    _filter.Controls.Add(cff);
                 }
                 sqlConnection.Close();
             }
@@ -360,19 +428,22 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectCPU_CoolingSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectCPU_CoolingSeek(FlowLayoutPanel flowLayoutPanel)
         {
             try
             {
+                CPU_FAN_Filter cff = new CPU_FAN_Filter();
+
                 SqlConnection sqlConnection = new SqlConnection(conn);
-                string query = "SELECT * FROM CPU_Cool where TDP like @Searth";
+                string query = "SELECT * FROM CPU_Cool where TDP like @SearthType and @SearthTDP";
 
                 sqlConnection.Open();
 
                 using (SqlCommand command = new SqlCommand(query, sqlConnection))
                 {
 
-                    command.Parameters.AddWithValue("@Searth", (string.Format("{0}%", comboBox.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthType", (string.Format("{0}%", cff.Type.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthTDP", (string.Format("{0}%", cff.TDP.SelectedItem)));
 
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
@@ -380,7 +451,6 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.cpu_fan;
                         pcUC.labelType.Text = "Охлаждение процессора";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(1)}" + Environment.NewLine + $"Рассеиваемая мощность(TDP): {reader.GetString(2)}";
 
@@ -395,9 +465,14 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectRAM(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectRAM(FlowLayoutPanel companent, FlowLayoutPanel _filter)
         {
-            comboBox.Items.Clear();
+            FilterRAM filterRAM = new FilterRAM();
+
+            filterRAM.DDR.Items.Clear();
+            filterRAM.GB.Items.Clear();
+            filterRAM.MGHz.Items.Clear();
+            filterRAM.Times.Items.Clear();
 
             try
             {
@@ -414,15 +489,23 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.ram;
                         pcUC.labelType.Text = "Оперативная память";
                         pcUC.TextBoxHar.Text = $"Тип памяти: DDR{reader.GetString(1)}" + Environment.NewLine + $"Объём памяти: {reader.GetString(2)} Гб" + Environment.NewLine + $"Тактовая частота: {reader.GetString(3)} МГц" + Environment.NewLine + $"Тайминги: {reader.GetString(4)}";
 
-                        flowLayoutPanel.Controls.Add(pcUC);
+                        companent.Controls.Add(pcUC);
 
-                        comboBox.Items.Add(reader.GetString(1));
-                        RemoveDuplicates(comboBox);
+                        filterRAM.DDR.Items.Add(reader.GetString(1));
+                        filterRAM.GB.Items.Add(reader.GetString(2));
+                        filterRAM.MGHz.Items.Add(reader.GetString(3));
+                        filterRAM.Times.Items.Add(reader.GetString(4));
+
+                        RemoveDuplicates(filterRAM.DDR);
+                        RemoveDuplicates(filterRAM.GB);
+                        RemoveDuplicates(filterRAM.MGHz);
+                        RemoveDuplicates(filterRAM.Times);
                     }
+
+                    _filter.Controls.Add(filterRAM);
                 }
                 sqlConnection.Close();
             }
@@ -432,25 +515,30 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectRAMSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox comboBox)
+        public void SelectRAMSeek(FlowLayoutPanel flowLayoutPanel)
         {
             try
             {
+                FilterRAM filterRAM = new FilterRAM();
+
                 SqlConnection sqlConnection = new SqlConnection(conn);
-                string query = "SELECT * FROM RAM where DDR like @Searth";
+                string query = "SELECT * FROM RAM where DDR like @SearthDDR and @SearthGB and @SearthMGHz and @SearthCL";
 
                 sqlConnection.Open();
 
                 using (SqlCommand command = new SqlCommand(query, sqlConnection))
                 {
-                    command.Parameters.AddWithValue("@Searth", (string.Format("{0}%", comboBox.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthDDR", (string.Format("{0}%", filterRAM.DDR.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthGB", (string.Format("{0}%", filterRAM.GB.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthMGHz", (string.Format("{0}%", filterRAM.MGHz.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthCL", (string.Format("{0}%", filterRAM.Times.SelectedItem)));
+                    
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.ram;
                         pcUC.labelType.Text = "Оперативная память";
                         pcUC.TextBoxHar.Text = $"Тип памяти: DDR{reader.GetString(1)}" + Environment.NewLine + $"Объём памяти: {reader.GetString(2)} Гб" + Environment.NewLine + $"Тактовая частота: {reader.GetString(3)} МГц" + Environment.NewLine + $"Тайминги: {reader.GetString(4)}";
 
@@ -483,7 +571,6 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.power;
                         pcUC.labelType.Text = "Блок питания";
                         pcUC.TextBoxHar.Text = $"Мощность: {reader.GetString(1)} W" + Environment.NewLine + $"Форм фактор: {reader.GetString(2)}";
 
@@ -517,7 +604,6 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ImageComp.Image = Properties.Resources.hdd;
                         pcUC.labelType.Text = "Накопитель";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость записи: {reader.GetString(1)} мб/сек";
 
@@ -821,27 +907,7 @@ namespace Architecture_KC
             }
         }
 
-        /*public void EditVideo( Guna2TextBox TBName, Guna2TextBox TBLink)
-        {
-            VideoUC uc1 = new VideoUC(_isAdmin);
-            SqlConnection sqlConnection = new SqlConnection(conn);
-            string update = $"Update videoResurs set Name = @Name, Link = @Link WHERE id={uc1.LabelId.Text}";
-
-            sqlConnection.Open();
-
-            using (SqlCommand command = new SqlCommand(update, sqlConnection))
-            {
-
-                command.Parameters.AddWithValue("@Name", TBName.Text);
-                command.Parameters.AddWithValue("@Link", TBLink.Text);
-
-                command.ExecuteReader();
-            }
-
-            sqlConnection.Close();
-        }*/
-
-
+        
 
     }
 }

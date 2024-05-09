@@ -28,37 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.NameComp = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.haracter = new System.Windows.Forms.TextBox();
             this._Type = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 1;
-            this.guna2PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 1);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(144, 144);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
-            this.guna2PictureBox1.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
-            this.guna2PictureBox1.MouseHover += new System.EventHandler(this.NameComp_MouseHover);
             // 
             // NameComp
             // 
             this.NameComp.AutoSize = true;
             this.NameComp.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameComp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.NameComp.Location = new System.Drawing.Point(153, 1);
+            this.NameComp.Location = new System.Drawing.Point(5, 1);
             this.NameComp.Name = "NameComp";
             this.NameComp.Size = new System.Drawing.Size(53, 21);
             this.NameComp.TabIndex = 2;
@@ -72,9 +54,9 @@
             this.groupBox1.Controls.Add(this.haracter);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.groupBox1.Location = new System.Drawing.Point(157, 25);
+            this.groupBox1.Location = new System.Drawing.Point(3, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(551, 120);
+            this.groupBox1.Size = new System.Drawing.Size(246, 288);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Характеристики";
@@ -90,18 +72,19 @@
             this.haracter.Name = "haracter";
             this.haracter.ReadOnly = true;
             this.haracter.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.haracter.Size = new System.Drawing.Size(539, 93);
+            this.haracter.Size = new System.Drawing.Size(234, 261);
             this.haracter.TabIndex = 0;
             this.haracter.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
             this.haracter.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
             // 
             // _Type
             // 
+            this._Type.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._Type.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this._Type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this._Type.Location = new System.Drawing.Point(464, 1);
+            this._Type.Location = new System.Drawing.Point(-1, 1);
             this._Type.Name = "_Type";
-            this._Type.Size = new System.Drawing.Size(244, 21);
+            this._Type.Size = new System.Drawing.Size(235, 21);
             this._Type.TabIndex = 4;
             this._Type.Text = "Type";
             this._Type.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -116,15 +99,13 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this._Type);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.NameComp);
             this.Name = "PCCompUC";
-            this.Size = new System.Drawing.Size(715, 148);
+            this.Size = new System.Drawing.Size(252, 316);
             this.Load += new System.EventHandler(this.PCCompUC_Load);
             this.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
             this.MouseHover += new System.EventHandler(this.NameComp_MouseHover);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -133,8 +114,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label NameComp;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label _Type;
