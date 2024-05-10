@@ -28,68 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.NameComp = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.SelectBtn = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.haracter = new System.Windows.Forms.TextBox();
+            this.NameComp = new System.Windows.Forms.Label();
             this._Type = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // NameComp
+            // guna2Panel1
             // 
-            this.NameComp.AutoSize = true;
-            this.NameComp.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameComp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.NameComp.Location = new System.Drawing.Point(5, 1);
-            this.NameComp.Name = "NameComp";
-            this.NameComp.Size = new System.Drawing.Size(53, 21);
-            this.NameComp.TabIndex = 2;
-            this.NameComp.Text = "Name";
-            this.NameComp.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
-            this.NameComp.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
-            this.NameComp.MouseHover += new System.EventHandler(this.NameComp_MouseHover);
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.guna2Panel1.BorderRadius = 5;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.SelectBtn);
+            this.guna2Panel1.Controls.Add(this.groupBox1);
+            this.guna2Panel1.Controls.Add(this.NameComp);
+            this.guna2Panel1.Controls.Add(this._Type);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(455, 270);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // SelectBtn
+            // 
+            this.SelectBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SelectBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SelectBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.SelectBtn.BorderRadius = 10;
+            this.SelectBtn.BorderThickness = 1;
+            this.SelectBtn.DefaultAutoSize = true;
+            this.SelectBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SelectBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SelectBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SelectBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SelectBtn.FillColor = System.Drawing.Color.Transparent;
+            this.SelectBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.SelectBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.SelectBtn.Location = new System.Drawing.Point(183, 229);
+            this.SelectBtn.Name = "SelectBtn";
+            this.SelectBtn.Size = new System.Drawing.Size(92, 29);
+            this.SelectBtn.TabIndex = 8;
+            this.SelectBtn.Text = "Выбрать";
+            this.SelectBtn.Click += new System.EventHandler(this.SelectBtn_Click);
+            this.SelectBtn.MouseEnter += new System.EventHandler(this.SelectBtn_MouseEnter);
+            this.SelectBtn.MouseLeave += new System.EventHandler(this.SelectBtn_MouseLeave);
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.haracter);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.groupBox1.Location = new System.Drawing.Point(3, 29);
+            this.groupBox1.Location = new System.Drawing.Point(13, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(246, 288);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.Size = new System.Drawing.Size(433, 150);
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Характеристики";
             // 
             // haracter
             // 
+            this.haracter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.haracter.BackColor = System.Drawing.Color.Gainsboro;
             this.haracter.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.haracter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.haracter.ForeColor = System.Drawing.Color.Black;
-            this.haracter.Location = new System.Drawing.Point(6, 21);
+            this.haracter.Location = new System.Drawing.Point(1, 18);
             this.haracter.Multiline = true;
             this.haracter.Name = "haracter";
             this.haracter.ReadOnly = true;
             this.haracter.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.haracter.Size = new System.Drawing.Size(234, 261);
+            this.haracter.Size = new System.Drawing.Size(436, 131);
             this.haracter.TabIndex = 0;
-            this.haracter.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
-            this.haracter.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
+            // 
+            // NameComp
+            // 
+            this.NameComp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.NameComp.AutoSize = true;
+            this.NameComp.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameComp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.NameComp.Location = new System.Drawing.Point(9, 37);
+            this.NameComp.Name = "NameComp";
+            this.NameComp.Size = new System.Drawing.Size(53, 21);
+            this.NameComp.TabIndex = 5;
+            this.NameComp.Text = "Name";
             // 
             // _Type
             // 
             this._Type.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._Type.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this._Type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this._Type.Location = new System.Drawing.Point(-1, 1);
+            this._Type.Location = new System.Drawing.Point(192, 0);
             this._Type.Name = "_Type";
-            this._Type.Size = new System.Drawing.Size(235, 21);
-            this._Type.TabIndex = 4;
+            this._Type.Size = new System.Drawing.Size(263, 30);
+            this._Type.TabIndex = 7;
             this._Type.Text = "Type";
             this._Type.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._Type.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
-            this._Type.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(11, 229);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "ID";
+            this.label1.Visible = false;
             // 
             // PCCompUC
             // 
@@ -97,26 +152,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this._Type);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.NameComp);
+            this.Controls.Add(this.guna2Panel1);
             this.Name = "PCCompUC";
-            this.Size = new System.Drawing.Size(252, 316);
+            this.Size = new System.Drawing.Size(458, 272);
             this.Load += new System.EventHandler(this.PCCompUC_Load);
-            this.MouseEnter += new System.EventHandler(this.PCCompUC_MouseEnter);
-            this.MouseLeave += new System.EventHandler(this.PCCompUC_MouseLeave);
-            this.MouseHover += new System.EventHandler(this.NameComp_MouseHover);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label NameComp;
+
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label _Type;
         private System.Windows.Forms.TextBox haracter;
+        private System.Windows.Forms.Label NameComp;
+        private System.Windows.Forms.Label _Type;
+        private Guna.UI2.WinForms.Guna2Button SelectBtn;
+        private System.Windows.Forms.Label label1;
     }
 }

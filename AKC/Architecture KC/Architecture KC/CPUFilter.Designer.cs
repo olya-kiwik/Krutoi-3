@@ -2,15 +2,15 @@
 {
     partial class CPUFilter
     {
-        /// <summary> 
-        /// Обязательная переменная конструктора.
+        /// <summary>
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Освободить все используемые ресурсы.
+        /// <summary>
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,230 +20,299 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором компонентов
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.ff = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.P_Core = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.TDP = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2ComboBox6 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.ConfirmBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.DDR = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Soket = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Creator = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Производитель";
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.AutoScroll = true;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.P_Core);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.TDP);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.ConfirmBtn);
+            this.panel1.Controls.Add(this.DDR);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.Soket);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.Creator);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(225, 534);
+            this.panel1.TabIndex = 43;
             // 
-            // ff
+            // P_Core
             // 
-            this.ff.BackColor = System.Drawing.Color.Transparent;
-            this.ff.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.ff.BorderRadius = 5;
-            this.ff.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ff.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.ff.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ff.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ff.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.ff.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ff.ItemHeight = 30;
-            this.ff.Items.AddRange(new object[] {
+            this.P_Core.BackColor = System.Drawing.Color.Transparent;
+            this.P_Core.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.P_Core.BorderRadius = 5;
+            this.P_Core.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.P_Core.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.P_Core.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.P_Core.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.P_Core.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.P_Core.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.P_Core.ForeColor = System.Drawing.Color.Gainsboro;
+            this.P_Core.ItemHeight = 30;
+            this.P_Core.Items.AddRange(new object[] {
             "ATX",
-            "FlexATX",
             "SFX"});
-            this.ff.Location = new System.Drawing.Point(7, 26);
-            this.ff.Name = "ff";
-            this.ff.Size = new System.Drawing.Size(238, 36);
-            this.ff.TabIndex = 46;
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.guna2ComboBox1.BorderRadius = 5;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "ATX",
-            "FlexATX",
-            "SFX"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(7, 101);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(238, 36);
-            this.guna2ComboBox1.TabIndex = 48;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.label2.Location = new System.Drawing.Point(3, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 23);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Сокет";
-            // 
-            // guna2ComboBox2
-            // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.guna2ComboBox2.BorderRadius = 5;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
-            "ATX",
-            "FlexATX",
-            "SFX"});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(7, 169);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(238, 36);
-            this.guna2ComboBox2.TabIndex = 50;
+            this.P_Core.Location = new System.Drawing.Point(10, 355);
+            this.P_Core.Name = "P_Core";
+            this.P_Core.Size = new System.Drawing.Size(206, 36);
+            this.P_Core.TabIndex = 49;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.label3.Location = new System.Drawing.Point(3, 143);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(6, 312);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Тип памяти";
+            this.label3.Size = new System.Drawing.Size(204, 42);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Кол-во\r\nпроизводительных ядер";
             // 
-            // guna2ComboBox3
+            // TDP
             // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.guna2ComboBox3.BorderRadius = 5;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Items.AddRange(new object[] {
+            this.TDP.BackColor = System.Drawing.Color.Transparent;
+            this.TDP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.TDP.BorderRadius = 5;
+            this.TDP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.TDP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TDP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.TDP.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TDP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TDP.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.TDP.ForeColor = System.Drawing.Color.Gainsboro;
+            this.TDP.ItemHeight = 30;
+            this.TDP.Items.AddRange(new object[] {
             "ATX",
-            "FlexATX",
             "SFX"});
-            this.guna2ComboBox3.Location = new System.Drawing.Point(7, 244);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(238, 36);
-            this.guna2ComboBox3.TabIndex = 52;
+            this.TDP.Location = new System.Drawing.Point(10, 268);
+            this.TDP.Name = "TDP";
+            this.TDP.Size = new System.Drawing.Size(206, 36);
+            this.TDP.TabIndex = 47;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.label4.Location = new System.Drawing.Point(3, 218);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(6, 225);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(217, 23);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "Тпловыделение (TDP) (Вт)";
+            this.label4.Size = new System.Drawing.Size(196, 42);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Тепловыделение (TDP)\r\n(Вт)";
             // 
-            // guna2ComboBox6
+            // ConfirmBtn
             // 
-            this.guna2ComboBox6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.guna2ComboBox6.BorderRadius = 5;
-            this.guna2ComboBox6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.guna2ComboBox6.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox6.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.guna2ComboBox6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2ComboBox6.ItemHeight = 30;
-            this.guna2ComboBox6.Items.AddRange(new object[] {
+            this.ConfirmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConfirmBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.ConfirmBtn.BorderRadius = 10;
+            this.ConfirmBtn.BorderThickness = 1;
+            this.ConfirmBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ConfirmBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ConfirmBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ConfirmBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ConfirmBtn.FillColor = System.Drawing.Color.Transparent;
+            this.ConfirmBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.ConfirmBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.ConfirmBtn.Location = new System.Drawing.Point(10, 475);
+            this.ConfirmBtn.Name = "ConfirmBtn";
+            this.ConfirmBtn.Size = new System.Drawing.Size(206, 45);
+            this.ConfirmBtn.TabIndex = 45;
+            this.ConfirmBtn.Text = "Найти";
+            this.ConfirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
+            // 
+            // DDR
+            // 
+            this.DDR.BackColor = System.Drawing.Color.Transparent;
+            this.DDR.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.DDR.BorderRadius = 5;
+            this.DDR.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DDR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DDR.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.DDR.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.DDR.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.DDR.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.DDR.ForeColor = System.Drawing.Color.Gainsboro;
+            this.DDR.ItemHeight = 30;
+            this.DDR.Items.AddRange(new object[] {
             "ATX",
-            "FlexATX",
             "SFX"});
-            this.guna2ComboBox6.Location = new System.Drawing.Point(7, 337);
-            this.guna2ComboBox6.Name = "guna2ComboBox6";
-            this.guna2ComboBox6.Size = new System.Drawing.Size(238, 36);
-            this.guna2ComboBox6.TabIndex = 54;
+            this.DDR.Location = new System.Drawing.Point(10, 183);
+            this.DDR.Name = "DDR";
+            this.DDR.Size = new System.Drawing.Size(206, 36);
+            this.DDR.TabIndex = 44;
             // 
-            // label7
+            // label2
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.label7.Location = new System.Drawing.Point(3, 288);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(208, 46);
-            this.label7.TabIndex = 53;
-            this.label7.Text = "Количество\r\nпроизводительных ядер";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(6, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(186, 42);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Тип поддерживоемой\r\nпамяти";
+            // 
+            // Soket
+            // 
+            this.Soket.BackColor = System.Drawing.Color.Transparent;
+            this.Soket.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.Soket.BorderRadius = 5;
+            this.Soket.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Soket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Soket.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.Soket.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Soket.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Soket.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.Soket.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Soket.ItemHeight = 30;
+            this.Soket.Items.AddRange(new object[] {
+            "ATX",
+            "SFX"});
+            this.Soket.Location = new System.Drawing.Point(10, 95);
+            this.Soket.Name = "Soket";
+            this.Soket.Size = new System.Drawing.Size(206, 36);
+            this.Soket.TabIndex = 42;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(6, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 21);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Сокет";
+            // 
+            // Creator
+            // 
+            this.Creator.BackColor = System.Drawing.Color.Transparent;
+            this.Creator.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.Creator.BorderRadius = 5;
+            this.Creator.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Creator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Creator.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.Creator.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Creator.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Creator.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.Creator.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Creator.ItemHeight = 30;
+            this.Creator.Items.AddRange(new object[] {
+            "ATX",
+            "SFX"});
+            this.Creator.Location = new System.Drawing.Point(10, 27);
+            this.Creator.Name = "Creator";
+            this.Creator.Size = new System.Drawing.Size(206, 36);
+            this.Creator.TabIndex = 40;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(6, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 21);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Производитель";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(233, -1);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(568, 534);
+            this.flowLayoutPanel1.TabIndex = 44;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.LightGray;
+            this.guna2Button1.Location = new System.Drawing.Point(10, 424);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(206, 45);
+            this.guna2Button1.TabIndex = 50;
+            this.guna2Button1.Text = "Сбросить";
+            this.guna2Button1.Visible = false;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // CPUFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.guna2ComboBox6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.guna2ComboBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2ComboBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2ComboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.ff);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.ClientSize = new System.Drawing.Size(800, 532);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CPUFilter";
-            this.Size = new System.Drawing.Size(250, 550);
+            this.Text = "CPUFilter";
+            this.Load += new System.EventHandler(this.CPUFilter_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox ff;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button ConfirmBtn;
+        public Guna.UI2.WinForms.Guna2ComboBox DDR;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        public Guna.UI2.WinForms.Guna2ComboBox Soket;
+        private System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2ComboBox Creator;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public Guna.UI2.WinForms.Guna2ComboBox P_Core;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        public Guna.UI2.WinForms.Guna2ComboBox TDP;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox6;
-        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

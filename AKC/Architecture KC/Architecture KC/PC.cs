@@ -36,9 +36,7 @@ namespace Architecture_KC
             TopMost = true;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            CompComponent.Controls.Clear();
-                      
-
+            Companent.Controls.Clear();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -70,9 +68,14 @@ namespace Architecture_KC
             guna2PictureBox7.BorderStyle = BorderStyle.None;
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
-            CompComponent.Controls.Clear();
-            FLPanelFilter.Controls.Clear();
-            sql.SelectBox(CompComponent, FLPanelFilter);
+            Companent.Controls.Clear();
+            BoxFilter bf = new BoxFilter();
+            bf.TopLevel = false;
+            bf.FormBorderStyle = FormBorderStyle.None;
+            bf.Size = Companent.Size;
+            Companent.Controls.Add(bf);
+            bf.Visible = true;
+
         }
 
         private void guna2PictureBox1_MouseEnter(object sender, EventArgs e)//Корпус
@@ -100,9 +103,14 @@ namespace Architecture_KC
             guna2PictureBox7.BorderStyle = BorderStyle.None;
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
-            CompComponent.Controls.Clear();
-            FLPanelFilter.Controls.Clear();
-            sql.SelectMB(CompComponent, FLPanelFilter);
+            Companent.Controls.Clear();
+            MBFilter mb = new MBFilter();
+            mb.TopLevel = false;
+            mb.FormBorderStyle = FormBorderStyle.None;
+            mb.Size = Companent.Size;
+            Companent.Controls.Add(mb);
+            mb.Visible = true;
+
         }
 
         private void guna2PictureBox2_MouseEnter(object sender, EventArgs e)//Системная плата
@@ -130,9 +138,14 @@ namespace Architecture_KC
             guna2PictureBox7.BorderStyle = BorderStyle.None;
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
-            CompComponent.Controls.Clear();
-            FLPanelFilter.Controls.Clear();
-            sql.SelectCPU(CompComponent, FLPanelFilter);
+            Companent.Controls.Clear();
+            CPUFilter cpu = new CPUFilter();
+            cpu.TopLevel = false;
+            cpu.FormBorderStyle = FormBorderStyle.None;
+            cpu.Size = Companent.Size;
+            Companent.Controls.Add(cpu);
+            cpu.Visible = true;
+
         }
 
         private void guna2PictureBox4_MouseEnter(object sender, EventArgs e)//проццессор
@@ -160,9 +173,13 @@ namespace Architecture_KC
             guna2PictureBox7.BorderStyle = BorderStyle.None;
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
-            CompComponent.Controls.Clear();
-            FLPanelFilter.Controls.Clear();
-            sql.SelectCPU_Cooling(CompComponent, FLPanelFilter);
+            Companent.Controls.Clear();
+            CPU_FAN_Filter cpuf = new CPU_FAN_Filter();
+            cpuf.TopLevel = false;
+            cpuf.FormBorderStyle = FormBorderStyle.None;
+            cpuf.Size = Companent.Size;
+            Companent.Controls.Add(cpuf);
+            cpuf.Visible = true;
         }
 
         private void guna2PictureBox3_MouseEnter(object sender, EventArgs e)//охлад процессора
@@ -190,9 +207,13 @@ namespace Architecture_KC
             guna2PictureBox7.BorderStyle = BorderStyle.None;
             guna2PictureBox1.BorderStyle = BorderStyle.None;
 
-            CompComponent.Controls.Clear();
-            FLPanelFilter.Controls.Clear();
-            sql.SelectRAM(CompComponent, FLPanelFilter);
+            Companent.Controls.Clear();
+            FilterRAM ram = new FilterRAM();
+            ram.TopLevel = false;
+            ram.FormBorderStyle = FormBorderStyle.None;
+            ram.Size = Companent.Size;
+            Companent.Controls.Add(ram);
+            ram.Visible = true;
         }
 
         private void guna2PictureBox8_MouseEnter(object sender, EventArgs e)//ОЗУ
@@ -220,9 +241,13 @@ namespace Architecture_KC
             guna2PictureBox1.BorderStyle = BorderStyle.None;
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
-            CompComponent.Controls.Clear();
-            FLPanelFilter.Controls.Clear();
-            sql.SelectGPU(CompComponent, FLPanelFilter);
+            Companent.Controls.Clear();
+            FilterGPU gpu = new FilterGPU();
+            gpu.TopLevel = false;
+            gpu.FormBorderStyle = FormBorderStyle.None;
+            gpu.Size = Companent.Size;
+            Companent.Controls.Add(gpu);
+            gpu.Visible = true;
         }
 
         private void guna2PictureBox7_MouseEnter(object sender, EventArgs e)//видеокарта
@@ -250,8 +275,8 @@ namespace Architecture_KC
             guna2PictureBox7.BorderStyle = BorderStyle.None;
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
-            CompComponent.Controls.Clear();
-            sql.SelectHDD(CompComponent);
+            Companent.Controls.Clear();
+            
         }
 
         private void guna2PictureBox6_MouseEnter(object sender, EventArgs e)//жйский диск
@@ -279,8 +304,8 @@ namespace Architecture_KC
             guna2PictureBox7.BorderStyle = BorderStyle.None;
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
-            CompComponent.Controls.Clear();
-            sql.SelectPower(CompComponent);
+            Companent.Controls.Clear();
+            
         }
 
         private void guna2PictureBox5_MouseEnter(object sender, EventArgs e)//блок питания
@@ -294,43 +319,9 @@ namespace Architecture_KC
                 guna2PictureBox5.Image = Properties.Resources.power_def;
         }
 
-        private void Button_SelectedValueChanged(object sender, EventArgs e)
+        private void ConfirmBtn_Click(object sender, EventArgs e)
         {
-            CompComponent.Controls.Clear();
-            switch (ComponentSelect.Text)
-            {
-                case "CPU":
-                    sql.SelectCPUSeek(CompComponent);
-                    break;
 
-                case "Corpus":
-                    sql.SelectBoxSeek(CompComponent);
-                    break;
-
-                case "MB":
-                    sql.SelectMBSeek(CompComponent);
-                    break;
-
-                case "RAM":
-                    sql.SelectRAMSeek(CompComponent);
-                    break;
-
-                case "GPU":
-                    sql.SelectGPUSeek(CompComponent);
-                    break;
-
-                case "HDD":
-
-                    break;
-
-                case "CPU_FAN":
-                    sql.SelectCPU_CoolingSeek(CompComponent);
-                    break;
-
-                case "power":
-
-                    break;
-            }
         }
     }
 }

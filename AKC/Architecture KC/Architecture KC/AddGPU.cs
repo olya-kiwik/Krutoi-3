@@ -49,17 +49,17 @@ namespace Architecture_KC
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (Name.Text != null && Creator.SelectedIndex != -1 && type_memory.Text != null && GB.Text != null && size.Text != null)
+            if (NameGPU.Text != null && Creator.SelectedIndex != -1 && type_memory.Text != null && GB.Text != null && size.Text != null)
             {
                 var qute = MessageBox.Show("Сохранить?", "Сохранение", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (qute == DialogResult.Yes)
                 {
-                    sql.AddGPU(Name, GB, Creator, type_memory, size);
+                    sql.AddGPU(NameGPU, GB, Creator, type_memory, size);
 
                     var quet2 = MessageBox.Show("Добавить ещё компанент?", "?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (quet2 == DialogResult.Yes)
                     {
-                        Name.Text = null;
+                        NameGPU.Text = null;
                         type_memory.Text = null;
                         GB.Text = null;
                         size.Text = null;

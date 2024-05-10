@@ -185,20 +185,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AKCDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BoxFolter.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="BoxFilter.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BoxFolter.Designer.cs">
-      <DependentUpon>BoxFolter.cs</DependentUpon>
+    <Compile Include="BoxFilter.Designer.cs">
+      <DependentUpon>BoxFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="CPUFilter.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="CPUFilter.Designer.cs">
       <DependentUpon>CPUFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="CPU_FAN_Filter.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="CPU_FAN_Filter.Designer.cs">
       <DependentUpon>CPU_FAN_Filter.cs</DependentUpon>
@@ -222,19 +222,13 @@
       <DependentUpon>AddFilesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FilterGPU.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FilterGPU.Designer.cs">
       <DependentUpon>FilterGPU.cs</DependentUpon>
     </Compile>
-    <Compile Include="FilterMB.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FilterMB.Designer.cs">
-      <DependentUpon>FilterMB.cs</DependentUpon>
-    </Compile>
     <Compile Include="FilterRAM.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FilterRAM.Designer.cs">
       <DependentUpon>FilterRAM.cs</DependentUpon>
@@ -250,6 +244,12 @@
     </Compile>
     <Compile Include="LodinForm.Designer.cs">
       <DependentUpon>LodinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MBFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MBFilter.Designer.cs">
+      <DependentUpon>MBFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="Methods.cs" />
     <Compile Include="PC.cs">
@@ -354,8 +354,8 @@
     <EmbeddedResource Include="AddVideo.resx">
       <DependentUpon>AddVideo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BoxFolter.resx">
-      <DependentUpon>BoxFolter.cs</DependentUpon>
+    <EmbeddedResource Include="BoxFilter.resx">
+      <DependentUpon>BoxFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPUFilter.resx">
       <DependentUpon>CPUFilter.cs</DependentUpon>
@@ -375,9 +375,6 @@
     <EmbeddedResource Include="FilterGPU.resx">
       <DependentUpon>FilterGPU.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FilterMB.resx">
-      <DependentUpon>FilterMB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FilterRAM.resx">
       <DependentUpon>FilterRAM.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,6 +383,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LodinForm.resx">
       <DependentUpon>LodinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MBFilter.resx">
+      <DependentUpon>MBFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PC.resx">
       <DependentUpon>PC.cs</DependentUpon>

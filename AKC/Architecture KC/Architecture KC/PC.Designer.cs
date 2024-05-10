@@ -33,14 +33,9 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.TextWork = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.CompComponent = new System.Windows.Forms.FlowLayoutPanel();
             this.AddBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ConfirmBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.ComponentSelect = new System.Windows.Forms.Label();
-            this.ComputerPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.FLPanelFilter = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -49,8 +44,11 @@
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ComponentSelect = new System.Windows.Forms.Label();
+            this.ComputerPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.Companent = new System.Windows.Forms.Panel();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
@@ -75,7 +73,7 @@
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Location = new System.Drawing.Point(155, 12);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1043, 74);
+            this.guna2Panel1.Size = new System.Drawing.Size(1052, 74);
             this.guna2Panel1.TabIndex = 4;
             // 
             // TextWork
@@ -101,20 +99,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Задание";
             // 
-            // CompComponent
-            // 
-            this.CompComponent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CompComponent.AutoScroll = true;
-            this.CompComponent.BackColor = System.Drawing.Color.Transparent;
-            this.CompComponent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CompComponent.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CompComponent.Location = new System.Drawing.Point(881, 92);
-            this.CompComponent.Margin = new System.Windows.Forms.Padding(2);
-            this.CompComponent.Name = "CompComponent";
-            this.CompComponent.Size = new System.Drawing.Size(317, 571);
-            this.CompComponent.TabIndex = 0;
-            // 
             // AddBtn
             // 
             this.AddBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -128,7 +112,7 @@
             this.AddBtn.FillColor = System.Drawing.Color.Transparent;
             this.AddBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.AddBtn.ForeColor = System.Drawing.Color.LightGray;
-            this.AddBtn.Location = new System.Drawing.Point(946, 686);
+            this.AddBtn.Location = new System.Drawing.Point(955, 686);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(252, 45);
             this.AddBtn.TabIndex = 5;
@@ -138,7 +122,7 @@
             // 
             // ConfirmBtn
             // 
-            this.ConfirmBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ConfirmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ConfirmBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
             this.ConfirmBtn.BorderRadius = 5;
             this.ConfirmBtn.BorderThickness = 1;
@@ -149,11 +133,12 @@
             this.ConfirmBtn.FillColor = System.Drawing.Color.Transparent;
             this.ConfirmBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.ConfirmBtn.ForeColor = System.Drawing.Color.LightGray;
-            this.ConfirmBtn.Location = new System.Drawing.Point(586, 686);
+            this.ConfirmBtn.Location = new System.Drawing.Point(164, 678);
             this.ConfirmBtn.Name = "ConfirmBtn";
-            this.ConfirmBtn.Size = new System.Drawing.Size(180, 45);
+            this.ConfirmBtn.Size = new System.Drawing.Size(206, 45);
             this.ConfirmBtn.TabIndex = 6;
             this.ConfirmBtn.Text = "Завершить";
+            this.ConfirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
             // 
             // panel1
             // 
@@ -173,45 +158,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(137, 683);
             this.panel1.TabIndex = 8;
-            // 
-            // ComponentSelect
-            // 
-            this.ComponentSelect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ComponentSelect.AutoSize = true;
-            this.ComponentSelect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ComponentSelect.Location = new System.Drawing.Point(852, 686);
-            this.ComponentSelect.Name = "ComponentSelect";
-            this.ComponentSelect.Size = new System.Drawing.Size(35, 13);
-            this.ComponentSelect.TabIndex = 9;
-            this.ComponentSelect.Text = "label2";
-            this.ComponentSelect.Visible = false;
-            // 
-            // ComputerPanel
-            // 
-            this.ComputerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComputerPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.ComputerPanel.BorderRadius = 10;
-            this.ComputerPanel.BorderThickness = 1;
-            this.ComputerPanel.Location = new System.Drawing.Point(477, 92);
-            this.ComputerPanel.Name = "ComputerPanel";
-            this.ComputerPanel.Size = new System.Drawing.Size(399, 571);
-            this.ComputerPanel.TabIndex = 10;
-            // 
-            // FLPanelFilter
-            // 
-            this.FLPanelFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.FLPanelFilter.AutoScroll = true;
-            this.FLPanelFilter.BackColor = System.Drawing.Color.Transparent;
-            this.FLPanelFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FLPanelFilter.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FLPanelFilter.Location = new System.Drawing.Point(155, 92);
-            this.FLPanelFilter.Margin = new System.Windows.Forms.Padding(2);
-            this.FLPanelFilter.Name = "FLPanelFilter";
-            this.FLPanelFilter.Size = new System.Drawing.Size(317, 571);
-            this.FLPanelFilter.TabIndex = 1;
             // 
             // guna2PictureBox5
             // 
@@ -341,6 +287,30 @@
             this.guna2PictureBox1.MouseEnter += new System.EventHandler(this.guna2PictureBox1_MouseEnter);
             this.guna2PictureBox1.MouseLeave += new System.EventHandler(this.guna2PictureBox1_MouseLeave);
             // 
+            // ComponentSelect
+            // 
+            this.ComponentSelect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ComponentSelect.AutoSize = true;
+            this.ComponentSelect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ComponentSelect.Location = new System.Drawing.Point(856, 686);
+            this.ComponentSelect.Name = "ComponentSelect";
+            this.ComponentSelect.Size = new System.Drawing.Size(35, 13);
+            this.ComponentSelect.TabIndex = 9;
+            this.ComponentSelect.Text = "label2";
+            this.ComponentSelect.Visible = false;
+            // 
+            // ComputerPanel
+            // 
+            this.ComputerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ComputerPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.ComputerPanel.BorderRadius = 10;
+            this.ComputerPanel.BorderThickness = 1;
+            this.ComputerPanel.Location = new System.Drawing.Point(808, 92);
+            this.ComputerPanel.Name = "ComputerPanel";
+            this.ComputerPanel.Size = new System.Drawing.Size(399, 571);
+            this.ComputerPanel.TabIndex = 10;
+            // 
             // guna2Button1
             // 
             this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
@@ -361,25 +331,15 @@
             this.guna2Button1.Text = "Выход";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2Button2
+            // Companent
             // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.guna2Button2.BorderRadius = 5;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2Button2.Location = new System.Drawing.Point(223, 686);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button2.TabIndex = 11;
-            this.guna2Button2.Text = "Найти";
-            this.guna2Button2.Click += new System.EventHandler(this.Button_SelectedValueChanged);
+            this.Companent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Companent.Location = new System.Drawing.Point(155, 92);
+            this.Companent.Name = "Companent";
+            this.Companent.Size = new System.Drawing.Size(647, 571);
+            this.Companent.TabIndex = 11;
             // 
             // PC
             // 
@@ -387,10 +347,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(1210, 742);
+            this.ClientSize = new System.Drawing.Size(1219, 742);
             this.ControlBox = false;
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.FLPanelFilter);
+            this.Controls.Add(this.Companent);
             this.Controls.Add(this.ComputerPanel);
             this.Controls.Add(this.ComponentSelect);
             this.Controls.Add(this.panel1);
@@ -398,7 +357,6 @@
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.CompComponent);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -424,7 +382,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.FlowLayoutPanel CompComponent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TextWork;
         private Guna.UI2.WinForms.Guna2Button AddBtn;
@@ -441,7 +398,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label ComponentSelect;
         public Guna.UI2.WinForms.Guna2Panel ComputerPanel;
-        private System.Windows.Forms.FlowLayoutPanel FLPanelFilter;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.Panel Companent;
     }
 }

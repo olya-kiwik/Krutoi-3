@@ -36,21 +36,10 @@ namespace Architecture_KC
             set { _Type = value; }
         }
 
-        private void PCCompUC_MouseEnter(object sender, EventArgs e)
+        public Label ID
         {
-            BorderStyle = BorderStyle.FixedSingle; // устанавливаем новый стиль границ
-            NameComp.ForeColor = Color.Black; // цвет текста чёрный
-            BackColor = Color.LightGray; // меняем фон при наведении
-            groupBox1.ForeColor = Color.Black;
-
-        }
-
-        private void PCCompUC_MouseLeave(object sender, EventArgs e)
-        {
-            BorderStyle = BorderStyle.None; // возвращаем стандартный стиль границ
-            NameComp.ForeColor = Color.FromArgb(184,184,184); // цвет текста стандартный
-            BackColor = Color.Transparent; // возвращаем стандартный фон
-            groupBox1.ForeColor = Color.LightGray;
+            get { return label1; }
+            set { label1 = value; }
         }
 
         private void PCCompUC_Load(object sender, EventArgs e)
@@ -61,9 +50,21 @@ namespace Architecture_KC
             groupBox1.ForeColor = Color.LightGray;
         }
 
-        private void NameComp_MouseHover(object sender, EventArgs e)
+        private void SelectBtn_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SelectBtn_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SelectBtn_Click(object sender, EventArgs e)
         {
             
         }
+
+        
     }
 }

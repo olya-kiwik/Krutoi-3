@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,35 +10,33 @@ using System.Windows.Forms;
 
 namespace Architecture_KC
 {
-    public partial class FilterRAM : UserControl
+    public partial class FilterRAM : Form
     {
+        PCQuerySql sql = new PCQuerySql();
+
         public FilterRAM()
         {
             InitializeComponent();
         }
 
-        public Guna2ComboBox DDR
+        private void FilterRAM_Load(object sender, EventArgs e)
         {
-            get { return ff; }
-            set { ff = value; }
+            flowLayoutPanel1.Controls.Clear();
+            sql.SelectRAM(flowLayoutPanel1, DDR, GB, MGHz, Times);
         }
 
-        public Guna2ComboBox GB
+        private void ConfirmBtn_Click(object sender, EventArgs e)
         {
-            get { return guna2ComboBox1; }
-            set { guna2ComboBox1 = value; }
+            flowLayoutPanel1.Controls.Clear();
+            sql.SelectRAMSeek(flowLayoutPanel1, DDR, GB, MGHz, Times);
+            guna2Button1.Visible = true;
         }
 
-        public Guna2ComboBox MGHz
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            get { return guna2ComboBox2; }
-            set { guna2ComboBox2 = value; }
-        }
-
-        public Guna2ComboBox Times
-        {
-            get { return guna2ComboBox3; }
-            set { guna2ComboBox3 = value; }
+            flowLayoutPanel1.Controls.Clear();
+            sql.SelectRAM(flowLayoutPanel1, DDR, GB, MGHz, Times);
+            guna2Button1.Visible = false;
         }
     }
 }

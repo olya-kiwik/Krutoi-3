@@ -41,7 +41,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.Creator = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.NameGPU = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.GB = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -212,30 +212,30 @@
             this.label4.TabIndex = 44;
             this.label4.Text = "Название";
             // 
-            // Name
+            // NameGPU
             // 
-            this.Name.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.Name.BorderRadius = 5;
-            this.Name.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Name.DefaultText = "";
-            this.Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Name.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
-            this.Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Name.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Name.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Name.Location = new System.Drawing.Point(16, 126);
-            this.Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name.Name = "Name";
-            this.Name.PasswordChar = '\0';
-            this.Name.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.Name.PlaceholderText = "GeForce RTX 4060 Dual OC";
-            this.Name.SelectedText = "";
-            this.Name.Size = new System.Drawing.Size(344, 41);
-            this.Name.TabIndex = 43;
+            this.NameGPU.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.NameGPU.BorderRadius = 5;
+            this.NameGPU.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NameGPU.DefaultText = "";
+            this.NameGPU.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NameGPU.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NameGPU.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NameGPU.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NameGPU.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.NameGPU.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NameGPU.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.NameGPU.ForeColor = System.Drawing.Color.Gainsboro;
+            this.NameGPU.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NameGPU.Location = new System.Drawing.Point(16, 126);
+            this.NameGPU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameGPU.Name = "NameGPU";
+            this.NameGPU.PasswordChar = '\0';
+            this.NameGPU.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.NameGPU.PlaceholderText = "GeForce RTX 4060 Dual OC";
+            this.NameGPU.SelectedText = "";
+            this.NameGPU.Size = new System.Drawing.Size(344, 41);
+            this.NameGPU.TabIndex = 43;
             // 
             // label5
             // 
@@ -358,7 +358,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.GB);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Name);
+            this.Controls.Add(this.NameGPU);
             this.Controls.Add(this.Creator);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label3);
@@ -366,6 +366,8 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "AddGPU";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddGPU";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -392,7 +394,7 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox GB;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox Name;
+        private Guna.UI2.WinForms.Guna2TextBox NameGPU;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox size;
     }
