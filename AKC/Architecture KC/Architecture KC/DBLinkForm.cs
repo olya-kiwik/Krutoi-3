@@ -40,8 +40,7 @@ namespace Architecture_KC
                 Close();
             }
             else
-                MessageBox.Show($"Поле {label1.Text} пустое!\nПожалуйста заполните поле {label1.Text}","Ошибка!");
-                
+                MessageBox.Show($"Поле {label1.Text} пустое!\nПожалуйста заполните поле {label1.Text}","Ошибка!");                
         }
     }
 }

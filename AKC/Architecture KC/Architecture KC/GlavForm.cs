@@ -229,7 +229,6 @@ namespace Architecture_KC
         
         private void GlavForm_Load(object sender, EventArgs e)
         {
-            
             if(_isAdmin == true)
             {
                 guna2TextBox1.Size = new System.Drawing.Size(758, 45);
@@ -238,9 +237,130 @@ namespace Architecture_KC
             {
                 guna2TextBox1.Size = new System.Drawing.Size(865, 45);
             }
-            
+
+            //------------------------Корпус--------------------------------------
+            string filePathBox = @"Box.txt";
+            string[] linesBox = File.ReadAllLines(filePathBox);
+            int[] BoxlinesToDelete = { 1, 2, 3, 4 };
+
+            using (StreamWriter sw = new StreamWriter(filePathBox))
+            {
+                for (int i = 0; i < linesBox.Length; i++)
+                {
+                    if (!BoxlinesToDelete.Contains(i + 1))
+                    {
+                        sw.WriteLine(linesBox[i]);
+                    }
+                }
+            }
+            //--------------------------Процессор-------------------------------------
+            string filePathCPU = @"CPU.txt";
+            string[] linesCPU = File.ReadAllLines(filePathCPU);
+            int[] CPUlinesToDelete = { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+            using (StreamWriter sw = new StreamWriter(filePathCPU))
+            {
+                for (int i = 0; i < linesCPU.Length; i++)
+                {
+                    if (!CPUlinesToDelete.Contains(i + 1))
+                    {
+                        sw.WriteLine(linesCPU[i]);
+                    }
+                }
+            }
+            //-------------------------Сист. плата------------------------------------
+            string filePathMB = @"MB.txt";
+            string[] linesMB = File.ReadAllLines(filePathMB);
+            int[] MBlinesToDelete = { 1, 2, 3, 4, 5, 6 };
+
+            using (StreamWriter sw = new StreamWriter(filePathMB))
+            {
+                for (int i = 0; i < linesMB.Length; i++)
+                {
+                    if (!MBlinesToDelete.Contains(i + 1))
+                    {
+                        sw.WriteLine(linesMB[i]);
+                    }
+                }
+            }
+            //-------------------------Видеокарта--------------------------------------
+            string filePathGPU = @"GPU.txt";
+            string[] linesGPU = File.ReadAllLines(filePathGPU);
+            int[] GPUlinesToDelete = { 1, 2, 3, 4, 5 };
+
+            using (StreamWriter sw = new StreamWriter(filePathGPU))
+            {
+                for (int i = 0; i < linesGPU.Length; i++)
+                {
+                    if (!GPUlinesToDelete.Contains(i + 1))
+                    {
+                        sw.WriteLine(linesGPU[i]);
+                    }
+                }
+            }
+            //----------------------------Охлаждение процессора---------------------------------
+            string filePathCPU_Cool = @"CPU_COOL.txt";
+            string[] linesCPU_Cool = File.ReadAllLines(filePathCPU_Cool);
+            int[] CPU_CoolLinesToDelete = { 1, 2, 3 };
+
+            using (StreamWriter sw = new StreamWriter(filePathCPU_Cool))
+            {
+                for (int i = 0; i < linesCPU_Cool.Length; i++)
+                {
+                    if (!CPU_CoolLinesToDelete.Contains(i + 1))
+                    {
+                        sw.WriteLine(linesCPU_Cool[i]);
+                    }
+                }
+            }
+            //------------------------Оперативная память-----------------------------------
+            string filePathRAM = @"RAM.txt";
+            string[] linesRAM = File.ReadAllLines(filePathRAM);
+            int[] RAMlinesToDelete = { 1, 2, 3, 4, 5 };
+
+            using (StreamWriter sw = new StreamWriter(filePathRAM))
+            {
+                for (int i = 0; i < linesRAM.Length; i++)
+                {
+                    if (!RAMlinesToDelete.Contains(i + 1))
+                    {
+                        sw.WriteLine(linesRAM[i]);
+                    }
+                }
+            }
+            //----------------------------Блок питания-----------------------------------
+            string filePathPower = @"Power.txt";
+            string[] linesPower = File.ReadAllLines(filePathPower);
+            int[] PowerlinesToDelete = { 1, 2, 3 };
+
+            using (StreamWriter sw = new StreamWriter(filePathPower))
+            {
+                for (int i = 0; i < linesPower.Length; i++)
+                {
+                    if (!PowerlinesToDelete.Contains(i + 1))
+                    {
+                        sw.WriteLine(linesPower[i]);
+                    }
+                }
+            }
+            //--------------------------Хранилище-----------------------------------
+            string filePathStorage = @"Storage.txt";
+            string[] linesStorage = File.ReadAllLines(filePathStorage);
+            int[] StoragelinesToDelete = { 1, 2, 3 };
+
+            using (StreamWriter sw = new StreamWriter(filePathStorage))
+            {
+                for (int i = 0; i < linesStorage.Length; i++)
+                {
+                    if (!StoragelinesToDelete.Contains(i + 1))
+                    {
+                        sw.WriteLine(linesStorage[i]);
+                    }
+                }
+            }
+            //--------------------------------------------------------------------
         }
-        
+
         private void guna2Button4_Click(object sender, EventArgs e) //Выбор файла для загрузки
         {
             if (guna2Button4.Text == "Добавить видео")

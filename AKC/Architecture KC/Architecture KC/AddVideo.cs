@@ -47,8 +47,6 @@ namespace Architecture_KC
             isDragging = false;
         }
 
-        string con = @"Data Source = (localdb)\MSSqlLocalDB; Initial Catalog = AKC; Integrated Security = SSPI";
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             try

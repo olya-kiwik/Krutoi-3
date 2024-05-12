@@ -227,11 +227,23 @@
     <Compile Include="FilterGPU.Designer.cs">
       <DependentUpon>FilterGPU.cs</DependentUpon>
     </Compile>
+    <Compile Include="FilterPower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterPower.Designer.cs">
+      <DependentUpon>FilterPower.cs</DependentUpon>
+    </Compile>
     <Compile Include="FilterRAM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FilterRAM.Designer.cs">
       <DependentUpon>FilterRAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterSorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterSorage.Designer.cs">
+      <DependentUpon>FilterSorage.cs</DependentUpon>
     </Compile>
     <Compile Include="GlavForm.cs">
       <SubType>Form</SubType>
@@ -276,6 +288,12 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SeeCompForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeeCompForm.Designer.cs">
+      <DependentUpon>SeeCompForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectAddComonent.cs">
       <SubType>Form</SubType>
@@ -375,8 +393,14 @@
     <EmbeddedResource Include="FilterGPU.resx">
       <DependentUpon>FilterGPU.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FilterPower.resx">
+      <DependentUpon>FilterPower.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FilterRAM.resx">
       <DependentUpon>FilterRAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterSorage.resx">
+      <DependentUpon>FilterSorage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlavForm.resx">
       <DependentUpon>GlavForm.cs</DependentUpon>
@@ -397,6 +421,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeeCompForm.resx">
+      <DependentUpon>SeeCompForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectAddComonent.resx">
       <DependentUpon>SelectAddComonent.cs</DependentUpon>

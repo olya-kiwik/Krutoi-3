@@ -12,7 +12,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Architecture_KC
 {
@@ -657,6 +659,50 @@ namespace Architecture_KC
             }
         }
 
+        public void SelectPowerSeek(FlowLayoutPanel companent, Guna2ComboBox W, Guna2ComboBox FF)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(conn);
+                string query = "SELECT * FROM Power where Power(W) like @SearthW and FormFactor like @SearthFF";
+
+                sqlConnection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, sqlConnection))
+                {
+                    command.Parameters.AddWithValue("@SearthW", (string.Format("{0}%", W.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthFF", (string.Format("{0}%", FF.SelectedItem)));
+
+                    W.Items.Clear();
+                    FF.Items.Clear();
+
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        PCCompUC pcUC = new PCCompUC();
+
+                        pcUC.labelName.Text = reader.GetString(0);
+                        pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
+                        pcUC.labelType.Text = "Оперативная память";
+                        pcUC.TextBoxHar.Text = $"Мощность: {reader.GetString(1)} W" + Environment.NewLine + $"Форм фактор: {reader.GetString(2)}";
+
+                        companent.Controls.Add(pcUC);
+
+                        W.Items.Add(reader.GetString(1));
+                        FF.Items.Add(reader.GetString(2));
+
+                        RemoveDuplicates(W);
+                        RemoveDuplicates(FF);
+                    }
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         public void SelectHDD(FlowLayoutPanel flowLayoutPanel)
         {
             try
@@ -679,6 +725,50 @@ namespace Architecture_KC
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость записи: {reader.GetString(1)} мб/сек";
 
                         flowLayoutPanel.Controls.Add(pcUC);
+                    }
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        public void SelectStorageSeek(FlowLayoutPanel companent, Guna2ComboBox speed, Guna2ComboBox type)
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(conn);
+                string query = "SELECT * FROM Storage where Speed like @SearthSpeed and Type like @SearthType";
+
+                sqlConnection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, sqlConnection))
+                {
+                    command.Parameters.AddWithValue("@SearthSpeed", (string.Format("{0}%", speed.SelectedItem)));
+                    command.Parameters.AddWithValue("@SearthType", (string.Format("{0}%", type.SelectedItem)));
+
+                    speed.Items.Clear();
+                    type.Items.Clear();
+
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        PCCompUC pcUC = new PCCompUC();
+
+                        pcUC.labelName.Text = reader.GetString(0);
+                        pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
+                        pcUC.labelType.Text = "Оперативная память";
+                        pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость записи: {reader.GetString(1)} мб/сек";
+
+                        companent.Controls.Add(pcUC);
+
+                        speed.Items.Add(reader.GetString(1));
+                        type.Items.Add(reader.GetString(2));
+
+                        RemoveDuplicates(speed);
+                        RemoveDuplicates(type);
                     }
                 }
                 sqlConnection.Close();
@@ -930,7 +1020,7 @@ namespace Architecture_KC
               
                 con.Open();
                 SqlCommand command = new SqlCommand($"Insert INTO txtResurs (Teoria, Name) values (@Teoria,@Name)", con);
-                command.Parameters.Add("@Teoria", SqlDbType.VarBinary).Value = File.ReadAllBytes(selectedFilePath);
+                command.Parameters.Add("@Teoria", SqlDbType.VarBinary).Value = System.IO.File.ReadAllBytes(selectedFilePath);
                 command.Parameters.AddWithValue("@Name", tb1.Text);
                 command.ExecuteNonQuery();
                 con.Close();
@@ -977,8 +1067,5 @@ namespace Architecture_KC
                 Methods.ResetLayout2();
             }
         }
-
-        
-
     }
 }

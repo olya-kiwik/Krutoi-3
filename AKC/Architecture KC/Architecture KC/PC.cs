@@ -12,24 +12,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Architecture_KC
 {
     public partial class PC : Form
     {
-
-
         private bool _isAdmin;
         public PC(bool isAdmin)
         {
             InitializeComponent();
             _isAdmin = isAdmin;
-            
         }
 
-        
         PCQuerySql sql = new PCQuerySql();
-        
+
+        public string BoxName;
+
+        public string fff
+        {
+            get { return BoxName; }
+            set { BoxName = value; }
+        }
+
+
         private void PC_Load(object sender, EventArgs e)
         {     
             AddBtn.Visible = _isAdmin;
@@ -37,6 +43,7 @@ namespace Architecture_KC
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             Companent.Controls.Clear();
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -45,9 +52,7 @@ namespace Architecture_KC
             glavForm.Show();
             Hide();
         }
-
         
-
         private void AddBtn_Click(object sender, EventArgs e)
         {
             SelectAddComonent sac = new SelectAddComonent();
@@ -75,7 +80,6 @@ namespace Architecture_KC
             bf.Size = Companent.Size;
             Companent.Controls.Add(bf);
             bf.Visible = true;
-
         }
 
         private void guna2PictureBox1_MouseEnter(object sender, EventArgs e)//Корпус
@@ -110,7 +114,6 @@ namespace Architecture_KC
             mb.Size = Companent.Size;
             Companent.Controls.Add(mb);
             mb.Visible = true;
-
         }
 
         private void guna2PictureBox2_MouseEnter(object sender, EventArgs e)//Системная плата
@@ -276,7 +279,12 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            
+            FilterSorage hdd = new FilterSorage();
+            hdd.TopLevel = false;
+            hdd.FormBorderStyle = FormBorderStyle.None;
+            hdd.Size = Companent.Size;
+            Companent.Controls.Add(hdd);
+            hdd.Visible = true;
         }
 
         private void guna2PictureBox6_MouseEnter(object sender, EventArgs e)//жйский диск
@@ -305,7 +313,12 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            
+            FilterPower w = new FilterPower();
+            w.TopLevel = false;
+            w.FormBorderStyle = FormBorderStyle.None;
+            w.Size = Companent.Size;
+            Companent.Controls.Add(w);
+            w.Visible = true;
         }
 
         private void guna2PictureBox5_MouseEnter(object sender, EventArgs e)//блок питания
@@ -321,6 +334,13 @@ namespace Architecture_KC
 
         private void ConfirmBtn_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void SeeComplect_Click(object sender, EventArgs e)
+        {
+            SeeCompForm see = new SeeCompForm();
+            see.ShowDialog();
 
         }
     }

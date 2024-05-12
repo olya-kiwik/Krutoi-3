@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.IDBox = new System.Windows.Forms.Label();
             this.SelectBtn = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.haracter = new System.Windows.Forms.TextBox();
             this.NameComp = new System.Windows.Forms.Label();
             this._Type = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +47,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.IDBox);
             this.guna2Panel1.Controls.Add(this.SelectBtn);
             this.guna2Panel1.Controls.Add(this.groupBox1);
             this.guna2Panel1.Controls.Add(this.NameComp);
@@ -56,6 +56,17 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(455, 270);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // IDBox
+            // 
+            this.IDBox.AutoSize = true;
+            this.IDBox.ForeColor = System.Drawing.Color.LightGray;
+            this.IDBox.Location = new System.Drawing.Point(11, 229);
+            this.IDBox.Name = "IDBox";
+            this.IDBox.Size = new System.Drawing.Size(18, 13);
+            this.IDBox.TabIndex = 9;
+            this.IDBox.Text = "ID";
+            this.IDBox.Visible = false;
             // 
             // SelectBtn
             // 
@@ -135,17 +146,6 @@
             this._Type.Text = "Type";
             this._Type.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(11, 229);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "ID";
-            this.label1.Visible = false;
-            // 
             // PCCompUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +172,6 @@
         private System.Windows.Forms.Label NameComp;
         private System.Windows.Forms.Label _Type;
         private Guna.UI2.WinForms.Guna2Button SelectBtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label IDBox;
     }
 }
