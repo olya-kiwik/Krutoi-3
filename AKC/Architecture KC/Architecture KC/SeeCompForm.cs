@@ -53,10 +53,10 @@ namespace Architecture_KC
                 string[] lines = File.ReadAllLines("Box.txt");
 
                 // Запись первой строки в Label
-                label2.Text = lines[0];
+                label2.Text = lines[1];
 
                 // Запись остальных строк в TextBox
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     textBox1.Text += lines[i] + Environment.NewLine;
                 }
@@ -72,10 +72,10 @@ namespace Architecture_KC
                 string[] lines = File.ReadAllLines("CPU.txt");
 
                 // Запись первой строки в Label
-                label3.Text = lines[0];
+                label3.Text = lines[1];
 
                 // Запись остальных строк в TextBox
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     textBox2.Text += lines[i] + Environment.NewLine;
                 }
@@ -91,10 +91,10 @@ namespace Architecture_KC
                 string[] lines = File.ReadAllLines("MB.txt");
 
                 // Запись первой строки в Label
-                label4.Text = lines[0];
+                label4.Text = lines[1];
 
                 // Запись остальных строк в TextBox
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     textBox3.Text += lines[i] + Environment.NewLine;
                 }
@@ -110,10 +110,10 @@ namespace Architecture_KC
                 string[] lines = File.ReadAllLines("RAM.txt");
 
                 // Запись первой строки в Label
-                label5.Text = lines[0];
+                label5.Text = lines[1];
 
                 // Запись остальных строк в TextBox
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     textBox4.Text += lines[i] + Environment.NewLine;
                 }
@@ -129,10 +129,10 @@ namespace Architecture_KC
                 string[] lines = File.ReadAllLines("RAM.txt");
 
                 // Запись первой строки в Label
-                label5.Text = lines[0];
+                label5.Text = lines[1];
 
                 // Запись остальных строк в TextBox
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     textBox4.Text += lines[i] + Environment.NewLine;
                 }
@@ -148,10 +148,10 @@ namespace Architecture_KC
                 string[] lines = File.ReadAllLines("Power.txt");
 
                 // Запись первой строки в Label
-                label6.Text = lines[0];
+                label6.Text = lines[1];
 
                 // Запись остальных строк в TextBox
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     textBox5.Text += lines[i] + Environment.NewLine;
                 }
@@ -167,10 +167,10 @@ namespace Architecture_KC
                 string[] lines = File.ReadAllLines("CPU_COOL.txt");
 
                 // Запись первой строки в Label
-                label7.Text = lines[0];
+                label7.Text = lines[1];
 
                 // Запись остальных строк в TextBox
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     textBox6.Text += lines[i] + Environment.NewLine;
                 }
@@ -186,10 +186,10 @@ namespace Architecture_KC
                 string[] lines = File.ReadAllLines("GPU.txt");
 
                 // Запись первой строки в Label
-                label8.Text = lines[0];
+                label8.Text = lines[1];
 
                 // Запись остальных строк в TextBox
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     textBox7.Text += lines[i] + Environment.NewLine;
                 }
@@ -205,10 +205,10 @@ namespace Architecture_KC
                 string[] lines = File.ReadAllLines("Storage.txt");
 
                 // Запись первой строки в Label
-                label9.Text = lines[0];
+                label9.Text = lines[1];
 
                 // Запись остальных строк в TextBox
-                for (int i = 1; i < lines.Length; i++)
+                for (int i = 2; i < lines.Length; i++)
                 {
                     textBox8.Text += lines[i] + Environment.NewLine;
                 }

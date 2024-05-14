@@ -33,9 +33,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -126,6 +126,21 @@
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = global::Architecture_KC.Properties.Resources.logo;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(4, 0);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(25, 28);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 1;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.guna2CirclePictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.guna2CirclePictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -148,21 +163,6 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = global::Architecture_KC.Properties.Resources.logo;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(4, 0);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(25, 28);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.guna2CirclePictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.guna2CirclePictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -170,9 +170,9 @@
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(3, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.Size = new System.Drawing.Size(186, 20);
             this.label2.TabIndex = 39;
-            this.label2.Text = "Корпус";
+            this.label2.Text = "Данные отсутствуют";
             // 
             // textBox1
             // 
@@ -189,7 +189,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(373, 83);
             this.textBox1.TabIndex = 40;
-            this.textBox1.Text = "Данные отствуют";
             // 
             // guna2Panel1
             // 
@@ -230,7 +229,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(373, 153);
             this.textBox2.TabIndex = 40;
-            this.textBox2.Text = "Данные отствуют";
             // 
             // label3
             // 
@@ -239,9 +237,9 @@
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(3, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
+            this.label3.Size = new System.Drawing.Size(186, 20);
             this.label3.TabIndex = 39;
-            this.label3.Text = "Процессор";
+            this.label3.Text = "Данные отсутствуют";
             // 
             // guna2Panel3
             // 
@@ -270,7 +268,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(373, 153);
             this.textBox3.TabIndex = 40;
-            this.textBox3.Text = "Данные отствуют";
             // 
             // label4
             // 
@@ -279,9 +276,9 @@
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(3, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 20);
+            this.label4.Size = new System.Drawing.Size(186, 20);
             this.label4.TabIndex = 39;
-            this.label4.Text = "Системная плата";
+            this.label4.Text = "Данные отсутствуют";
             // 
             // guna2Panel4
             // 
@@ -310,7 +307,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(373, 153);
             this.textBox4.TabIndex = 40;
-            this.textBox4.Text = "Данные отствуют";
             // 
             // label5
             // 
@@ -319,9 +315,9 @@
             this.label5.ForeColor = System.Drawing.Color.LightGray;
             this.label5.Location = new System.Drawing.Point(3, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 20);
+            this.label5.Size = new System.Drawing.Size(186, 20);
             this.label5.TabIndex = 39;
-            this.label5.Text = "Оперативная память";
+            this.label5.Text = "Данные отсутствуют";
             // 
             // guna2Panel5
             // 
@@ -350,7 +346,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(373, 61);
             this.textBox5.TabIndex = 40;
-            this.textBox5.Text = "Данные отствуют";
             // 
             // label6
             // 
@@ -359,9 +354,9 @@
             this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Location = new System.Drawing.Point(3, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 20);
+            this.label6.Size = new System.Drawing.Size(186, 20);
             this.label6.TabIndex = 39;
-            this.label6.Text = "Блок питания";
+            this.label6.Text = "Данные отсутствуют";
             // 
             // guna2Panel6
             // 
@@ -390,7 +385,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(373, 83);
             this.textBox6.TabIndex = 40;
-            this.textBox6.Text = "Данные отствуют";
             // 
             // label7
             // 
@@ -399,9 +393,9 @@
             this.label7.ForeColor = System.Drawing.Color.LightGray;
             this.label7.Location = new System.Drawing.Point(3, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(218, 20);
+            this.label7.Size = new System.Drawing.Size(186, 20);
             this.label7.TabIndex = 39;
-            this.label7.Text = "Охлаждение процессора";
+            this.label7.Text = "Данные отсутствуют";
             // 
             // guna2Panel7
             // 
@@ -430,7 +424,6 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(373, 153);
             this.textBox7.TabIndex = 40;
-            this.textBox7.Text = "Данные отствуют";
             // 
             // label8
             // 
@@ -439,9 +432,9 @@
             this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(3, 5);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 20);
+            this.label8.Size = new System.Drawing.Size(186, 20);
             this.label8.TabIndex = 39;
-            this.label8.Text = "Видеокарта";
+            this.label8.Text = "Данные отсутствуют";
             // 
             // guna2Panel8
             // 
@@ -470,7 +463,6 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(373, 83);
             this.textBox8.TabIndex = 40;
-            this.textBox8.Text = "Данные отствуют";
             // 
             // label9
             // 
@@ -479,9 +471,9 @@
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(3, 5);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 20);
+            this.label9.Size = new System.Drawing.Size(186, 20);
             this.label9.TabIndex = 39;
-            this.label9.Text = "Накопитель";
+            this.label9.Text = "Данные отсутствуют";
             // 
             // label10
             // 

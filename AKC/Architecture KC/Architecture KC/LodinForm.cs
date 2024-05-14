@@ -122,7 +122,8 @@ namespace Architecture_KC
 
         private void label1_Click(object sender, EventArgs e)
         {
-            dBLinkForm.ShowDialog(); 
+            dBLinkForm.ShowDialog();
+            linkBD.Text = $"Имя сервера SQL: {sql.GetSqlConn()}";
         }
     }
 }

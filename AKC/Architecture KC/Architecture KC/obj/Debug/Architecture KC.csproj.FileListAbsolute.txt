@@ -308,3 +308,9 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.SeeCompForm.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.FilterSorage.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.FilterPower.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\BouncyCastle.Crypto.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\itextsharp.dll
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Debug\itextsharp.xml
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.Stud.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.ResultCompUC.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Debug\Architecture_KC.QuatForm.resources

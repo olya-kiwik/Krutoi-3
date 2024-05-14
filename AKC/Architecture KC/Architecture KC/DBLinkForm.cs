@@ -9,14 +9,12 @@ using System.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace Architecture_KC
 {
     public partial class DBLinkForm : Form
     {
-        PCQuerySql sql;
-        LodinForm lf;
-
         public DBLinkForm()
         {
             InitializeComponent();
@@ -40,7 +38,12 @@ namespace Architecture_KC
                 Close();
             }
             else
-                MessageBox.Show($"Поле {label1.Text} пустое!\nПожалуйста заполните поле {label1.Text}","Ошибка!");                
+            {
+                MessageBox.Show($"Поле {label1.Text} пустое!\nПожалуйста заполните поле {label1.Text}", "Ошибка!");
+                return;
+            }
+                
+                
         }
     }
 }

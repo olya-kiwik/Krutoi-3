@@ -11,8 +11,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
+using iTextSharp.text.pdf.parser;
+using System.Configuration;
 
 namespace Architecture_KC
 {
@@ -25,7 +30,7 @@ namespace Architecture_KC
             _isAdmin = isAdmin;
         }
 
-        PCQuerySql sql = new PCQuerySql();
+        static PCQuerySql sql = new PCQuerySql();
 
         public string BoxName;
 
@@ -35,14 +40,30 @@ namespace Architecture_KC
             set { BoxName = value; }
         }
 
+        string conn = $@"Data Source = {sql.GetSqlConn()}; Initial Catalog = AKC; Integrated Security = SSPI";
 
         private void PC_Load(object sender, EventArgs e)
         {     
             AddBtn.Visible = _isAdmin;
+            AddQuestion.Visible = _isAdmin;
             TopMost = true;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             Companent.Controls.Clear();
+
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                connection.Open();
+                string query = "SELECT * FROM Question";
+                SqlCommand command = new SqlCommand(query, connection);
+                int rowCount = (int)command.ExecuteScalar();
+            
+                Random random = new Random();
+                int randomIndex = random.Next(1, rowCount + 1);
+
+                TextWork.Text = sql.SelectQuestion(randomIndex);
+                connection.Close();
+            }
             
         }
 
@@ -334,7 +355,8 @@ namespace Architecture_KC
 
         private void ConfirmBtn_Click(object sender, EventArgs e)
         {
-            
+            Stud stud = new Stud();
+            stud.ShowDialog();
         }
 
         private void SeeComplect_Click(object sender, EventArgs e)
@@ -342,6 +364,12 @@ namespace Architecture_KC
             SeeCompForm see = new SeeCompForm();
             see.ShowDialog();
 
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            QuatForm q = new QuatForm();
+            q.ShowDialog();
         }
     }
 }

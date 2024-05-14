@@ -35,6 +35,7 @@ namespace Architecture_KC
             Methods.ResetLayout1 = FLP1reset;
             Methods.ResetLayout2 = FLP2reset;
             Methods.ResetLayout3 = FLP3reset;
+            Methods.ResetLayout4 = FLP4reset;
             
         }
 
@@ -171,6 +172,42 @@ namespace Architecture_KC
             }
         }
 
+        public void SelectResultUC4()
+        {
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(conn);
+                string query = "SELECT * FROM Prepod";
+
+                sqlConnection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, sqlConnection))
+                {
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        ResultCompUC uc4 = new ResultCompUC();
+
+                        uc4.Label2.Text = reader.GetInt32(0).ToString();
+                        uc4.Label1.Text = reader.GetString(2);
+                        uc4.Label3.Text = reader.GetString(1);
+
+                        flowLayoutPanel2.Controls.Add(uc4);
+
+                    }
+                }
+                sqlConnection.Close();
+                loadingCicle.Stop();
+                loadingCicle.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                loadingCicle.Stop();
+                loadingCicle.Visible = false;
+                MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             
@@ -200,6 +237,12 @@ namespace Architecture_KC
         {
             flowLayoutPanel2.Controls.Clear();
             SelectTestUC3();
+        }
+
+        public void FLP4reset()//перезагрузка сборок студентов
+        {
+            flowLayoutPanel2.Controls.Clear();
+            SelectResultUC4();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -232,16 +275,18 @@ namespace Architecture_KC
             if(_isAdmin == true)
             {
                 guna2TextBox1.Size = new System.Drawing.Size(758, 45);
+                guna2Button8.Visible = true;
             }
             else
             {
                 guna2TextBox1.Size = new System.Drawing.Size(865, 45);
+                guna2Button8.Visible = false;
             }
 
             //------------------------Корпус--------------------------------------
             string filePathBox = @"Box.txt";
             string[] linesBox = File.ReadAllLines(filePathBox);
-            int[] BoxlinesToDelete = { 1, 2, 3, 4 };
+            int[] BoxlinesToDelete = { 1, 2, 3, 4, 5 ,6};
 
             using (StreamWriter sw = new StreamWriter(filePathBox))
             {
@@ -256,7 +301,7 @@ namespace Architecture_KC
             //--------------------------Процессор-------------------------------------
             string filePathCPU = @"CPU.txt";
             string[] linesCPU = File.ReadAllLines(filePathCPU);
-            int[] CPUlinesToDelete = { 1, 2, 3, 4, 5, 6, 7, 8 };
+            int[] CPUlinesToDelete = { 1, 2, 3, 4, 5, 6, 7, 8, 9 , 10};
 
             using (StreamWriter sw = new StreamWriter(filePathCPU))
             {
@@ -271,7 +316,7 @@ namespace Architecture_KC
             //-------------------------Сист. плата------------------------------------
             string filePathMB = @"MB.txt";
             string[] linesMB = File.ReadAllLines(filePathMB);
-            int[] MBlinesToDelete = { 1, 2, 3, 4, 5, 6 };
+            int[] MBlinesToDelete = { 1, 2, 3, 4, 5, 6, 7 , 8};
 
             using (StreamWriter sw = new StreamWriter(filePathMB))
             {
@@ -286,7 +331,7 @@ namespace Architecture_KC
             //-------------------------Видеокарта--------------------------------------
             string filePathGPU = @"GPU.txt";
             string[] linesGPU = File.ReadAllLines(filePathGPU);
-            int[] GPUlinesToDelete = { 1, 2, 3, 4, 5 };
+            int[] GPUlinesToDelete = { 1, 2, 3, 4, 5, 6 , 7};
 
             using (StreamWriter sw = new StreamWriter(filePathGPU))
             {
@@ -301,7 +346,7 @@ namespace Architecture_KC
             //----------------------------Охлаждение процессора---------------------------------
             string filePathCPU_Cool = @"CPU_COOL.txt";
             string[] linesCPU_Cool = File.ReadAllLines(filePathCPU_Cool);
-            int[] CPU_CoolLinesToDelete = { 1, 2, 3 };
+            int[] CPU_CoolLinesToDelete = { 1, 2, 3, 4, 5 };
 
             using (StreamWriter sw = new StreamWriter(filePathCPU_Cool))
             {
@@ -316,7 +361,7 @@ namespace Architecture_KC
             //------------------------Оперативная память-----------------------------------
             string filePathRAM = @"RAM.txt";
             string[] linesRAM = File.ReadAllLines(filePathRAM);
-            int[] RAMlinesToDelete = { 1, 2, 3, 4, 5 };
+            int[] RAMlinesToDelete = { 1, 2, 3, 4, 5, 6 , 7};
 
             using (StreamWriter sw = new StreamWriter(filePathRAM))
             {
@@ -331,7 +376,7 @@ namespace Architecture_KC
             //----------------------------Блок питания-----------------------------------
             string filePathPower = @"Power.txt";
             string[] linesPower = File.ReadAllLines(filePathPower);
-            int[] PowerlinesToDelete = { 1, 2, 3 };
+            int[] PowerlinesToDelete = { 1, 2, 3, 4 , 5};
 
             using (StreamWriter sw = new StreamWriter(filePathPower))
             {
@@ -346,7 +391,7 @@ namespace Architecture_KC
             //--------------------------Хранилище-----------------------------------
             string filePathStorage = @"Storage.txt";
             string[] linesStorage = File.ReadAllLines(filePathStorage);
-            int[] StoragelinesToDelete = { 1, 2, 3 };
+            int[] StoragelinesToDelete = { 1, 2, 3, 4, 5 };
 
             using (StreamWriter sw = new StreamWriter(filePathStorage))
             {
@@ -423,6 +468,17 @@ namespace Architecture_KC
             
         }
 
+        private void guna2Button8_Click(object sender, EventArgs e)//Сборки
+        {
+            if (flowLayoutPanel2.Visible == false)
+            {
+                flowLayoutPanel2.Visible = true;
+            }
+            label3.Text = "Prepod";
+            guna2TextBox1.Visible = true;
+            FLP4reset();
+        }
+
         private void guna2Button6_Click(object sender, EventArgs e)//Сборка
         {
             PC pc = new PC(_isAdmin);
@@ -436,44 +492,73 @@ namespace Architecture_KC
             using (SqlConnection con = new SqlConnection(conn))
             {
                 con.Open();
-
-                SqlCommand cmd = new SqlCommand($"Select * from {label3.Text} where Name like @Searth", con);
-                cmd.Parameters.AddWithValue("@Searth", (string.Format("{0}%", guna2TextBox1.Text)));
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (label3.Text == "txtResurs")
+                try
                 {
+                    SqlCommand cmd = new SqlCommand($"Select * from {label3.Text} where Name like @Searth", con);
 
-                    while (reader.Read())
+                    cmd.Parameters.AddWithValue("@Searth", (string.Format("{0}%", guna2TextBox1.Text)));
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (label3.Text == "txtResurs")
                     {
 
-                        TheorUC theorUC = new TheorUC(_isAdmin);
-                        
-                        theorUC.Label2.Text = reader.GetInt32(0).ToString();
-                        theorUC.Label1.Text = reader.GetString(1);
+                        while (reader.Read())
+                        {
 
-                        flowLayoutPanel2.Controls.Add(theorUC);
+                            TheorUC theorUC = new TheorUC(_isAdmin);
+
+                            theorUC.Label2.Text = reader.GetInt32(0).ToString();
+                            theorUC.Label1.Text = reader.GetString(1);
+
+                            flowLayoutPanel2.Controls.Add(theorUC);
+                        }
+
+                    }
+                    else if (label3.Text == "videoResurs")
+                    {
+
+                        while (reader.Read())
+                        {
+                            VideoUC videoUC = new VideoUC(_isAdmin);
+
+                            videoUC.LabelName.Text = reader.GetString(1);
+                            videoUC.LabelId.Text = reader.GetInt32(0).ToString();
+
+                            flowLayoutPanel2.Controls.Add(videoUC);
+                        }
+
                     }
 
+                    reader.Close();
+                    cmd.ExecuteNonQuery();
                 }
-                else if (label3.Text == "videoResurs")
-                {                 
-                                        
+                catch
+                {
+                    SqlCommand cmd = new SqlCommand($"Select * from {label3.Text} where FIO_stud like @SearthFIO or _Group like @SearthG", con);
+
+                    cmd.Parameters.AddWithValue("@SearthFIO", (string.Format("{0}%", guna2TextBox1.Text)));
+                    cmd.Parameters.AddWithValue("@SearthG", (string.Format("{0}%", guna2TextBox1.Text)));
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
                     while (reader.Read())
                     {
+                        ResultCompUC RCUC = new ResultCompUC();
 
-                        VideoUC videoUC = new VideoUC(_isAdmin);
+                        RCUC.Label1.Text = reader.GetString(2);
+                        RCUC.Label3.Text = reader.GetString(1);
+                        RCUC.Label2.Text = reader.GetInt32(0).ToString();
 
-                        videoUC.LabelName.Text = reader.GetString(1);
-                        videoUC.LabelId.Text = reader.GetInt32(0).ToString();
-
-                        flowLayoutPanel2.Controls.Add(videoUC);
+                        flowLayoutPanel2.Controls.Add(RCUC);
                     }
 
+                    reader.Close();
+                    cmd.ExecuteNonQuery();
                 }
                 
-                reader.Close();
-                cmd.ExecuteNonQuery();
+                
+
+                
                 con.Close();
             }
         }

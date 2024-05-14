@@ -1,5 +1,8 @@
 ﻿using Amazon.Runtime.Internal.Util;
 using Guna.UI2.WinForms;
+using iTextSharp.xmp.impl;
+using Mysqlx.Session;
+using MySqlX.XDevAPI.Common;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -27,11 +30,6 @@ namespace Architecture_KC
         public string GetSqlConn()
         {
             return sqlConn;
-        }
-
-        public void SetSqlConn(string value)
-        {
-            sqlConn = value;
         }
 
         string conn = $@"Data Source = {sqlConn}; Initial Catalog = AKC; Integrated Security = SSPI";
@@ -626,9 +624,11 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectPower(FlowLayoutPanel flowLayoutPanel)
+        public void SelectPower(FlowLayoutPanel companent, Guna2ComboBox W, Guna2ComboBox FF)
         {
-            
+            W.Items.Clear();
+            FF.Items.Clear();
+
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(conn);
@@ -647,8 +647,13 @@ namespace Architecture_KC
                         pcUC.labelType.Text = "Блок питания";
                         pcUC.TextBoxHar.Text = $"Мощность: {reader.GetString(1)} W" + Environment.NewLine + $"Форм фактор: {reader.GetString(2)}";
 
-                        flowLayoutPanel.Controls.Add(pcUC);
+                        companent.Controls.Add(pcUC);
 
+                        W.Items.Add(reader.GetString(1));
+                        FF.Items.Add(reader.GetString(2));
+
+                        RemoveDuplicates(W);
+                        RemoveDuplicates(FF);
                     }
                 }
                 sqlConnection.Close();
@@ -703,8 +708,11 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectHDD(FlowLayoutPanel flowLayoutPanel)
+        public void SelectHDD(FlowLayoutPanel companent, Guna2ComboBox speed, Guna2ComboBox type)
         {
+            speed.Items.Clear();
+            type.Items.Clear();
+
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(conn);
@@ -724,7 +732,13 @@ namespace Architecture_KC
                         pcUC.labelType.Text = "Накопитель";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость записи: {reader.GetString(1)} мб/сек";
 
-                        flowLayoutPanel.Controls.Add(pcUC);
+                        companent.Controls.Add(pcUC);
+
+                        speed.Items.Add(reader.GetString(1));
+                        type.Items.Add(reader.GetString(2));
+
+                        RemoveDuplicates(speed);
+                        RemoveDuplicates(type);
                     }
                 }
                 sqlConnection.Close();
@@ -1012,6 +1026,22 @@ namespace Architecture_KC
             }
         }
 
+        public void AddResultStud(string selectedFilePath, string FIO_stud, string group)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand($"Insert INTO Prepod (_Group, FIO_stud, Result_comp) values (@Group, @FIO_stud, @Result_comp)", con);
+                command.Parameters.Add("@Result_comp", SqlDbType.VarBinary).Value = System.IO.File.ReadAllBytes(selectedFilePath);
+                command.Parameters.AddWithValue("@FIO_stud", FIO_stud);
+                command.Parameters.AddWithValue("@Group", group);
+                command.ExecuteNonQuery();
+                con.Close();
+
+                Methods.ResetLayout4();
+            }
+        }
+
         public void AddFile(string selectedFilePath, Guna2TextBox tb1)
         {
 
@@ -1066,6 +1096,55 @@ namespace Architecture_KC
                 Methods.ResetLayout1();              
                 Methods.ResetLayout2();
             }
+        }
+
+        public void AddQuestion(string Question)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+
+                con.Open();
+
+                SqlCommand command = new SqlCommand($"Insert INTO Question (Questions) values (@Question)", con);
+                command.Parameters.AddWithValue("@Question", Question);
+                
+                command.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Данные успешно добавлены в базу данных!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public string SelectQuestion(int ID)
+        {
+            string result = "";
+
+            try
+            {
+                SqlConnection sqlConnection = new SqlConnection(conn);
+                string query = "SELECT * FROM Question where ID like @SearthID";
+
+                sqlConnection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, sqlConnection))
+                {
+                    command.Parameters.AddWithValue("@SearthID", (string.Format("{0}%", ID)));
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        result = reader.GetString(1);
+                    }
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            return result;
         }
     }
 }

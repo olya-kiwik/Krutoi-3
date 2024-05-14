@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GlavForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
@@ -58,8 +59,8 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.loadingCicle = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -77,6 +78,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.panel2.Controls.Add(this.guna2Button8);
             this.panel2.Controls.Add(this.guna2Button6);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel9);
@@ -88,6 +90,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(154, 633);
             this.panel2.TabIndex = 1;
+            // 
+            // guna2Button8
+            // 
+            this.guna2Button8.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button8.BorderRadius = 10;
+            this.guna2Button8.BorderThickness = 1;
+            this.guna2Button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button8.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button8.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2Button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button8.ImageSize = new System.Drawing.Size(55, 55);
+            this.guna2Button8.Location = new System.Drawing.Point(2, 338);
+            this.guna2Button8.Name = "guna2Button8";
+            this.guna2Button8.Size = new System.Drawing.Size(151, 52);
+            this.guna2Button8.TabIndex = 7;
+            this.guna2Button8.Text = "Пркатические работы";
+            this.guna2Button8.Visible = false;
+            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
             // guna2Button6
             // 
@@ -105,7 +130,7 @@
             this.guna2Button6.Image = global::Architecture_KC.Properties.Resources.компьютер;
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.ImageSize = new System.Drawing.Size(55, 55);
-            this.guna2Button6.Location = new System.Drawing.Point(-11, 280);
+            this.guna2Button6.Location = new System.Drawing.Point(2, 280);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(151, 52);
             this.guna2Button6.TabIndex = 6;
@@ -148,7 +173,7 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.guna2Button3);
-            this.panel9.Location = new System.Drawing.Point(-11, 222);
+            this.panel9.Location = new System.Drawing.Point(-1, 222);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(157, 52);
             this.panel9.TabIndex = 1;
@@ -166,7 +191,7 @@
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2Button3.Font = new System.Drawing.Font("Sitka Text", 11.25F);
             this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.guna2Button3.Image = global::Architecture_KC.Properties.Resources.тест;
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -181,7 +206,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.guna2Button2);
-            this.panel7.Location = new System.Drawing.Point(-3, 164);
+            this.panel7.Location = new System.Drawing.Point(3, 164);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(149, 52);
             this.panel7.TabIndex = 1;
@@ -248,7 +273,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.guna2Button1);
-            this.panel5.Location = new System.Drawing.Point(-8, 106);
+            this.panel5.Location = new System.Drawing.Point(3, 106);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(148, 52);
             this.panel5.TabIndex = 0;
@@ -464,6 +489,16 @@
             this.panel3.Size = new System.Drawing.Size(1045, 633);
             this.panel3.TabIndex = 2;
             // 
+            // loadingCicle
+            // 
+            this.loadingCicle.AutoStart = true;
+            this.loadingCicle.BackColor = System.Drawing.Color.Transparent;
+            this.loadingCicle.Location = new System.Drawing.Point(584, 241);
+            this.loadingCicle.Name = "loadingCicle";
+            this.loadingCicle.ProgressColor = System.Drawing.Color.White;
+            this.loadingCicle.Size = new System.Drawing.Size(90, 90);
+            this.loadingCicle.TabIndex = 2;
+            // 
             // guna2Button4
             // 
             this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
@@ -487,16 +522,6 @@
             this.guna2Button4.Text = "Добавить файл";
             this.guna2Button4.Visible = false;
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
-            // 
-            // loadingCicle
-            // 
-            this.loadingCicle.AutoStart = true;
-            this.loadingCicle.BackColor = System.Drawing.Color.Transparent;
-            this.loadingCicle.Location = new System.Drawing.Point(584, 241);
-            this.loadingCicle.Name = "loadingCicle";
-            this.loadingCicle.ProgressColor = System.Drawing.Color.White;
-            this.loadingCicle.Size = new System.Drawing.Size(90, 90);
-            this.loadingCicle.TabIndex = 2;
             // 
             // GlavForm
             // 
@@ -564,5 +589,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator loadingCicle;
+        private Guna.UI2.WinForms.Guna2Button guna2Button8;
     }
 }

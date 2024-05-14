@@ -22,7 +22,7 @@ namespace Architecture_KC
         private void FilterPower_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectPower(flowLayoutPanel1);
+            sql.SelectPower(flowLayoutPanel1, W, FF);
         }
 
         private void ConfirmBtn_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Architecture_KC
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectPower(flowLayoutPanel1);
+            sql.SelectPower(flowLayoutPanel1, W, FF);
             guna2Button1.Visible = false;
         }
     }

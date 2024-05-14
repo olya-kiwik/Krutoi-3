@@ -79,9 +79,9 @@ namespace Architecture_KC
                     case ("Корпус"):
                         string filePathBox = @"Box.txt";
                         string[] linesBox = File.ReadAllLines(filePathBox);
-                        int[] BoxlinesToDelete = { 1, 2, 3, 4 };
+                        int[] BoxlinesToDelete = { 1, 2, 3, 4,5,6 };
 
-                        string dataBox = $"Название корпуса: {labelName.Text}\nХарактеристики\n{haracter.Text}";
+                        string dataBox = $"--------------------------------------------------------------------\n{labelName.Text}\nХарактеристики\n{haracter.Text}";
                         
                         using (StreamWriter sw = new StreamWriter(filePathBox))
                         {
@@ -100,9 +100,9 @@ namespace Architecture_KC
                     case ("Процессор"):
                         string filePathCPU = @"CPU.txt";
                         string[] linesCPU = File.ReadAllLines(filePathCPU);
-                        int[] CPUlinesToDelete = { 1, 2, 3, 4, 5, 6, 7, 8 };
+                        int[] CPUlinesToDelete = { 1, 2, 3, 4, 5, 6, 7, 8,9,10 };
 
-                        string dataCPU = $"Название процессора: {labelName.Text}\nХарактеристики\n{haracter.Text}";
+                        string dataCPU = $"--------------------------------------------------------------------\n{labelName.Text}\nХарактеристики\n{haracter.Text}";
 
                         using (StreamWriter sw = new StreamWriter(filePathCPU))
                         {
@@ -121,9 +121,9 @@ namespace Architecture_KC
                     case ("Системная плата"):
                         string filePathMB = @"MB.txt";
                         string[] linesMB = File.ReadAllLines(filePathMB);
-                        int[] MBlinesToDelete = { 1, 2, 3, 4, 5, 6};
+                        int[] MBlinesToDelete = { 1, 2, 3, 4, 5, 6,7,8};
 
-                        string dataMB = $"Название системной платы: {labelName.Text}\nХарактеристики\n{haracter.Text}";
+                        string dataMB = $"--------------------------------------------------------------------\n{labelName.Text}\nХарактеристики\n{haracter.Text}";
 
                         using (StreamWriter sw = new StreamWriter(filePathMB))
                         {
@@ -142,9 +142,9 @@ namespace Architecture_KC
                     case ("Видеокарта"):
                         string filePathGPU = @"GPU.txt";
                         string[] linesGPU = File.ReadAllLines(filePathGPU);
-                        int[] GPUlinesToDelete = { 1, 2, 3, 4, 5};
+                        int[] GPUlinesToDelete = { 1, 2, 3, 4, 5,6,7};
 
-                        string dataGPU = $"Название видеокарты: {labelName.Text}\nХарактеристики\n{haracter.Text}";
+                        string dataGPU = $"--------------------------------------------------------------------\n{labelName.Text}\nХарактеристики\n{haracter.Text}";
 
                         using (StreamWriter sw = new StreamWriter(filePathGPU))
                         {
@@ -163,9 +163,9 @@ namespace Architecture_KC
                     case ("Охлаждение процессора"):
                         string filePathCPU_Cool = @"CPU_COOL.txt";
                         string[] linesCPU_Cool = File.ReadAllLines(filePathCPU_Cool);
-                        int[] CPU_CoolLinesToDelete = { 1, 2, 3};
+                        int[] CPU_CoolLinesToDelete = { 1, 2, 3,4,5};
 
-                        string dataCPU_Cool = $"Название кулера: {labelName.Text}\nХарактеристики\n{haracter.Text}";
+                        string dataCPU_Cool = $"--------------------------------------------------------------------\n{labelName.Text}\nХарактеристики\n{haracter.Text}";
 
                         using (StreamWriter sw = new StreamWriter(filePathCPU_Cool))
                         {
@@ -184,9 +184,9 @@ namespace Architecture_KC
                     case ("Оперативная память"):
                         string filePathRAM = @"RAM.txt";
                         string[] linesRAM = File.ReadAllLines(filePathRAM);
-                        int[] RAMlinesToDelete = { 1, 2, 3, 4, 5};
+                        int[] RAMlinesToDelete = { 1, 2, 3, 4, 5,6,7};
 
-                        string dataRAM = $"Название оперативной памяти: {labelName.Text}\nХарактеристики\n{haracter.Text}";
+                        string dataRAM = $"--------------------------------------------------------------------\n{labelName.Text}\nХарактеристики\n{haracter.Text}";
 
                         using (StreamWriter sw = new StreamWriter(filePathRAM))
                         {
@@ -205,9 +205,9 @@ namespace Architecture_KC
                     case ("Блок питания"):
                         string filePathPower = @"Power.txt";
                         string[] linesPower = File.ReadAllLines(filePathPower);
-                        int[] PowerlinesToDelete = { 1, 2, 3 };
+                        int[] PowerlinesToDelete = { 1, 2, 3, 4, 5 };
 
-                        string dataPower = $"Название блока питания: {labelName.Text}\nХарактеристики\n{haracter.Text}";
+                        string dataPower = $"--------------------------------------------------------------------\n{labelName.Text}\nХарактеристики\n{haracter.Text}";
 
                         using (StreamWriter sw = new StreamWriter(filePathPower))
                         {
@@ -226,9 +226,9 @@ namespace Architecture_KC
                     case ("Накопитель"):
                         string filePathStorage = @"Storage.txt";
                         string[] linesStorage = File.ReadAllLines(filePathStorage);
-                        int[] StoragelinesToDelete = { 1, 2, 3 };
+                        int[] StoragelinesToDelete = { 1, 2, 3,4 ,5 };
 
-                        string dataStorage = $"Название накопителя: {labelName.Text}\nХарактеристики\n{haracter.Text}";
+                        string dataStorage = $"--------------------------------------------------------------------\n{labelName.Text}\nХарактеристики\n{haracter.Text}";
 
                         using (StreamWriter sw = new StreamWriter(filePathStorage))
                         {

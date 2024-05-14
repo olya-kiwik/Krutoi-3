@@ -41,6 +41,9 @@
     <Reference Include="AWSSDK, Version=2.3.55.2, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
       <HintPath>..\packages\AWSSDK.2.3.55.2\lib\net45\AWSSDK.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
@@ -49,6 +52,9 @@
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -289,6 +295,18 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="QuatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuatForm.Designer.cs">
+      <DependentUpon>QuatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultCompUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ResultCompUC.Designer.cs">
+      <DependentUpon>ResultCompUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeeCompForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +318,12 @@
     </Compile>
     <Compile Include="SelectAddComonent.Designer.cs">
       <DependentUpon>SelectAddComonent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stud.Designer.cs">
+      <DependentUpon>Stud.cs</DependentUpon>
     </Compile>
     <Compile Include="TestUC.cs">
       <SubType>UserControl</SubType>
@@ -422,11 +446,20 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuatForm.resx">
+      <DependentUpon>QuatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultCompUC.resx">
+      <DependentUpon>ResultCompUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SeeCompForm.resx">
       <DependentUpon>SeeCompForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectAddComonent.resx">
       <DependentUpon>SelectAddComonent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stud.resx">
+      <DependentUpon>Stud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestUC.resx">
       <DependentUpon>TestUC.cs</DependentUpon>
