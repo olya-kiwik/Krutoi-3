@@ -47,9 +47,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TextWork = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.AddQuestion = new Guna.UI2.WinForms.Guna2Button();
             this.SeeComplect = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.AddQuestion = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -312,6 +312,28 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1052, 74);
             this.guna2Panel1.TabIndex = 4;
             // 
+            // AddQuestion
+            // 
+            this.AddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddQuestion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.AddQuestion.BorderRadius = 5;
+            this.AddQuestion.BorderThickness = 1;
+            this.AddQuestion.DefaultAutoSize = true;
+            this.AddQuestion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddQuestion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddQuestion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddQuestion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddQuestion.FillColor = System.Drawing.Color.Transparent;
+            this.AddQuestion.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.AddQuestion.ForeColor = System.Drawing.Color.LightGray;
+            this.AddQuestion.Location = new System.Drawing.Point(893, 25);
+            this.AddQuestion.Name = "AddQuestion";
+            this.AddQuestion.Size = new System.Drawing.Size(156, 29);
+            this.AddQuestion.TabIndex = 13;
+            this.AddQuestion.Text = "Добавить задание";
+            this.AddQuestion.Visible = false;
+            this.AddQuestion.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // SeeComplect
             // 
             this.SeeComplect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -351,28 +373,6 @@
             this.guna2Button1.TabIndex = 2;
             this.guna2Button1.Text = "Выход";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // AddQuestion
-            // 
-            this.AddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddQuestion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
-            this.AddQuestion.BorderRadius = 5;
-            this.AddQuestion.BorderThickness = 1;
-            this.AddQuestion.DefaultAutoSize = true;
-            this.AddQuestion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AddQuestion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AddQuestion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AddQuestion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AddQuestion.FillColor = System.Drawing.Color.Transparent;
-            this.AddQuestion.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.AddQuestion.ForeColor = System.Drawing.Color.LightGray;
-            this.AddQuestion.Location = new System.Drawing.Point(893, 25);
-            this.AddQuestion.Name = "AddQuestion";
-            this.AddQuestion.Size = new System.Drawing.Size(156, 29);
-            this.AddQuestion.TabIndex = 13;
-            this.AddQuestion.Text = "Добавить задание";
-            this.AddQuestion.Visible = false;
-            this.AddQuestion.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // PC
             // 
@@ -426,11 +426,11 @@
         private System.Windows.Forms.Label ComponentSelect;
         private System.Windows.Forms.Panel Companent;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label TextWork;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         public System.Windows.Forms.ToolTip toolTip1;
         private Guna.UI2.WinForms.Guna2Button SeeComplect;
         private Guna.UI2.WinForms.Guna2Button AddQuestion;
+        public System.Windows.Forms.Label TextWork;
     }
 }

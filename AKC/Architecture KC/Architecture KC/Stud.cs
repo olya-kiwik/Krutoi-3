@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using iTextSharp.text.pdf.parser;
+using Amazon.ElasticTranscoder.Model;
+using Amazon.Lambda;
+using System.Data.SqlClient;
 
 namespace Architecture_KC
 {
@@ -21,6 +24,7 @@ namespace Architecture_KC
         private bool isDragging = false;
         private Point lastCursorPos;
 
+        PC pc;
         PCQuerySql sql = new PCQuerySql();
 
         public Stud()
@@ -109,7 +113,7 @@ namespace Architecture_KC
                     string[] linesPower = File.ReadAllLines(filePathPower);
 
                     // Вывод данных в PDF
-                    Paragraph PDFName = new Paragraph($"{Group.Text}\n{lastName.Text} {studName.Text} {middleName.Text}", fontTitle);
+                    Paragraph PDFName = new Paragraph($"{Group.Text}\n{lastName.Text} {studName.Text} {middleName.Text}\n\nЗадание: {pc.TextWork.Text}\n\n", fontTitle);
                     document.Add(PDFName);
 
                     foreach (string line in linesBox)
@@ -164,16 +168,16 @@ namespace Architecture_KC
 
                     string studFIO = $"{lastName.Text} {studName.Text} {middleName.Text}";
 
-                    Process.Start($@"{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf");
+                    DateTime dateTime = DateTime.Now;
 
                     if (guna2CheckBox1.Checked == true)
                     {
-                        sql.AddResultStud(Environment.CurrentDirectory + $@"\{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf", studFIO, Group.Text);
+                        sql.AddResultStud(Environment.CurrentDirectory + $@"\{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf", studFIO, Group.Text, dateTime);
                     }
 
                     Close();
 
-
+                    File.Delete($@"{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf");
 
                 }
                 catch(Exception ex)

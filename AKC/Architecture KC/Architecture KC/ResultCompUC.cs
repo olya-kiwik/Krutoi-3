@@ -48,6 +48,12 @@ namespace Architecture_KC
             set { label3 = value; }
         }
 
+        public Label DateTimePicker1
+        {
+            get { return label4; }
+            set { label4 = value; }
+        }
+
         string con = $@"Data Source = {conect}; Initial Catalog = AKC; Integrated Security = SSPI";
         private void guna2Button1_Click(object sender, EventArgs e)
         {

@@ -1026,15 +1026,16 @@ namespace Architecture_KC
             }
         }
 
-        public void AddResultStud(string selectedFilePath, string FIO_stud, string group)
+        public void AddResultStud(string selectedFilePath, string FIO_stud, string group, DateTime dateTime)
         {
             using (SqlConnection con = new SqlConnection(conn))
             {
                 con.Open();
-                SqlCommand command = new SqlCommand($"Insert INTO Prepod (_Group, FIO_stud, Result_comp) values (@Group, @FIO_stud, @Result_comp)", con);
+                SqlCommand command = new SqlCommand($"Insert INTO Prepod (_Group, FIO_stud, Result_comp, Data_Result) values (@Group, @FIO_stud, @Result_comp, @Data_Result)", con);
                 command.Parameters.Add("@Result_comp", SqlDbType.VarBinary).Value = System.IO.File.ReadAllBytes(selectedFilePath);
                 command.Parameters.AddWithValue("@FIO_stud", FIO_stud);
                 command.Parameters.AddWithValue("@Group", group);
+                command.Parameters.AddWithValue("Data_Result", dateTime);
                 command.ExecuteNonQuery();
                 con.Close();
 

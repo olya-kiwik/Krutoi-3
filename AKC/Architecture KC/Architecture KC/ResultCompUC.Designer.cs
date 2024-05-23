@@ -34,6 +34,7 @@
             this.delBt = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(112, 84);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(99, 33);
@@ -71,7 +72,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(108, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(726, 33);
@@ -90,7 +91,7 @@
             this.delBt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.delBt.FillColor = System.Drawing.Color.Transparent;
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.delBt.ForeColor = System.Drawing.Color.Gainsboro;
+            this.delBt.ForeColor = System.Drawing.Color.White;
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
             this.delBt.Location = new System.Drawing.Point(733, 84);
             this.delBt.Name = "delBt";
@@ -114,17 +115,30 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(108, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(726, 33);
             this.label3.TabIndex = 10;
             this.label3.Text = "Тема";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(709, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 19);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "label4";
+            // 
             // ResultCompUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.delBt);
             this.Controls.Add(this.label2);
@@ -148,5 +162,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

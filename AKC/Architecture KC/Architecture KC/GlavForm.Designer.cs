@@ -514,7 +514,7 @@
             this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button4.FocusedColor = System.Drawing.Color.Black;
             this.guna2Button4.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.guna2Button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
             this.guna2Button4.Location = new System.Drawing.Point(938, 9);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(94, 45);

@@ -191,7 +191,8 @@ namespace Architecture_KC
                         uc4.Label2.Text = reader.GetInt32(0).ToString();
                         uc4.Label1.Text = reader.GetString(2);
                         uc4.Label3.Text = reader.GetString(1);
-
+                        uc4.DateTimePicker1.Text = Convert.ToString(reader.GetDateTime(4));
+                        
                         flowLayoutPanel2.Controls.Add(uc4);
 
                     }

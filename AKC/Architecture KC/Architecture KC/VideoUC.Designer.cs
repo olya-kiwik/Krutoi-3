@@ -66,9 +66,9 @@
             // 
             // NameLabel
             // 
-            this.NameLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.NameLabel.BackColor = System.Drawing.Color.Transparent;
             this.NameLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.NameLabel.ForeColor = System.Drawing.Color.White;
             this.NameLabel.Location = new System.Drawing.Point(114, 4);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(738, 45);
@@ -87,7 +87,7 @@
             // 
             // PalyBt
             // 
-            this.PalyBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.PalyBt.BackColor = System.Drawing.Color.Transparent;
             this.PalyBt.BorderColor = System.Drawing.Color.DarkGray;
             this.PalyBt.BorderRadius = 5;
             this.PalyBt.BorderThickness = 1;
@@ -99,7 +99,7 @@
             this.PalyBt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.PalyBt.FillColor = System.Drawing.Color.Transparent;
             this.PalyBt.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.PalyBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.PalyBt.ForeColor = System.Drawing.Color.White;
             this.PalyBt.Location = new System.Drawing.Point(114, 59);
             this.PalyBt.Name = "PalyBt";
             this.PalyBt.Size = new System.Drawing.Size(112, 33);
@@ -119,7 +119,7 @@
             // 
             // delBt
             // 
-            this.delBt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(38)))), ((int)(((byte)(48)))));
+            this.delBt.BackColor = System.Drawing.Color.Transparent;
             this.delBt.BorderColor = System.Drawing.Color.DarkGray;
             this.delBt.BorderRadius = 5;
             this.delBt.BorderThickness = 1;
@@ -130,7 +130,7 @@
             this.delBt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.delBt.FillColor = System.Drawing.Color.Transparent;
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.delBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.delBt.ForeColor = System.Drawing.Color.White;
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
             this.delBt.Location = new System.Drawing.Point(733, 59);
             this.delBt.Name = "delBt";
