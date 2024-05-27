@@ -1,9 +1,6 @@
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\runtimes\win-x86\native\WebView2Loader.dll
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\runtimes\win-x64\native\WebView2Loader.dll
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\runtimes\win-arm64\native\WebView2Loader.dll
-D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\Architecture KC.exe.config
-D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\Architecture KC.exe
-D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\Architecture KC.pdb
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\BouncyCastle.Cryptography.dll
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\Google.Protobuf.dll
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\Guna.UI2.dll
@@ -43,7 +40,6 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\System.Numeri
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\System.Threading.Tasks.Extensions.xml
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture KC.csproj.AssemblyReference.cache
-D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture KC.g.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddTest.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddVideo.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.EditVideo.resources
@@ -60,8 +56,6 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture KC.csproj.GenerateResource.cache
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture KC.csproj.CoreCompileInputs.cache
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architec.FCFD6F30.Up2Date
-D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture KC.exe
-D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture KC.pdb
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\AWSSDK.dll
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\AWSSDK.pdb
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.AddBox.resources
@@ -89,3 +83,9 @@ D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.ResultCompUC.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.SeeCompForm.resources
 D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Architecture_KC.Stud.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\Архитектура компьютерных сиситем.exe.config
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\Архитектура компьютерных сиситем.exe
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\bin\Release\Архитектура компьютерных сиситем.pdb
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Архитектура компьютерных сиситем.g.resources
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Архитектура компьютерных сиситем.exe
+D:\GitHub\Krutoi-3\AKC\Architecture KC\Architecture KC\obj\Release\Архитектура компьютерных сиситем.pdb

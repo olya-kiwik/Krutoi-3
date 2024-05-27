@@ -667,6 +667,7 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
+                        pcUC.ID.Text = Convert.ToString(reader.GetInt32(3));
                         pcUC.labelType.Text = "Блок питания";
                         pcUC.TextBoxHar.Text = $"Мощность: {reader.GetString(1)} W" + Environment.NewLine + $"Форм фактор: {reader.GetString(2)}";
                         pcUC.TableSelected.Text = "Power";
@@ -694,7 +695,7 @@ namespace Architecture_KC
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(conn);
-                string query = "SELECT * FROM Power where Power(W) like @SearthW and FormFactor like @SearthFF";
+                string query = "SELECT * FROM Power where W like @SearthW and FormFactor like @SearthFF";
 
                 sqlConnection.Open();
 
@@ -712,7 +713,7 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
+                        pcUC.ID.Text = Convert.ToString(reader.GetInt32(3));
                         pcUC.labelType.Text = "Блок питания";
                         pcUC.TextBoxHar.Text = $"Мощность: {reader.GetString(1)} W" + Environment.NewLine + $"Форм фактор: {reader.GetString(2)}";
                         pcUC.TableSelected.Text = "Power";
@@ -756,6 +757,7 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
+                        pcUC.ID.Text = Convert.ToString(reader.GetInt32(3));
                         pcUC.labelType.Text = "Накопитель";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость записи: {reader.GetString(1)} мб/сек";
                         pcUC.TableSelected.Text = "Storage";
@@ -801,7 +803,7 @@ namespace Architecture_KC
                         PCCompUC pcUC = new PCCompUC();
 
                         pcUC.labelName.Text = reader.GetString(0);
-                        pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
+                        pcUC.ID.Text = Convert.ToString(reader.GetInt32(3));
                         pcUC.labelType.Text = "Накопитель";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость записи: {reader.GetString(1)} мб/сек";
                         pcUC.TableSelected.Text = "Storage";

@@ -20,11 +20,11 @@ namespace Architecture_KC
 {
     public partial class Stud : Form
     {
+        private static bool _isAdmin;
 
         private bool isDragging = false;
         private Point lastCursorPos;
 
-        PC pc;
         PCQuerySql sql = new PCQuerySql();
 
         public Stud()
@@ -113,7 +113,7 @@ namespace Architecture_KC
                     string[] linesPower = File.ReadAllLines(filePathPower);
 
                     // Вывод данных в PDF
-                    Paragraph PDFName = new Paragraph($"{Group.Text}\n{lastName.Text} {studName.Text} {middleName.Text}\n\nЗадание: {pc.TextWork.Text}\n\n", fontTitle);
+                    Paragraph PDFName = new Paragraph($"{Group.Text}\n{lastName.Text} {studName.Text} {middleName.Text}\n\nЗадание: {PC.Quat}\n\n", fontTitle);
                     document.Add(PDFName);
 
                     foreach (string line in linesBox)

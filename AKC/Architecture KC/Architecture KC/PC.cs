@@ -34,6 +34,7 @@ namespace Architecture_KC
         static PCQuerySql sql = new PCQuerySql();
         PCCompUC compUC = new PCCompUC();
 
+        static public string Quat;
         public string BoxName;
 
         public string fff
@@ -63,7 +64,8 @@ namespace Architecture_KC
                 Random random = new Random();
                 int randomIndex = random.Next(1, rowCount + 1);
 
-                TextWork.Text = sql.SelectQuestion(randomIndex);
+                Quat = sql.SelectQuestion(randomIndex);
+                TextWork.Text = Quat;
                 connection.Close();
             }
             

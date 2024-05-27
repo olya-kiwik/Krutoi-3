@@ -471,6 +471,7 @@ namespace Architecture_KC
 
         private void guna2Button8_Click(object sender, EventArgs e)//Сборки
         {
+            guna2Button4.Visible = false;
             if (flowLayoutPanel2.Visible == false)
             {
                 flowLayoutPanel2.Visible = true;

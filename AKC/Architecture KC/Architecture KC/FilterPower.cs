@@ -29,7 +29,7 @@ namespace Architecture_KC
         private void ConfirmBtn_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectPowerSeek(flowLayoutPanel1, FF, W, _isAdmin);
+            sql.SelectPowerSeek(flowLayoutPanel1, W, FF, _isAdmin);
             guna2Button1.Visible = true;
         }
 

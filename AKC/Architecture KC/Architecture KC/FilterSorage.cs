@@ -23,7 +23,7 @@ namespace Architecture_KC
         private void FilterSorage_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectHDD(flowLayoutPanel1, Type, Speed, _isAdmin);
+            sql.SelectHDD(flowLayoutPanel1, Speed, Type, _isAdmin);
         }
 
         private void ConfirmBtn_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace Architecture_KC
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectHDD(flowLayoutPanel1, Type, Speed, _isAdmin);
+            sql.SelectHDD(flowLayoutPanel1, Speed, Type, _isAdmin);
             guna2Button1.Visible = false;
         }
     }
