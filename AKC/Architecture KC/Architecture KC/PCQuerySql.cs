@@ -1,4 +1,5 @@
 ﻿using Amazon.Runtime.Internal.Util;
+using Amazon.WorkSpaces;
 using Guna.UI2.WinForms;
 using iTextSharp.xmp.impl;
 using Mysqlx.Session;
@@ -23,8 +24,6 @@ namespace Architecture_KC
 {
     public class PCQuerySql
     {
-        private bool _isAdmin;
-        
         static string sqlConn = ConfigurationManager.AppSettings["dbCon"];
 
         public string GetSqlConn()
@@ -34,7 +33,7 @@ namespace Architecture_KC
 
         string conn = $@"Data Source = {sqlConn}; Initial Catalog = AKC; Integrated Security = SSPI";
 
-        public void SelectBox(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox FFMB, Guna2ComboBox BoxSize, Guna2ComboBox FFP)
+        public void SelectBox(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox FFMB, Guna2ComboBox BoxSize, Guna2ComboBox FFP, bool admin)
         {
             try
             {                
@@ -58,6 +57,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(0));
                         pcUC.labelType.Text = "Корпус";
                         pcUC.TextBoxHar.Text = $"Размер системной платы: {reader.GetString(2)}"+Environment.NewLine+$"Размер корпуса: {reader.GetString(3)}"+Environment.NewLine+$"Размер блока питания: {reader.GetString(4)}";
+                        pcUC.TableSelected.Text = "Box";
+                        pcUC.Del.Visible = admin;
 
                         flowLayoutPanel.Controls.Add(pcUC);
 
@@ -78,7 +79,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectBoxSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox FFMB, Guna2ComboBox BoxSize, Guna2ComboBox FFP)
+        public void SelectBoxSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox FFMB, Guna2ComboBox BoxSize, Guna2ComboBox FFP, bool admin)
         {            
             try
             {
@@ -106,6 +107,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(0));
                         pcUC.labelType.Text = "Корпус";
                         pcUC.TextBoxHar.Text = $"Размер системной платы: {reader.GetString(2)}" + Environment.NewLine + $"Размер корпуса: {reader.GetString(3)}" + Environment.NewLine + $"Размер блока питания: {reader.GetString(4)}";
+                        pcUC.TableSelected.Text = "Box";
+                        pcUC.Del.Visible = admin;
 
                         flowLayoutPanel.Controls.Add(pcUC);
 
@@ -126,7 +129,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectCPU(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox Soket, Guna2ComboBox DDR, Guna2ComboBox TDP, Guna2ComboBox P_Core)
+        public void SelectCPU(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox Soket, Guna2ComboBox DDR, Guna2ComboBox TDP, Guna2ComboBox P_Core, bool admin)
         {
             try
             {
@@ -152,6 +155,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(8));
                         pcUC.labelType.Text = "Процессор";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(1)}" + Environment.NewLine + $"Сокет: {reader.GetString(2)}" + Environment.NewLine + $"Тип памяти: {reader.GetString(3)}" + Environment.NewLine + $"Тепловыделение(TDP): {reader.GetString(4)} Вт" + Environment.NewLine + $"Максидальное кол-во памяти: {reader.GetString(5)} Гб" + Environment.NewLine + $"Кол-во производительных ядер: {reader.GetString(6)}" + Environment.NewLine + $"Кол-во энергоэффективных ядер: {reader.GetString(7)}";
+                        pcUC.TableSelected.Text = "CPU";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -177,7 +182,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectCPUSeek(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox Soket, Guna2ComboBox DDR, Guna2ComboBox TDP, Guna2ComboBox P_Core)
+        public void SelectCPUSeek(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox Soket, Guna2ComboBox DDR, Guna2ComboBox TDP, Guna2ComboBox P_Core, bool admin)
         {
             try
             {
@@ -209,6 +214,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(8));
                         pcUC.labelType.Text = "Процессор";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(1)}" + Environment.NewLine + $"Сокет: {reader.GetString(2)}" + Environment.NewLine + $"Тип памяти: {reader.GetString(3)}" + Environment.NewLine + $"Тепловыделение(TDP): {reader.GetString(4)} Вт" + Environment.NewLine + $"Максидальное кол-во памяти: {reader.GetString(5)} Гб" + Environment.NewLine + $"Кол-во производительных ядер: {reader.GetString(6)}" + Environment.NewLine + $"Кол-во энергоэффективных ядер: {reader.GetString(7)}";
+                        pcUC.TableSelected.Text = "CPU";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -233,7 +240,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectMB(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox Soket, Guna2ComboBox DDR, Guna2ComboBox FF, Guna2ComboBox Chipset)
+        public void SelectMB(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox Soket, Guna2ComboBox DDR, Guna2ComboBox FF, Guna2ComboBox Chipset, bool admin)
         {
             
             Creator.Items.Clear();
@@ -260,6 +267,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(6));
                         pcUC.labelType.Text = "Системная плата";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Сокет: {reader.GetString(1)}" + Environment.NewLine + $"Тип памяти: DDR{reader.GetString(3)}" + Environment.NewLine + $"Чипсет: {reader.GetString(4)}" + Environment.NewLine + $"Форум-фактор: {reader.GetString(5)}";
+                        pcUC.TableSelected.Text = "MotherBoard";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -284,7 +293,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectMBSeek(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox Soket, Guna2ComboBox DDR, Guna2ComboBox FF, Guna2ComboBox Chipset)
+        public void SelectMBSeek(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox Soket, Guna2ComboBox DDR, Guna2ComboBox FF, Guna2ComboBox Chipset, bool admin)
         {
             try
             {
@@ -316,6 +325,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(6));
                         pcUC.labelType.Text = "Системная плата";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Сокет: {reader.GetString(1)}" + Environment.NewLine + $"Тип памяти: DDR{reader.GetString(3)}" + Environment.NewLine + $"Чипсет: {reader.GetString(4)}" + Environment.NewLine + $"Форум-фактор: {reader.GetString(5)}";
+                        pcUC.TableSelected.Text = "MotherBoard";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -340,7 +351,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectGPU(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox GB, Guna2ComboBox GDDR, Guna2ComboBox GPUSize)
+        public void SelectGPU(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox GB, Guna2ComboBox GDDR, Guna2ComboBox GPUSize, bool admin)
         {
             Creator.Items.Clear();
             GB.Items.Clear();
@@ -365,6 +376,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
                         pcUC.labelType.Text = "Видеокарта";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Кол-во памяти: {reader.GetString(1)} Гб" + Environment.NewLine + $"Тип памяти: GDDR{reader.GetString(3)}" + Environment.NewLine + $"Длинна видеокарты:{reader.GetString(4)}";
+                        pcUC.TableSelected.Text = "GPU";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -387,7 +400,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectGPUSeek(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox GB, Guna2ComboBox GDDR, Guna2ComboBox GPUSize)
+        public void SelectGPUSeek(FlowLayoutPanel companent, Guna2ComboBox Creator, Guna2ComboBox GB, Guna2ComboBox GDDR, Guna2ComboBox GPUSize, bool admin)
         {
             try
             {
@@ -417,6 +430,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
                         pcUC.labelType.Text = "Видеокарта";
                         pcUC.TextBoxHar.Text = $"Произодитель: {reader.GetString(2)}" + Environment.NewLine + $"Кол-во памяти: {reader.GetString(1)} Гб" + Environment.NewLine + $"Тип памяти: GDDR{reader.GetString(3)}" + Environment.NewLine + $"Длинна видеокарты:{reader.GetString(4)}";
+                        pcUC.TableSelected.Text = "GPU";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -439,7 +454,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectCPU_Cooling(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox Type, Guna2ComboBox TDP)
+        public void SelectCPU_Cooling(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox Type, Guna2ComboBox TDP, bool admin)
         {
             Type.Items.Clear();
             TDP.Items.Clear();
@@ -462,6 +477,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(3));
                         pcUC.labelType.Text = "Охлаждение процессора";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(1)}" + Environment.NewLine + $"Рассеиваемая мощность(TDP): {reader.GetString(2)}";
+                        pcUC.TableSelected.Text = "CPU_Cool";
+                        pcUC.Del.Visible = admin;
 
                         flowLayoutPanel.Controls.Add(pcUC);
 
@@ -480,7 +497,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectCPU_CoolingSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox Type, Guna2ComboBox TDP)
+        public void SelectCPU_CoolingSeek(FlowLayoutPanel flowLayoutPanel, Guna2ComboBox Type, Guna2ComboBox TDP, bool admin)
         {
             try
             {
@@ -507,6 +524,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(3));
                         pcUC.labelType.Text = "Охлаждение процессора";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(1)}" + Environment.NewLine + $"Рассеиваемая мощность(TDP): {reader.GetString(2)}";
+                        pcUC.TableSelected.Text = "CPU_Cool";
+                        pcUC.Del.Visible = admin;
 
                         flowLayoutPanel.Controls.Add(pcUC);
 
@@ -525,7 +544,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectRAM(FlowLayoutPanel companent, Guna2ComboBox DDR, Guna2ComboBox GB, Guna2ComboBox MGHz, Guna2ComboBox Times)
+        public void SelectRAM(FlowLayoutPanel companent, Guna2ComboBox DDR, Guna2ComboBox GB, Guna2ComboBox MGHz, Guna2ComboBox Times, bool admin)
         {
             DDR.Items.Clear();
             GB.Items.Clear();
@@ -550,6 +569,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
                         pcUC.labelType.Text = "Оперативная память";
                         pcUC.TextBoxHar.Text = $"Тип памяти: {reader.GetString(1)}" + Environment.NewLine + $"Объём памяти: {reader.GetString(2)} Гб" + Environment.NewLine + $"Тактовая частота: {reader.GetString(3)} МГц" + Environment.NewLine + $"Тайминги: {reader.GetString(4)}";
+                        pcUC.TableSelected.Text = "RAM";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -572,7 +593,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectRAMSeek(FlowLayoutPanel companent, Guna2ComboBox DDR, Guna2ComboBox GB, Guna2ComboBox MGHz, Guna2ComboBox Times)
+        public void SelectRAMSeek(FlowLayoutPanel companent, Guna2ComboBox DDR, Guna2ComboBox GB, Guna2ComboBox MGHz, Guna2ComboBox Times, bool admin)
         {
             try
             {
@@ -602,6 +623,8 @@ namespace Architecture_KC
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
                         pcUC.labelType.Text = "Оперативная память";
                         pcUC.TextBoxHar.Text = $"Тип памяти: DDR{reader.GetString(1)}" + Environment.NewLine + $"Объём памяти: {reader.GetString(2)} Гб" + Environment.NewLine + $"Тактовая частота: {reader.GetString(3)} МГц" + Environment.NewLine + $"Тайминги: {reader.GetString(4)}";
+                        pcUC.TableSelected.Text = "RAM";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -624,7 +647,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectPower(FlowLayoutPanel companent, Guna2ComboBox W, Guna2ComboBox FF)
+        public void SelectPower(FlowLayoutPanel companent, Guna2ComboBox W, Guna2ComboBox FF, bool admin)
         {
             W.Items.Clear();
             FF.Items.Clear();
@@ -646,6 +669,8 @@ namespace Architecture_KC
                         pcUC.labelName.Text = reader.GetString(0);
                         pcUC.labelType.Text = "Блок питания";
                         pcUC.TextBoxHar.Text = $"Мощность: {reader.GetString(1)} W" + Environment.NewLine + $"Форм фактор: {reader.GetString(2)}";
+                        pcUC.TableSelected.Text = "Power";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -664,7 +689,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectPowerSeek(FlowLayoutPanel companent, Guna2ComboBox W, Guna2ComboBox FF)
+        public void SelectPowerSeek(FlowLayoutPanel companent, Guna2ComboBox W, Guna2ComboBox FF, bool admin)
         {
             try
             {
@@ -688,8 +713,10 @@ namespace Architecture_KC
 
                         pcUC.labelName.Text = reader.GetString(0);
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
-                        pcUC.labelType.Text = "Оперативная память";
+                        pcUC.labelType.Text = "Блок питания";
                         pcUC.TextBoxHar.Text = $"Мощность: {reader.GetString(1)} W" + Environment.NewLine + $"Форм фактор: {reader.GetString(2)}";
+                        pcUC.TableSelected.Text = "Power";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -708,7 +735,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectHDD(FlowLayoutPanel companent, Guna2ComboBox speed, Guna2ComboBox type)
+        public void SelectHDD(FlowLayoutPanel companent, Guna2ComboBox speed, Guna2ComboBox type, bool admin)
         {
             speed.Items.Clear();
             type.Items.Clear();
@@ -731,6 +758,8 @@ namespace Architecture_KC
                         pcUC.labelName.Text = reader.GetString(0);
                         pcUC.labelType.Text = "Накопитель";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость записи: {reader.GetString(1)} мб/сек";
+                        pcUC.TableSelected.Text = "Storage";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 
@@ -749,7 +778,7 @@ namespace Architecture_KC
             }
         }
 
-        public void SelectStorageSeek(FlowLayoutPanel companent, Guna2ComboBox speed, Guna2ComboBox type)
+        public void SelectStorageSeek(FlowLayoutPanel companent, Guna2ComboBox speed, Guna2ComboBox type, bool admin)
         {
             try
             {
@@ -773,8 +802,10 @@ namespace Architecture_KC
 
                         pcUC.labelName.Text = reader.GetString(0);
                         pcUC.ID.Text = Convert.ToString(reader.GetInt32(5));
-                        pcUC.labelType.Text = "Оперативная память";
+                        pcUC.labelType.Text = "Накопитель";
                         pcUC.TextBoxHar.Text = $"Тип: {reader.GetString(2)}" + Environment.NewLine + $"Скорость записи: {reader.GetString(1)} мб/сек";
+                        pcUC.TableSelected.Text = "Storage";
+                        pcUC.Del.Visible = admin;
 
                         companent.Controls.Add(pcUC);
 

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.DelBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.SelectedTable = new System.Windows.Forms.Label();
             this.IDBox = new System.Windows.Forms.Label();
             this.SelectBtn = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -47,6 +49,8 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.DelBtn);
+            this.guna2Panel1.Controls.Add(this.SelectedTable);
             this.guna2Panel1.Controls.Add(this.IDBox);
             this.guna2Panel1.Controls.Add(this.SelectBtn);
             this.guna2Panel1.Controls.Add(this.groupBox1);
@@ -56,6 +60,39 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(455, 270);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // DelBtn
+            // 
+            this.DelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DelBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DelBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(222)))), ((int)(((byte)(85)))));
+            this.DelBtn.BorderRadius = 10;
+            this.DelBtn.BorderThickness = 1;
+            this.DelBtn.DefaultAutoSize = true;
+            this.DelBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DelBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DelBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DelBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DelBtn.FillColor = System.Drawing.Color.Transparent;
+            this.DelBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.DelBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.DelBtn.Location = new System.Drawing.Point(354, 229);
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(90, 29);
+            this.DelBtn.TabIndex = 11;
+            this.DelBtn.Text = "Удалить";
+            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
+            // 
+            // SelectedTable
+            // 
+            this.SelectedTable.AutoSize = true;
+            this.SelectedTable.ForeColor = System.Drawing.Color.LightGray;
+            this.SelectedTable.Location = new System.Drawing.Point(11, 245);
+            this.SelectedTable.Name = "SelectedTable";
+            this.SelectedTable.Size = new System.Drawing.Size(76, 13);
+            this.SelectedTable.TabIndex = 10;
+            this.SelectedTable.Text = "SelectedTable";
+            this.SelectedTable.Visible = false;
             // 
             // IDBox
             // 
@@ -173,5 +210,7 @@
         private System.Windows.Forms.Label _Type;
         private Guna.UI2.WinForms.Guna2Button SelectBtn;
         private System.Windows.Forms.Label IDBox;
+        private System.Windows.Forms.Label SelectedTable;
+        private Guna.UI2.WinForms.Guna2Button DelBtn;
     }
 }

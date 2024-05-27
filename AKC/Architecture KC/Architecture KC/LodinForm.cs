@@ -36,12 +36,18 @@ namespace Architecture_KC
                 form1.Show();
                 Hide();
 
+                PCCompUC pCCompUC = new PCCompUC();
+                pCCompUC.Del.Visible = true;
+
             }
             else if (guna2log.Text == "stud" && guna2parol.Text == "1234")
             {
                 GlavForm form1 = new GlavForm(false);
                 form1.Show();
                 Hide();
+
+                PCCompUC pCCompUC = new PCCompUC();
+                pCCompUC.Del.Visible = false;
             }
             else
             {

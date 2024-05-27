@@ -424,7 +424,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
         private System.Windows.Forms.Label ComponentSelect;
-        private System.Windows.Forms.Panel Companent;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
@@ -432,5 +431,6 @@
         private Guna.UI2.WinForms.Guna2Button SeeComplect;
         private Guna.UI2.WinForms.Guna2Button AddQuestion;
         public System.Windows.Forms.Label TextWork;
+        public System.Windows.Forms.Panel Companent;
     }
 }

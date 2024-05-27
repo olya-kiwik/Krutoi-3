@@ -18,6 +18,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
 using iTextSharp.text.pdf.parser;
 using System.Configuration;
+using Amazon.WorkSpaces;
 
 namespace Architecture_KC
 {
@@ -31,6 +32,7 @@ namespace Architecture_KC
         }
 
         static PCQuerySql sql = new PCQuerySql();
+        PCCompUC compUC = new PCCompUC();
 
         public string BoxName;
 
@@ -46,7 +48,7 @@ namespace Architecture_KC
         {     
             AddBtn.Visible = _isAdmin;
             AddQuestion.Visible = _isAdmin;
-            TopMost = true;
+            
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             Companent.Controls.Clear();
@@ -95,7 +97,7 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            BoxFilter bf = new BoxFilter();
+            BoxFilter bf = new BoxFilter(_isAdmin);
             bf.TopLevel = false;
             bf.FormBorderStyle = FormBorderStyle.None;
             bf.Size = Companent.Size;
@@ -129,7 +131,7 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            MBFilter mb = new MBFilter();
+            MBFilter mb = new MBFilter(_isAdmin);
             mb.TopLevel = false;
             mb.FormBorderStyle = FormBorderStyle.None;
             mb.Size = Companent.Size;
@@ -163,7 +165,7 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            CPUFilter cpu = new CPUFilter();
+            CPUFilter cpu = new CPUFilter(_isAdmin);
             cpu.TopLevel = false;
             cpu.FormBorderStyle = FormBorderStyle.None;
             cpu.Size = Companent.Size;
@@ -198,7 +200,7 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            CPU_FAN_Filter cpuf = new CPU_FAN_Filter();
+            CPU_FAN_Filter cpuf = new CPU_FAN_Filter(_isAdmin);
             cpuf.TopLevel = false;
             cpuf.FormBorderStyle = FormBorderStyle.None;
             cpuf.Size = Companent.Size;
@@ -232,7 +234,7 @@ namespace Architecture_KC
             guna2PictureBox1.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            FilterRAM ram = new FilterRAM();
+            FilterRAM ram = new FilterRAM(_isAdmin);
             ram.TopLevel = false;
             ram.FormBorderStyle = FormBorderStyle.None;
             ram.Size = Companent.Size;
@@ -266,7 +268,7 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            FilterGPU gpu = new FilterGPU();
+            FilterGPU gpu = new FilterGPU(_isAdmin);
             gpu.TopLevel = false;
             gpu.FormBorderStyle = FormBorderStyle.None;
             gpu.Size = Companent.Size;
@@ -300,7 +302,7 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            FilterSorage hdd = new FilterSorage();
+            FilterSorage hdd = new FilterSorage(_isAdmin);
             hdd.TopLevel = false;
             hdd.FormBorderStyle = FormBorderStyle.None;
             hdd.Size = Companent.Size;
@@ -334,7 +336,7 @@ namespace Architecture_KC
             guna2PictureBox8.BorderStyle = BorderStyle.None;
 
             Companent.Controls.Clear();
-            FilterPower w = new FilterPower();
+            FilterPower w = new FilterPower(_isAdmin);
             w.TopLevel = false;
             w.FormBorderStyle = FormBorderStyle.None;
             w.Size = Companent.Size;

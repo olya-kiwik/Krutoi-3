@@ -15,14 +15,15 @@ namespace Architecture_KC
 {
     public partial class PCCompUC : UserControl
     {
-        static bool isAdmin;
-
-        PCQuerySql sql;
-        PC pc = new PC(isAdmin:isAdmin);
         
+
+        static PCQuerySql sql = new PCQuerySql();
+        static string conect = sql.GetSqlConn();
+
         public PCCompUC()
         {
             InitializeComponent();
+            
         }
                 
         public Label labelName
@@ -48,6 +49,17 @@ namespace Architecture_KC
             get { return IDBox; }
             set { IDBox = value; }
         }
+        public Label TableSelected
+        {
+            get { return SelectedTable; }
+            set { SelectedTable = value; }
+        }
+
+        public Guna2Button Del
+        {
+            get { return DelBtn; }
+            set { DelBtn = value; }
+        }
 
         private void PCCompUC_Load(object sender, EventArgs e)
         {
@@ -67,7 +79,7 @@ namespace Architecture_KC
 
         }
 
-        
+
 
         private void SelectBtn_Click(object sender, EventArgs e)
         {
@@ -252,6 +264,34 @@ namespace Architecture_KC
             }
         }
 
-        
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            string con = $@"Data Source = {conect}; Initial Catalog = AKC; Integrated Security = SSPI";
+
+            var deel = MessageBox.Show($"Вы действительно хотите удалить запись: {labelName.Text}?" +
+            "\nПосле удаления востановить запись будет невозможно.", "Закрыть", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (deel == DialogResult.Yes)
+            {
+                try
+                {
+                    SqlConnection sqlConnection = new SqlConnection(con);
+                    string del = $"DELETE FROM {SelectedTable.Text} WHERE id={ID.Text}";
+
+                    sqlConnection.Open();
+
+                    using (SqlCommand command = new SqlCommand(del, sqlConnection))
+                    {
+                        command.ExecuteReader();
+                    }
+                    sqlConnection.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
     }
 }

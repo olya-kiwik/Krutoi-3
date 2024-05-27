@@ -13,29 +13,30 @@ namespace Architecture_KC
     public partial class FilterPower : Form
     {
         PCQuerySql sql = new PCQuerySql();
-
-        public FilterPower()
+        private bool _isAdmin;
+        public FilterPower(bool isAdmin)
         {
             InitializeComponent();
+            _isAdmin = isAdmin;
         }
 
         private void FilterPower_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectPower(flowLayoutPanel1, W, FF);
+            sql.SelectPower(flowLayoutPanel1, W, FF, _isAdmin);
         }
 
         private void ConfirmBtn_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectPowerSeek(flowLayoutPanel1, FF, W);
+            sql.SelectPowerSeek(flowLayoutPanel1, FF, W, _isAdmin);
             guna2Button1.Visible = true;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectPower(flowLayoutPanel1, W, FF);
+            sql.SelectPower(flowLayoutPanel1, W, FF, _isAdmin);
             guna2Button1.Visible = false;
         }
     }

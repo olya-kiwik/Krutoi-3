@@ -14,9 +14,12 @@ namespace Architecture_KC
     public partial class BoxFilter : Form
     {
         PCQuerySql sql = new PCQuerySql();
-        public BoxFilter()
+
+        private bool _isAdmin;
+        public BoxFilter(bool isAdmin)
         {
             InitializeComponent();
+            _isAdmin = isAdmin; 
         }
 
         public int count = 0;
@@ -24,20 +27,20 @@ namespace Architecture_KC
         public void BoxFilter_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectBox(flowLayoutPanel1, FFMB, BoxSize, FFP);
+            sql.SelectBox(flowLayoutPanel1, FFMB, BoxSize, FFP, _isAdmin);
         }
 
         public void ConfirmBtn_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectBoxSeek(flowLayoutPanel1, FFMB, BoxSize, FFP);
+            sql.SelectBoxSeek(flowLayoutPanel1, FFMB, BoxSize, FFP, _isAdmin);
             guna2Button1.Visible = true;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            sql.SelectBox(flowLayoutPanel1, FFMB, BoxSize, FFP);
+            sql.SelectBox(flowLayoutPanel1, FFMB, BoxSize, FFP, _isAdmin);
             guna2Button1.Visible = false;
         }
     }
