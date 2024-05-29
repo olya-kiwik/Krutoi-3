@@ -1149,36 +1149,38 @@ namespace Architecture_KC
             }
         }
 
-        public string SelectQuestion(int ID)
+        public string[] SelectQuestion()
         {
-            string result = "";
+            List<string> questions = new List<string>();
 
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(conn);
-                string query = "SELECT * FROM Question where ID like @SearthID";
+                string query = "SELECT Questions FROM Question";
 
                 sqlConnection.Open();
 
                 using (SqlCommand command = new SqlCommand(query, sqlConnection))
                 {
-                    command.Parameters.AddWithValue("@SearthID", (string.Format("{0}%", ID)));
-
                     SqlDataReader reader = command.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        result = reader.GetString(1);
+                        questions.Add(reader["Questions"].ToString());
                     }
+
+                    reader.Close();
                 }
                 sqlConnection.Close();
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка : {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            return result;
+            return questions.ToArray();
+
         }
     }
 }

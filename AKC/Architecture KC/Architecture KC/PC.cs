@@ -54,21 +54,15 @@ namespace Architecture_KC
             WindowState = FormWindowState.Maximized;
             Companent.Controls.Clear();
 
-            using (SqlConnection connection = new SqlConnection(conn))
-            {
-                connection.Open();
-                string query = "SELECT * FROM Question";
-                SqlCommand command = new SqlCommand(query, connection);
-                int rowCount = (int)command.ExecuteScalar();
-            
-                Random random = new Random();
-                int randomIndex = random.Next(1, rowCount + 1);
+            string[] questions = sql.SelectQuestion();
 
-                Quat = sql.SelectQuestion(randomIndex);
-                TextWork.Text = Quat;
-                connection.Close();
-            }
-            
+            Random random = new Random();
+            int Qindex = random.Next(0, questions.Length);
+
+            string selectedQuestion = questions[Qindex];
+
+            TextWork.Text = selectedQuestion;
+            Quat = selectedQuestion;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
