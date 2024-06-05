@@ -81,7 +81,7 @@ namespace Architecture_KC
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(con);
-                string query = $"SELECT Link FROM videoResurs";
+                string query = $"SELECT Link FROM videoResurs where id like {labelid.Text}";
 
                 sqlConnection.Open();
 
@@ -90,13 +90,13 @@ namespace Architecture_KC
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        link.Text = reader["Link"].ToString();
+                        Process.Start($"{reader["Link"].ToString()}");
                     }
 
                 }
                 sqlConnection.Close();
 
-                Process.Start($"{link.Text}");
+                
             }
             catch (Exception ex)
             {
@@ -115,7 +115,7 @@ namespace Architecture_KC
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(con);
-                string query = $"SELECT Link FROM videoResurs";
+                string query = $"SELECT Link FROM videoResurs where id like {labelid.Text}";
 
                 sqlConnection.Open();
 

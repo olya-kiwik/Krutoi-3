@@ -92,93 +92,138 @@ namespace Architecture_KC
             {
                 try
                 {
-                    //Установка шрифта для PDF файла
-                    string ttf = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "ARIAL.TTF");
-                    var baseFont = BaseFont.CreateFont(ttf, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
-                    var font = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);
-                    var fontTitle = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.BOLD);
+                    string TBlastName = lastName.Text;
+                    string TBstudName = studName.Text;
+                    string TBmidleName = middleName.Text;
 
-                    PdfWriter.GetInstance(document, new FileStream($@"{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf", FileMode.Create));
+                    bool containsDigitsLN = false;
+                    bool containsDigitsSN = false;
+                    bool containsDigitsMN = false;
 
-                    document.Open();
-
-                    // Чтение данных из файла
-                    string[] linesBox = File.ReadAllLines(filePathBox);
-                    string[] linesCPU = File.ReadAllLines(filePathCPU);
-                    string[] linesRAM = File.ReadAllLines(filePathRAM);
-                    string[] linesGPU = File.ReadAllLines(filePathGPU);
-                    string[] linesStorage = File.ReadAllLines(filePathStorage);
-                    string[] linesMB = File.ReadAllLines(filePathMB);
-                    string[] linesCPU_Cooling = File.ReadAllLines(filePathCPU_Colling);
-                    string[] linesPower = File.ReadAllLines(filePathPower);
-
-                    // Вывод данных в PDF
-                    Paragraph PDFName = new Paragraph($"{Group.Text}\n{lastName.Text} {studName.Text} {middleName.Text}\n\nЗадание: {PC.Quat}\n\n", fontTitle);
-                    document.Add(PDFName);
-
-                    foreach (string line in linesBox)
+                    foreach (char c in TBlastName)
                     {
-                        Paragraph box = new Paragraph(line, font);
-                        document.Add(box);
+                        if (char.IsDigit(c))
+                        {
+                            containsDigitsLN = true;
+                            break;
+                        }
                     }
 
-                    foreach (string line in linesCPU)
+                    foreach (char c in TBstudName)
                     {
-                        Paragraph CPU = new Paragraph(line, font);
-                        document.Add(CPU);
+                        if (char.IsDigit(c))
+                        {
+                            containsDigitsSN = true;
+                            break;
+                        }
                     }
 
-                    foreach (string line in linesRAM)
+                    foreach (char c in TBmidleName)
                     {
-                        Paragraph RAM = new Paragraph(line, font);
-                        document.Add(RAM);
+                        if (char.IsDigit(c))
+                        {
+                            containsDigitsMN = true;
+                            break;
+                        }
                     }
 
-                    foreach (string line in linesCPU_Cooling)
+                    if (containsDigitsLN == false && containsDigitsSN == false && containsDigitsMN == false)
                     {
-                        Paragraph CC = new Paragraph(line, font);
-                        document.Add(CC);
+                        //Установка шрифта для PDF файла
+                        string ttf = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "ARIAL.TTF");
+                        var baseFont = BaseFont.CreateFont(ttf, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+                        var font = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);
+                        var fontTitle = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.BOLD);
+
+                        PdfWriter.GetInstance(document, new FileStream($@"{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf", FileMode.Create));
+
+                        document.Open();
+
+                        // Чтение данных из файла
+                        string[] linesBox = File.ReadAllLines(filePathBox);
+                        string[] linesCPU = File.ReadAllLines(filePathCPU);
+                        string[] linesRAM = File.ReadAllLines(filePathRAM);
+                        string[] linesGPU = File.ReadAllLines(filePathGPU);
+                        string[] linesStorage = File.ReadAllLines(filePathStorage);
+                        string[] linesMB = File.ReadAllLines(filePathMB);
+                        string[] linesCPU_Cooling = File.ReadAllLines(filePathCPU_Colling);
+                        string[] linesPower = File.ReadAllLines(filePathPower);
+
+                        // Вывод данных в PDF
+                        Paragraph PDFName = new Paragraph($"{Group.Text}\n{lastName.Text} {studName.Text} {middleName.Text}\n\nЗадание: {PC.Quat}\n\n", fontTitle);
+                        document.Add(PDFName);
+
+                        foreach (string line in linesBox)
+                        {
+                            Paragraph box = new Paragraph(line, font);
+                            document.Add(box);
+                        }
+
+                        foreach (string line in linesCPU)
+                        {
+                            Paragraph CPU = new Paragraph(line, font);
+                            document.Add(CPU);
+                        }
+
+                        foreach (string line in linesRAM)
+                        {
+                            Paragraph RAM = new Paragraph(line, font);
+                            document.Add(RAM);
+                        }
+
+                        foreach (string line in linesCPU_Cooling)
+                        {
+                            Paragraph CC = new Paragraph(line, font);
+                            document.Add(CC);
+                        }
+
+                        foreach (string line in linesGPU)
+                        {
+                            Paragraph GPU = new Paragraph(line, font);
+                            document.Add(GPU);
+                        }
+
+                        foreach (string line in linesMB)
+                        {
+                            Paragraph MB = new Paragraph(line, font);
+                            document.Add(MB);
+                        }
+
+                        foreach (string line in linesPower)
+                        {
+                            Paragraph Power = new Paragraph(line, font);
+                            document.Add(Power);
+                        }
+
+                        foreach (string line in linesStorage)
+                        {
+                            Paragraph Storage = new Paragraph(line, font);
+                            document.Add(Storage);
+                        }
+
+                        document.Close();
+
+                        string studFIO = $"{lastName.Text} {studName.Text} {middleName.Text}";
+
+                        DateTime dateTime = DateTime.Now;
+
+                        if (guna2CheckBox1.Checked == true)
+                        {
+                            sql.AddResultStud(Environment.CurrentDirectory + $@"\{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf", studFIO, Group.Text, dateTime);
+                        }
+
+                        Close();
+
+                        File.Delete($@"{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf");
+
                     }
+                    else {
+                        MessageBox.Show("Текст содержит цифры от 0 до 9!\nПожалуйста, введите своё ФИО правильно!", "Ошибка!");
 
-                    foreach (string line in linesGPU)
-                    {
-                        Paragraph GPU = new Paragraph(line, font);
-                        document.Add(GPU);
+                        lastName.BorderColor = Color.Red;
+                        studName.BorderColor = Color.Red;
+                        Group.BorderColor = Color.Red;
                     }
-
-                    foreach (string line in linesMB)
-                    {
-                        Paragraph MB = new Paragraph(line, font);
-                        document.Add(MB);
-                    }
-
-                    foreach (string line in linesPower)
-                    {
-                        Paragraph Power = new Paragraph(line, font);
-                        document.Add(Power);
-                    }
-
-                    foreach (string line in linesStorage)
-                    {
-                        Paragraph Storage = new Paragraph(line, font);
-                        document.Add(Storage);
-                    }
-
-                    document.Close();
-
-                    string studFIO = $"{lastName.Text} {studName.Text} {middleName.Text}";
-
-                    DateTime dateTime = DateTime.Now;
-
-                    if (guna2CheckBox1.Checked == true)
-                    {
-                        sql.AddResultStud(Environment.CurrentDirectory + $@"\{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf", studFIO, Group.Text, dateTime);
-                    }
-
-                    Close();
-
-                    File.Delete($@"{TranslateToEnglish(lastName.Text)}_{TranslateToEnglish(studName.Text)}_{TranslateToEnglish(middleName.Text)}_{TranslateToEnglish(Group.Text)}.pdf");
-
                 }
                 catch(Exception ex)
                 {

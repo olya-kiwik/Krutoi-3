@@ -95,7 +95,7 @@ namespace Architecture_KC
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(con);
-                string query = $"SELECT Link FROM Test";
+                string query = $"SELECT Link FROM Test where id like {label2.Text}";
 
                 sqlConnection.Open();
 
@@ -104,14 +104,13 @@ namespace Architecture_KC
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        labelLink.Text = reader["Link"].ToString();
+                        Process.Start($"{reader["Link"].ToString()}");
                     }
 
                 }
                 sqlConnection.Close();
 
                 //Methods.WebViewLoad(labelLink.Text);
-                Process.Start(labelLink.Text);
             }
             catch (Exception ex)
             {
