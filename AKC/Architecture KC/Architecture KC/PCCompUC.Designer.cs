@@ -75,7 +75,7 @@
             this.DelBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.DelBtn.FillColor = System.Drawing.Color.Transparent;
             this.DelBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.DelBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.DelBtn.ForeColor = System.Drawing.Color.White;
             this.DelBtn.Location = new System.Drawing.Point(354, 229);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(90, 29);
@@ -119,7 +119,7 @@
             this.SelectBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.SelectBtn.FillColor = System.Drawing.Color.Transparent;
             this.SelectBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.SelectBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.SelectBtn.ForeColor = System.Drawing.Color.White;
             this.SelectBtn.Location = new System.Drawing.Point(183, 229);
             this.SelectBtn.Name = "SelectBtn";
             this.SelectBtn.Size = new System.Drawing.Size(92, 29);
@@ -134,7 +134,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.haracter);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.ForeColor = System.Drawing.Color.LightGray;
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 61);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(433, 150);
@@ -164,7 +164,7 @@
             this.NameComp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.NameComp.AutoSize = true;
             this.NameComp.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameComp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.NameComp.ForeColor = System.Drawing.Color.White;
             this.NameComp.Location = new System.Drawing.Point(9, 37);
             this.NameComp.Name = "NameComp";
             this.NameComp.Size = new System.Drawing.Size(53, 21);

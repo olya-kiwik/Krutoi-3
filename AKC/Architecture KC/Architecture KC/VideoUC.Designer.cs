@@ -71,7 +71,7 @@
             this.NameLabel.ForeColor = System.Drawing.Color.White;
             this.NameLabel.Location = new System.Drawing.Point(114, 4);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(738, 45);
+            this.NameLabel.Size = new System.Drawing.Size(713, 45);
             this.NameLabel.TabIndex = 2;
             this.NameLabel.Text = "Name";
             // 
@@ -132,7 +132,7 @@
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.delBt.ForeColor = System.Drawing.Color.White;
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
-            this.delBt.Location = new System.Drawing.Point(733, 59);
+            this.delBt.Location = new System.Drawing.Point(708, 59);
             this.delBt.Name = "delBt";
             this.delBt.Size = new System.Drawing.Size(119, 33);
             this.delBt.TabIndex = 5;
@@ -151,7 +151,7 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "VideoUC";
-            this.Size = new System.Drawing.Size(855, 98);
+            this.Size = new System.Drawing.Size(831, 98);
             this.Load += new System.EventHandler(this.VideoUC_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageVideo)).EndInit();

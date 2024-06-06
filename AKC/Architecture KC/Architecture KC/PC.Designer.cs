@@ -74,7 +74,7 @@
             this.AddBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.AddBtn.FillColor = System.Drawing.Color.Transparent;
             this.AddBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.AddBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.AddBtn.ForeColor = System.Drawing.Color.White;
             this.AddBtn.Location = new System.Drawing.Point(1001, 685);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(206, 45);
@@ -95,7 +95,7 @@
             this.ConfirmBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ConfirmBtn.FillColor = System.Drawing.Color.Transparent;
             this.ConfirmBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.ConfirmBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.ConfirmBtn.ForeColor = System.Drawing.Color.White;
             this.ConfirmBtn.Location = new System.Drawing.Point(578, 685);
             this.ConfirmBtn.Name = "ConfirmBtn";
             this.ConfirmBtn.Size = new System.Drawing.Size(206, 45);
@@ -277,7 +277,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(486, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 22);
@@ -288,7 +288,7 @@
             // 
             this.TextWork.AutoSize = true;
             this.TextWork.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextWork.ForeColor = System.Drawing.Color.LightGray;
+            this.TextWork.ForeColor = System.Drawing.Color.White;
             this.TextWork.Location = new System.Drawing.Point(2, 25);
             this.TextWork.Name = "TextWork";
             this.TextWork.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -325,7 +325,7 @@
             this.AddQuestion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.AddQuestion.FillColor = System.Drawing.Color.Transparent;
             this.AddQuestion.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.AddQuestion.ForeColor = System.Drawing.Color.LightGray;
+            this.AddQuestion.ForeColor = System.Drawing.Color.White;
             this.AddQuestion.Location = new System.Drawing.Point(893, 25);
             this.AddQuestion.Name = "AddQuestion";
             this.AddQuestion.Size = new System.Drawing.Size(156, 29);
@@ -346,7 +346,7 @@
             this.SeeComplect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.SeeComplect.FillColor = System.Drawing.Color.Transparent;
             this.SeeComplect.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.SeeComplect.ForeColor = System.Drawing.Color.LightGray;
+            this.SeeComplect.ForeColor = System.Drawing.Color.White;
             this.SeeComplect.Location = new System.Drawing.Point(165, 685);
             this.SeeComplect.Name = "SeeComplect";
             this.SeeComplect.Size = new System.Drawing.Size(206, 45);
@@ -365,7 +365,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.LightGray;
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = global::Architecture_KC.Properties.Resources.exit;
             this.guna2Button1.Location = new System.Drawing.Point(12, 12);
             this.guna2Button1.Name = "guna2Button1";

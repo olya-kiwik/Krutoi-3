@@ -42,7 +42,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(117, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(726, 48);
+            this.label1.Size = new System.Drawing.Size(716, 48);
             this.label1.TabIndex = 1;
             this.label1.Text = "Тема";
             // 
@@ -93,7 +93,7 @@
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.delBt.ForeColor = System.Drawing.Color.White;
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
-            this.delBt.Location = new System.Drawing.Point(742, 84);
+            this.delBt.Location = new System.Drawing.Point(723, 84);
             this.delBt.Name = "delBt";
             this.delBt.Size = new System.Drawing.Size(110, 33);
             this.delBt.TabIndex = 4;
@@ -123,7 +123,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "TheorUC";
-            this.Size = new System.Drawing.Size(855, 120);
+            this.Size = new System.Drawing.Size(838, 120);
             this.Load += new System.EventHandler(this.TheorUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);

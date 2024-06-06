@@ -222,7 +222,6 @@ namespace Architecture_KC
 
                         lastName.BorderColor = Color.Red;
                         studName.BorderColor = Color.Red;
-                        Group.BorderColor = Color.Red;
                     }
                 }
                 catch(Exception ex)

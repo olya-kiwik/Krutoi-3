@@ -68,7 +68,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.LightGray;
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(10, 342);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(206, 45);
@@ -89,7 +89,7 @@
             this.ConfirmBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ConfirmBtn.FillColor = System.Drawing.Color.Transparent;
             this.ConfirmBtn.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.ConfirmBtn.ForeColor = System.Drawing.Color.LightGray;
+            this.ConfirmBtn.ForeColor = System.Drawing.Color.White;
             this.ConfirmBtn.Location = new System.Drawing.Point(10, 393);
             this.ConfirmBtn.Name = "ConfirmBtn";
             this.ConfirmBtn.Size = new System.Drawing.Size(206, 45);
@@ -108,7 +108,7 @@
             this.W.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.W.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.W.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.W.ForeColor = System.Drawing.Color.Gainsboro;
+            this.W.ForeColor = System.Drawing.Color.White;
             this.W.ItemHeight = 30;
             this.W.Items.AddRange(new object[] {
             "ATX",
@@ -122,7 +122,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(7, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 42);
@@ -140,7 +140,7 @@
             this.FF.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.FF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.FF.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.FF.ForeColor = System.Drawing.Color.Gainsboro;
+            this.FF.ForeColor = System.Drawing.Color.White;
             this.FF.ItemHeight = 30;
             this.FF.Items.AddRange(new object[] {
             "ATX",
@@ -154,7 +154,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(6, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 21);
@@ -166,6 +166,7 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(233, -1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(568, 452);

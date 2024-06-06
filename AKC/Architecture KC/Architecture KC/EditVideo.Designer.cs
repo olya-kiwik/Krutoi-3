@@ -134,7 +134,7 @@
             // 
             this.EditLabel.AutoSize = true;
             this.EditLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EditLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.EditLabel.ForeColor = System.Drawing.Color.White;
             this.EditLabel.Location = new System.Drawing.Point(222, 31);
             this.EditLabel.Name = "EditLabel";
             this.EditLabel.Size = new System.Drawing.Size(192, 24);
@@ -145,7 +145,7 @@
             // 
             this.LinkLabel.AutoSize = true;
             this.LinkLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.LinkLabel.ForeColor = System.Drawing.Color.White;
             this.LinkLabel.Location = new System.Drawing.Point(12, 135);
             this.LinkLabel.Name = "LinkLabel";
             this.LinkLabel.Size = new System.Drawing.Size(80, 22);
@@ -156,7 +156,7 @@
             // 
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
+            this.NameLabel.ForeColor = System.Drawing.Color.White;
             this.NameLabel.Location = new System.Drawing.Point(12, 89);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(93, 22);
@@ -239,7 +239,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = global::Architecture_KC.Properties.Resources.free_icon_check_1055183;
             this.guna2Button1.Location = new System.Drawing.Point(237, 218);
             this.guna2Button1.Name = "guna2Button1";

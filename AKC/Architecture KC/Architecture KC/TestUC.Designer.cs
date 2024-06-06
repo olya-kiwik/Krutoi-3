@@ -52,7 +52,7 @@
             this.delBt.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.delBt.ForeColor = System.Drawing.Color.White;
             this.delBt.Image = global::Architecture_KC.Properties.Resources.free_icon_bin_8556181;
-            this.delBt.Location = new System.Drawing.Point(725, 77);
+            this.delBt.Location = new System.Drawing.Point(715, 77);
             this.delBt.Name = "delBt";
             this.delBt.Size = new System.Drawing.Size(110, 33);
             this.delBt.TabIndex = 9;
@@ -95,12 +95,11 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(117, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 24);
+            this.label1.Size = new System.Drawing.Size(708, 48);
             this.label1.TabIndex = 6;
             this.label1.Text = "Тема";
             // 
@@ -137,7 +136,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "TestUC";
-            this.Size = new System.Drawing.Size(855, 120);
+            this.Size = new System.Drawing.Size(829, 120);
             this.Load += new System.EventHandler(this.TestUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
