@@ -572,7 +572,7 @@ namespace Architecture_KC
             _ClickLol++;
             if(_ClickLol == 10)
             {
-                Process.Start("https://www.youtube.com/watch?v=0tOXxuLcaog");
+                Process.Start("https://rutube.ru/video/f3b615db135287a64584737e664e1e4b/?&utm_source=embed&utm_medium=referral&utm_campaign=logo&utm_content=f3b615db135287a64584737e664e1e4b&utm_term=yastatic.net%2F&referrer=appmetrica_tracking_id%3D1037600761300671389%26ym_tracking_id%3D17625612217935394571");
                 _ClickLol = 0;
             }
 
